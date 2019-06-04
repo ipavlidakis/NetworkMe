@@ -4,10 +4,63 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>NetworkMe.xcscheme_^#shared#^_</key>
+		<key>NetworkMe iOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>NetworkMe macOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>NetworkMe tvOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>NetworkMe watchOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>404F303B22A5F72B00267175</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>404F304A22A5F74600267175</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>404F305922A5F7F700267175</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>407A866F22A41D4B00588850</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>407A86AA22A465A200588850</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>407A86C722A465CA00588850</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>407A86E622A4667C00588850</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
