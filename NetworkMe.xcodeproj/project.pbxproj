@@ -64,6 +64,34 @@
 		404F307822A5F83000267175 /* NetworkMeFileRetrieving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302422A5F47700267175 /* NetworkMeFileRetrieving.swift */; };
 		404F307922A5F83000267175 /* NetworkMe+Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A868022A41DA900588850 /* NetworkMe+Router.swift */; };
 		404F307A22A5F83D00267175 /* NetworkMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A867322A41D4B00588850 /* NetworkMe.swift */; };
+		404F307B22A5FC4A00267175 /* NetworkMeStub+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2C22A5C71800AB0539 /* NetworkMeStub+DateFormatter.swift */; };
+		404F307C22A5FC4A00267175 /* NetworkMeStub+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301A22A5E09900267175 /* NetworkMeStub+Endpoint.swift */; };
+		404F307D22A5FC4A00267175 /* NetworkMeStub+Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301C22A5E2A900267175 /* NetworkMeStub+Encoder.swift */; };
+		404F307E22A5FC4A00267175 /* NetworkMeStub+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301E22A5E2AF00267175 /* NetworkMeStub+Decoder.swift */; };
+		404F307F22A5FC4A00267175 /* NetworkMeStub+URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302022A5E48600267175 /* NetworkMeStub+URLSession.swift */; };
+		404F308022A5FC4A00267175 /* NetworkMeStub+URLSessionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302222A5E56000267175 /* NetworkMeStub+URLSessionTask.swift */; };
+		404F308122A5FC4A00267175 /* NetworkMeStub+FileRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302622A5F4C600267175 /* NetworkMeStub+FileRetriever.swift */; };
+		404F308222A5FC4A00267175 /* NetworkMeRouter_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301822A5E06900267175 /* NetworkMeRouter_Tests.swift */; };
+		404F308322A5FC4A00267175 /* NetworMeScheme_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86F422A4670500588850 /* NetworMeScheme_Tests.swift */; };
+		404F308422A5FC4A00267175 /* NetworMeMethod_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86F622A4681300588850 /* NetworMeMethod_Tests.swift */; };
+		404F308522A5FC4A00267175 /* NetworkMeHeader_GenericTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2122A5C0C900AB0539 /* NetworkMeHeader_GenericTests.swift */; };
+		404F308622A5FC4A00267175 /* NetworkMeHeader_RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3622A5CC7300AB0539 /* NetworkMeHeader_RequestTests.swift */; };
+		404F308722A5FC4A00267175 /* NetworkHeader_ResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301222A5D97A00267175 /* NetworkHeader_ResponseTests.swift */; };
+		404F308822A5FC4A00267175 /* NetworkMe+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2E22A5C72500AB0539 /* NetworkMe+Tests.swift */; };
+		404F308922A5FC4B00267175 /* NetworkMeStub+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2C22A5C71800AB0539 /* NetworkMeStub+DateFormatter.swift */; };
+		404F308A22A5FC4B00267175 /* NetworkMeStub+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301A22A5E09900267175 /* NetworkMeStub+Endpoint.swift */; };
+		404F308B22A5FC4B00267175 /* NetworkMeStub+Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301C22A5E2A900267175 /* NetworkMeStub+Encoder.swift */; };
+		404F308C22A5FC4B00267175 /* NetworkMeStub+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301E22A5E2AF00267175 /* NetworkMeStub+Decoder.swift */; };
+		404F308D22A5FC4B00267175 /* NetworkMeStub+URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302022A5E48600267175 /* NetworkMeStub+URLSession.swift */; };
+		404F308E22A5FC4B00267175 /* NetworkMeStub+URLSessionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302222A5E56000267175 /* NetworkMeStub+URLSessionTask.swift */; };
+		404F308F22A5FC4B00267175 /* NetworkMeStub+FileRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302622A5F4C600267175 /* NetworkMeStub+FileRetriever.swift */; };
+		404F309022A5FC4B00267175 /* NetworkMeRouter_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301822A5E06900267175 /* NetworkMeRouter_Tests.swift */; };
+		404F309122A5FC4B00267175 /* NetworMeScheme_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86F422A4670500588850 /* NetworMeScheme_Tests.swift */; };
+		404F309222A5FC4B00267175 /* NetworMeMethod_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86F622A4681300588850 /* NetworMeMethod_Tests.swift */; };
+		404F309322A5FC4B00267175 /* NetworkMeHeader_GenericTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2122A5C0C900AB0539 /* NetworkMeHeader_GenericTests.swift */; };
+		404F309422A5FC4B00267175 /* NetworkMeHeader_RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3622A5CC7300AB0539 /* NetworkMeHeader_RequestTests.swift */; };
+		404F309522A5FC4B00267175 /* NetworkHeader_ResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301222A5D97A00267175 /* NetworkHeader_ResponseTests.swift */; };
+		404F309622A5FC4B00267175 /* NetworkMe+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2E22A5C72500AB0539 /* NetworkMe+Tests.swift */; };
 		407A867422A41D4B00588850 /* NetworkMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A867322A41D4B00588850 /* NetworkMe.swift */; };
 		407A867C22A41D8000588850 /* NetworkMeEndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A867B22A41D8000588850 /* NetworkMeEndpointProtocol.swift */; };
 		407A867E22A41D9300588850 /* NetworkMeRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A867D22A41D9300588850 /* NetworkMeRouting.swift */; };
@@ -749,7 +777,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				404F307E22A5FC4A00267175 /* NetworkMeStub+Decoder.swift in Sources */,
+				404F308522A5FC4A00267175 /* NetworkMeHeader_GenericTests.swift in Sources */,
+				404F308322A5FC4A00267175 /* NetworMeScheme_Tests.swift in Sources */,
+				404F307C22A5FC4A00267175 /* NetworkMeStub+Endpoint.swift in Sources */,
+				404F308222A5FC4A00267175 /* NetworkMeRouter_Tests.swift in Sources */,
+				404F308822A5FC4A00267175 /* NetworkMe+Tests.swift in Sources */,
 				404F303F22A5F72B00267175 /* NetworkMe_tvOS_Tests.swift in Sources */,
+				404F308122A5FC4A00267175 /* NetworkMeStub+FileRetriever.swift in Sources */,
+				404F307F22A5FC4A00267175 /* NetworkMeStub+URLSession.swift in Sources */,
+				404F308722A5FC4A00267175 /* NetworkHeader_ResponseTests.swift in Sources */,
+				404F308622A5FC4A00267175 /* NetworkMeHeader_RequestTests.swift in Sources */,
+				404F307B22A5FC4A00267175 /* NetworkMeStub+DateFormatter.swift in Sources */,
+				404F308422A5FC4A00267175 /* NetworMeMethod_Tests.swift in Sources */,
+				404F307D22A5FC4A00267175 /* NetworkMeStub+Encoder.swift in Sources */,
+				404F308022A5FC4A00267175 /* NetworkMeStub+URLSessionTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,7 +799,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				404F308C22A5FC4B00267175 /* NetworkMeStub+Decoder.swift in Sources */,
+				404F309322A5FC4B00267175 /* NetworkMeHeader_GenericTests.swift in Sources */,
+				404F309122A5FC4B00267175 /* NetworMeScheme_Tests.swift in Sources */,
+				404F308A22A5FC4B00267175 /* NetworkMeStub+Endpoint.swift in Sources */,
+				404F309022A5FC4B00267175 /* NetworkMeRouter_Tests.swift in Sources */,
+				404F309622A5FC4B00267175 /* NetworkMe+Tests.swift in Sources */,
 				404F304E22A5F74600267175 /* NetworkMe_macOS_Tests.swift in Sources */,
+				404F308F22A5FC4B00267175 /* NetworkMeStub+FileRetriever.swift in Sources */,
+				404F308D22A5FC4B00267175 /* NetworkMeStub+URLSession.swift in Sources */,
+				404F309522A5FC4B00267175 /* NetworkHeader_ResponseTests.swift in Sources */,
+				404F309422A5FC4B00267175 /* NetworkMeHeader_RequestTests.swift in Sources */,
+				404F308922A5FC4B00267175 /* NetworkMeStub+DateFormatter.swift in Sources */,
+				404F309222A5FC4B00267175 /* NetworMeMethod_Tests.swift in Sources */,
+				404F308B22A5FC4B00267175 /* NetworkMeStub+Encoder.swift in Sources */,
+				404F308E22A5FC4B00267175 /* NetworkMeStub+URLSessionTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1021,6 +1077,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UBW6JB7T2F;
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipavlidakis.networkMe.watchos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1036,6 +1093,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UBW6JB7T2F;
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipavlidakis.networkMe.watchos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1100,6 +1158,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipavlidakis.networkMe;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1154,6 +1213,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipavlidakis.networkMe;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -1167,6 +1227,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UBW6JB7T2F;
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipavlidakis.networkMe.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1180,6 +1241,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UBW6JB7T2F;
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipavlidakis.networkMe.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1193,6 +1255,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UBW6JB7T2F;
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipavlidakis.networkMe.tvos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -1208,6 +1271,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UBW6JB7T2F;
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipavlidakis.networkMe.tvos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -1225,6 +1289,7 @@
 				DEVELOPMENT_TEAM = UBW6JB7T2F;
 				EXECUTABLE_PREFIX = lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipavlidakis.networkMe.macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1240,6 +1305,7 @@
 				DEVELOPMENT_TEAM = UBW6JB7T2F;
 				EXECUTABLE_PREFIX = lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipavlidakis.networkMe.macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
