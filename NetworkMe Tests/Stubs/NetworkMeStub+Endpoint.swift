@@ -25,6 +25,7 @@ extension NetworkMe.Stub {
 
         var stubTaskType: NetworkMe.TaskType
         var stubUrl: URL
+        var stubBody: Data?
         var stubQueryItems: [URLQueryItem]?
         var stubScheme: NetworkMe.Scheme
         var stubMethod: NetworkMe.Method
@@ -36,6 +37,7 @@ extension NetworkMe.Stub {
 
         private(set) var timesTaskTypeWasCalled: Int = 0
         private(set) var timeURLWasCalled: Int = 0
+        private(set) var timeBodyWasCalled: Int = 0
         private(set) var timesQueryItemsWasCalled: Int = 0
         private(set) var timesSchemeWasCalled: Int = 0
         private(set) var timesMethodWasCalled: Int = 0
@@ -47,6 +49,7 @@ extension NetworkMe.Stub {
 
         init(stubTaskType: NetworkMe.TaskType = .data,
              stubUrl: URL = URL(string: "http://test.com")!,
+             stubBody: Data? = nil,
              stubQueryItems: [URLQueryItem]? = nil,
              stubScheme: NetworkMe.Scheme = .http,
              stubMethod: NetworkMe.Method = .get,
@@ -58,6 +61,7 @@ extension NetworkMe.Stub {
 
             self.stubTaskType = stubTaskType
             self.stubUrl = stubUrl
+            self.stubBody = stubBody
             self.stubQueryItems = stubQueryItems
             self.stubScheme = stubScheme
             self.stubMethod = stubMethod
@@ -85,6 +89,13 @@ extension NetworkMe.Stub.Endpoint: NetworkMeEndpointProtocol {
         timeURLWasCalled += 1
 
         return stubUrl
+    }
+
+    var body: Data? {
+
+        timeBodyWasCalled += 1
+
+        return stubBody
     }
 
     var queryItems: [URLQueryItem]? {

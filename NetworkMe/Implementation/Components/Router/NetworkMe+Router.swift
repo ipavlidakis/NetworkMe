@@ -15,8 +15,9 @@ extension NetworkMe {
         private let urlSession: NetworkMeURLSessionProtocol
         private let fileRetriever: NetworkMeFileRetrieving
 
-        public init(urlSession: NetworkMeURLSessionProtocol,
-                    fileRetriever: NetworkMeFileRetrieving) {
+        public init(
+            urlSession: NetworkMeURLSessionProtocol,
+            fileRetriever: NetworkMeFileRetrieving) {
 
             self.urlSession = urlSession
             self.fileRetriever = fileRetriever
@@ -32,9 +33,9 @@ extension NetworkMe.Router: NetworkMeRouting {
 
         guard
             var components = URLComponents(url: endpoint.url, resolvingAgainstBaseURL: false)
-        else {
-            completion(.failure(NetworkError.invalidEndpoint(endpoint)))
-            return
+            else {
+                completion(.failure(NetworkError.invalidEndpoint(endpoint)))
+                return
         }
 
         components.scheme = endpoint.scheme.rawValue
@@ -42,9 +43,9 @@ extension NetworkMe.Router: NetworkMeRouting {
 
         guard
             let url = components.url
-        else {
-            completion(.failure(NetworkError.invalidURLComponents(components)))
-            return
+            else {
+                completion(.failure(NetworkError.invalidURLComponents(components)))
+                return
         }
 
         var request = URLRequest(
@@ -52,19 +53,20 @@ extension NetworkMe.Router: NetworkMeRouting {
             cachePolicy: endpoint.cachePolicy,
             timeoutInterval: endpoint.timeoutInterval)
         request.httpMethod = endpoint.method.rawValue
+        request.httpBody = endpoint.body
         let requestHeaders = endpoint.headers.map { $0.keyPair }
         request.allHTTPHeaderFields = requestHeaders.reduce([:]) { (headers, header) -> [String: String] in
-                var _headers = headers
-                _headers[header.key] = header.value
-                return _headers
+            var _headers = headers
+            _headers[header.key] = header.value
+            return _headers
         }
 
         let task: URLSessionTask = {
             switch endpoint.taskType {
             case .data:
                 return dataTask(with: request, endpoint: endpoint, completion: completion)
-            case .upload(let bodyData):
-                return uploadTask(with: request, from: bodyData, endpoint: endpoint, completion: completion)
+            case .upload:
+                return uploadTask(with: request, endpoint: endpoint, completion: completion)
             case .download:
                 return downloadTask(with: request, endpoint: endpoint, completion: completion)
             }
@@ -86,9 +88,9 @@ private extension NetworkMe.Router {
             guard
                 let data = data,
                 let decoded = try? endpoint.decoder.decode(ResultItem.self, from: data)
-            else {
-                completion(Result.failure(NetworkError.parsing))
-                return
+                else {
+                    completion(Result.failure(NetworkError.parsing))
+                    return
             }
 
             completion(Result.success(decoded))
@@ -97,18 +99,17 @@ private extension NetworkMe.Router {
 
     func uploadTask<ResultItem: Codable>(
         with request: URLRequest,
-        from bodyData: Data?,
         endpoint: NetworkMeEndpointProtocol,
         completion: @escaping (Result<ResultItem, NetworkError>) -> Void) -> URLSessionTask {
 
-        return urlSession.uploadTask(with: request, from: bodyData) { (data, response, error) in
+        return urlSession.uploadTask(with: request, from: request.httpBody) { (data, response, error) in
 
             guard
                 let data = data,
                 let decoded = try? endpoint.decoder.decode(ResultItem.self, from: data)
-            else {
-                completion(Result.failure(NetworkError.parsing))
-                return
+                else {
+                    completion(Result.failure(NetworkError.parsing))
+                    return
             }
 
             completion(Result.success(decoded))
@@ -126,9 +127,9 @@ private extension NetworkMe.Router {
                 let url = url,
                 let data = self?.fileRetriever.fetchData(from: url),
                 let decoded = try? endpoint.decoder.decode(ResultItem.self, from: data)
-            else {
-                completion(Result.failure(NetworkError.parsing))
-                return
+                else {
+                    completion(Result.failure(NetworkError.parsing))
+                    return
             }
 
             completion(Result.success(decoded))

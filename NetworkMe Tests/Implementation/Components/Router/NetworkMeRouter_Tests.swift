@@ -24,6 +24,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
 
     private struct CodableItem: Equatable, Codable { let value: String }
 
+    // MARK: -
+
     // MARK: - Data task
 
     func test_request_dataTask_resumeWasCalledOnURLSessionTask() {
@@ -156,9 +158,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
             fileRetriever: stubFileRetriever)
-        let stubData = Data(base64Encoded: "test")!
         let endpoint = NetworkMe.Stub.Endpoint(
-            stubTaskType: .upload(stubData),
+            stubTaskType: .upload,
             stubQueryItems: [URLQueryItem(name: "key", value: "value")],
             stubScheme: NetworkMe.Scheme.https,
             stubHeaders: [NetworkMe.Header.Request.contentType(.atomXML)]
@@ -178,7 +179,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
             fileRetriever: stubFileRetriever)
         let stubData = Data(base64Encoded: "test")!
         let endpoint = NetworkMe.Stub.Endpoint(
-            stubTaskType: .upload(stubData),
+            stubTaskType: .upload,
+            stubBody: stubData,
             stubQueryItems: [URLQueryItem(name: "key", value: "value")],
             stubScheme: NetworkMe.Scheme.https,
             stubHeaders: [NetworkMe.Header.Request.contentType(.atomXML)]
@@ -205,7 +207,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
             fileRetriever: stubFileRetriever)
         let stubDataResult = Data(base64Encoded: "test")!
         stubURLSession.stubUploadTaskCompletionHandlerInput = (stubDataResult, nil, nil)
-        let endpoint = NetworkMe.Stub.Endpoint(stubTaskType: .upload(Data()))
+        let endpoint = NetworkMe.Stub.Endpoint(stubTaskType: .upload)
 
         router.request(endpoint: endpoint) { (_: Result<CodableItem, NetworkMe.Router.NetworkError>) in }
 
@@ -220,7 +222,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
             urlSession: stubURLSession,
             fileRetriever: stubFileRetriever)
         stubURLSession.stubDataTaskCompletionHandlerInput = (nil, nil, nil)
-        let endpoint = NetworkMe.Stub.Endpoint(stubTaskType: .upload(Data()))
+        let endpoint = NetworkMe.Stub.Endpoint(stubTaskType: .upload)
 
         var _result: Result<CodableItem, NetworkMe.Router.NetworkError>?
         router.request(endpoint: endpoint) { _result = $0 }
@@ -251,7 +253,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
             fileRetriever: stubFileRetriever)
         let stubResult = CodableItem(value: "test")
         stubURLSession.stubDataTaskCompletionHandlerInput = (Data(), nil, nil)
-        let endpoint = NetworkMe.Stub.Endpoint(stubTaskType: .upload(Data()))
+        let endpoint = NetworkMe.Stub.Endpoint(stubTaskType: .upload)
         endpoint.stubDecoder.stubDecodeResult = stubResult
 
         var _result: Result<CodableItem, NetworkMe.Router.NetworkError>?

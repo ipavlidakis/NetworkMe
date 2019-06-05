@@ -14,6 +14,8 @@ public protocol NetworkMeEndpointProtocol {
 
     var url: URL { get }
 
+    var body: Data? { get }
+
     var queryItems: [URLQueryItem]? { get }
 
     var scheme: NetworkMe.Scheme { get }

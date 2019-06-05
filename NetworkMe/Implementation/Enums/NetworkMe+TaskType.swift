@@ -13,7 +13,7 @@ extension NetworkMe {
     public enum TaskType {
 
         case data
-        case upload(_ bodyData: Data)
+        case upload
         case download
     }
 }
