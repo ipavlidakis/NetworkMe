@@ -7,5 +7,3 @@
 //
 
 import Foundation
-
-public enum NetworkMe {}

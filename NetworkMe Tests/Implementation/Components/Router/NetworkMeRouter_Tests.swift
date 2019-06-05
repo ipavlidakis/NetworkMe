@@ -9,10 +9,14 @@
 import Foundation
 import XCTest
 #if os(iOS)
+#if canImport(NetworkMe_iOS)
 @testable import NetworkMe_iOS
+#else
+@testable import NetworkMe
+#endif
 #elseif os(tvOS)
 @testable import NetworkMe_tvOS
-#else
+#elseif os(macOS)
 @testable import NetworkMe_macOS
 #endif
 

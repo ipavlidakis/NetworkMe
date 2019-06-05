@@ -8,10 +8,14 @@
 
 import Foundation
 #if os(iOS)
+#if canImport(NetworkMe_iOS)
 import NetworkMe_iOS
+#else
+import NetworkMe
+#endif
 #elseif os(tvOS)
 import NetworkMe_tvOS
-#else
+#elseif os(macOS)
 import NetworkMe_macOS
 #endif
 
