@@ -90,8 +90,8 @@ extension Endpoint: NetworkMeEndpointProtocol {
 }
 ```
 
-## ViewController
-### Execution method
+# ViewController
+## Execution method
 ```swift
 func performRequest<T: Decodable>(for endpoint: Endpoint, resultItem: T.Type) {
 
@@ -106,4 +106,16 @@ func performRequest<T: Decodable>(for endpoint: Endpoint, resultItem: T.Type) {
             }
         }
     }
+```
+
+## Requests
+### Simple Get
+```swift
+performRequest(for: .simpleGet, resultItem: [Post].self)
+```
+### Simple Post
+```swift
+performRequest(
+    for: .simplePost(userId: 10, title: "Simple post", body: "A simple post request example"),
+    resultItem: Post.self)
 ```
