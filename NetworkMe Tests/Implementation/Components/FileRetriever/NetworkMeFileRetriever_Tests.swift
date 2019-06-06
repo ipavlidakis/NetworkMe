@@ -23,7 +23,7 @@ import XCTest
 final class NetworkMeFileRetriever_Tests: XCTestCase {
 
     private lazy var rawData: [String: String]! = ["key": "value"]
-    private lazy var url: URL! = URL(fileURLWithPath: "tmp/\(UUID().uuidString)")
+    private lazy var url: URL! = URL(fileURLWithPath: "/tmp/\(UUID().uuidString)")
 
     override func setUp() {
 
