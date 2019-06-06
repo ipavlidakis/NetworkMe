@@ -29,7 +29,7 @@ enum Endpoint {
 extension Endpoint: NetworkMeEndpointProtocol {
 
     var url: URL {
-return URL(string: "https://jsonplaceholder.typicode.com/posts")!
+        return URL(string: "https://jsonplaceholder.typicode.com/posts")!
     }
 }
 ```
@@ -39,7 +39,7 @@ return URL(string: "https://jsonplaceholder.typicode.com/posts")!
 import Foundation
 
 struct Post: Codable {
-
+    
     let userId: Int
     let id: Int
     let title: String
@@ -49,8 +49,8 @@ struct Post: Codable {
 3. Call the router with your endpoint and a completion
 ```swift
 let router: NetworkMe.Router = NetworkMe.Router(
-            urlSession: URLSession.shared,
-            fileRetriever: NetworkMe.FileRetriever())
+urlSession: URLSession.shared,
+fileRetriever: NetworkMe.FileRetriever())
 
 router.request(endpoint: Endpoint.simpleGet) { (result: Result<[Post], NetworkMe.Router.NetworkError>) in
     
