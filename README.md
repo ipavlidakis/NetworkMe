@@ -23,12 +23,14 @@ import Foundation
 import NetworkMe
 
 enum Endpoint {
+
     case simpleGet
 }
 
 extension Endpoint: NetworkMeEndpointProtocol {
 
     var url: URL {
+
         return URL(string: "https://jsonplaceholder.typicode.com/posts")!
     }
 }
@@ -48,9 +50,9 @@ struct Post: Codable {
 ```
 3. Call the router with your endpoint and a completion
 ```swift
-let router: NetworkMe.Router = NetworkMe.Router(
-urlSession: URLSession.shared,
-fileRetriever: NetworkMe.FileRetriever())
+// ...
+// ...
+let router = NetworkMe.Router()
 
 router.request(endpoint: Endpoint.simpleGet) { (result: Result<[Post], NetworkMe.Router.NetworkError>) in
     
