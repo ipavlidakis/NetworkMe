@@ -15,9 +15,26 @@ Some of the benefits of NetworkMe are:
 * Availble on iOS, tvOS, watchOS and macOS
 * Well tested
 
-Examples
-1. Get Request
-Create your endpoint
+# How To
+## Models
+```swift
+struct Post: Codable {
+
+    let userId: Int
+    let id: Int
+    let title: String
+    let body: String
+}
+
+struct CreatePost: Codable {
+
+    let userId: Int
+    let title: String
+    let body: String
+}
+```
+
+# Endpoints
 ```swift
 import Foundation
 import NetworkMe
@@ -25,42 +42,68 @@ import NetworkMe
 enum Endpoint {
 
     case simpleGet
+    case simplePost(userId: Int, title: String, body: String)
 }
 
 extension Endpoint: NetworkMeEndpointProtocol {
 
     var url: URL {
 
-        return URL(string: "https://jsonplaceholder.typicode.com/posts")!
+        switch self {
+        case .simpleGet,
+             .simplePost:
+            return URL(string: "https://jsonplaceholder.typicode.com/posts")!
+        }
+    }
+
+    var taskType: NetworkMe.TaskType {
+        switch self {
+        case .simpleGet,
+             .simplePost:
+            return .data
+        }
+    }
+
+    var body: Data? {
+        switch self {
+        case .simpleGet:
+            return nil
+        case .simplePost(let userId, let title, let body):
+            return try? JSONEncoder().encode(
+                CreatePost(userId: userId, title: title, body: body))
+        }
+    }
+
+    var method: NetworkMe.Method {
+        switch self {
+        case .simpleGet:
+            return .get
+        case .simplePost:
+            return .post
+        }
+    }
+    var headers: [NetworkMeHeaderProtocol] {
+        return [
+            NetworkMe.Header.Request.contentType(.json)
+        ]
     }
 }
 ```
-> For the rest of the Endpoint's properties we will be using the default ones
-2. Create your Codable Model
-```swift
-import Foundation
 
-struct Post: Codable {
-    
-    let userId: Int
-    let id: Int
-    let title: String
-    let body: String
-}
-```
-3. Call the router with your endpoint and a completion
+## ViewController
+### Execution method
 ```swift
-// ...
-// ...
-let router = NetworkMe.Router()
+func performRequest<T: Decodable>(for endpoint: Endpoint, resultItem: T.Type) {
 
-router.request(endpoint: Endpoint.simpleGet) { (result: Result<[Post], NetworkMe.Router.NetworkError>) in
-    
-    switch result {
-    case .success(let response):
-        print(response)
-    case .failure(let error):
-        print(error)
+        let router: NetworkMe.Router = NetworkMe.Router()
+
+        router.request(endpoint: endpoint) { (result: Result<T, NetworkMe.Router.NetworkError>) in
+            switch result {
+            case .success(let response):
+                print(response)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
-}
 ```

@@ -112,8 +112,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
             XCTFail("Invalid result received. Was expecting parsing error")
         case .failure(let error):
             switch error {
-            case .parsing: XCTAssert(true)
-            default: XCTFail("Invalid result received. Was expecting parsing error")
+            case .noData: XCTAssert(true)
+            default: XCTFail("Invalid result received. Was expecting noData error")
             }
         }
     }
@@ -379,8 +379,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
             XCTFail("Invalid result received. Was expecting parsing error")
         case .failure(let error):
             switch error {
-            case .parsing: XCTAssert(true)
-            default: XCTFail("Invalid result received. Was expecting parsing error")
+            case .noData: XCTAssert(true)
+            default: XCTFail("Invalid result received. Was expecting noData error")
             }
         }
     }

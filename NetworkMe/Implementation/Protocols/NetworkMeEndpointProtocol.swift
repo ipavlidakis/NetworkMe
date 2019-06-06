@@ -28,12 +28,10 @@ public protocol NetworkMeEndpointProtocol {
 
     var decoder: NetworkMeDecoding { get }
 
-    var encoder: NetworkMeEncoding { get }
-
     var headers: [NetworkMeHeaderProtocol] { get }
 }
 
-extension NetworkMeEndpointProtocol {
+public extension NetworkMeEndpointProtocol {
 
     var taskType: NetworkMe.TaskType { return .data }
 
@@ -50,8 +48,6 @@ extension NetworkMeEndpointProtocol {
     var timeoutInterval: TimeInterval { return 30 }
 
     var decoder: NetworkMeDecoding { return JSONDecoder() }
-
-    var encoder: NetworkMeEncoding { return JSONEncoder() }
 
     var headers: [NetworkMeHeaderProtocol] { return [] }
 }

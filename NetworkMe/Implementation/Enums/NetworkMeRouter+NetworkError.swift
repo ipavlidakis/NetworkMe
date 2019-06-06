@@ -14,7 +14,8 @@ extension NetworkMe.Router {
 
         case invalidEndpoint(_ endpoint: NetworkMeEndpointProtocol)
         case invalidURLComponents(_ components: URLComponents)
-        case parsing
+        case noData
+        case parsing(_ error: Error)
         case unauthorized
     }
 }

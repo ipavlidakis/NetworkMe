@@ -34,7 +34,7 @@ extension NetworkMe {
 
 extension NetworkMe.Router: NetworkMeRouting {
 
-    public func request<ResultItem: Codable>(
+    public func request<ResultItem: Decodable>(
         endpoint: NetworkMeEndpointProtocol,
         completion: @escaping (Result<ResultItem, NetworkError>) -> Void) {
 
@@ -85,7 +85,7 @@ extension NetworkMe.Router: NetworkMeRouting {
 
 private extension NetworkMe.Router {
 
-    func dataTask<ResultItem: Codable>(
+    func dataTask<ResultItem: Decodable>(
         with request: URLRequest,
         endpoint: NetworkMeEndpointProtocol,
         completion: @escaping (Result<ResultItem, NetworkError>) -> Void) -> URLSessionDataTask {
@@ -93,18 +93,22 @@ private extension NetworkMe.Router {
         return urlSession.dataTask(with: request) { (data, response, error) in
 
             guard
-                let data = data,
-                let decoded = try? endpoint.decoder.decode(ResultItem.self, from: data)
-                else {
-                    completion(Result.failure(NetworkError.parsing))
-                    return
+                let data = data
+            else {
+                completion(Result.failure(NetworkError.noData))
+                return
             }
 
-            completion(Result.success(decoded))
+            do {
+                let decoded = try endpoint.decoder.decode(ResultItem.self, from: data)
+                completion(Result.success(decoded))
+            } catch(let exception) {
+                completion(Result.failure(NetworkError.parsing(exception)))
+            }
         }
     }
 
-    func uploadTask<ResultItem: Codable>(
+    func uploadTask<ResultItem: Decodable>(
         with request: URLRequest,
         endpoint: NetworkMeEndpointProtocol,
         completion: @escaping (Result<ResultItem, NetworkError>) -> Void) -> URLSessionUploadTask {
@@ -112,18 +116,22 @@ private extension NetworkMe.Router {
         return urlSession.uploadTask(with: request, from: request.httpBody) { (data, response, error) in
 
             guard
-                let data = data,
-                let decoded = try? endpoint.decoder.decode(ResultItem.self, from: data)
-                else {
-                    completion(Result.failure(NetworkError.parsing))
-                    return
+                let data = data
+            else {
+                completion(Result.failure(NetworkError.noData))
+                return
             }
 
-            completion(Result.success(decoded))
+            do {
+                let decoded = try endpoint.decoder.decode(ResultItem.self, from: data)
+                completion(Result.success(decoded))
+            } catch(let exception) {
+                completion(Result.failure(NetworkError.parsing(exception)))
+            }
         }
     }
 
-    func downloadTask<ResultItem: Codable>(
+    func downloadTask<ResultItem: Decodable>(
         with request: URLRequest,
         endpoint: NetworkMeEndpointProtocol,
         completion: @escaping (Result<ResultItem, NetworkError>) -> Void) -> URLSessionDownloadTask {
@@ -132,14 +140,18 @@ private extension NetworkMe.Router {
 
             guard
                 let url = url,
-                let data = self?.fileRetriever.fetchData(from: url),
-                let decoded = try? endpoint.decoder.decode(ResultItem.self, from: data)
-                else {
-                    completion(Result.failure(NetworkError.parsing))
-                    return
+                let data = self?.fileRetriever.fetchData(from: url)
+            else {
+                completion(Result.failure(NetworkError.noData))
+                return
             }
 
-            completion(Result.success(decoded))
+            do {
+                let decoded = try endpoint.decoder.decode(ResultItem.self, from: data)
+                completion(Result.success(decoded))
+            } catch(let exception) {
+                completion(Result.failure(NetworkError.parsing(exception)))
+            }
         }
     }
 }
