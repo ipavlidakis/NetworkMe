@@ -48,7 +48,6 @@ enum Endpoint {
 extension Endpoint: NetworkMeEndpointProtocol {
 
     var url: URL {
-
         switch self {
         case .simpleGet,
              .simplePost:
