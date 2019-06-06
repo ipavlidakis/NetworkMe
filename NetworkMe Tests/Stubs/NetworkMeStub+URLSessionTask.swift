@@ -21,7 +21,27 @@ import NetworkMe_macOS
 
 extension NetworkMe.Stub {
 
-    final class URLSessionTask: Foundation.URLSessionTask {
+    final class URLSessionDataTask: Foundation.URLSessionDataTask {
+
+        private(set) var resumeWasCalled: Bool = false
+
+        override func resume() {
+
+            resumeWasCalled = true
+        }
+    }
+
+    final class URLSessionUploadTask: Foundation.URLSessionUploadTask {
+
+        private(set) var resumeWasCalled: Bool = false
+
+        override func resume() {
+
+            resumeWasCalled = true
+        }
+    }
+
+    final class URLSessionDownloadTask: Foundation.URLSessionDownloadTask {
 
         private(set) var resumeWasCalled: Bool = false
 

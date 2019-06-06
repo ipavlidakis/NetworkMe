@@ -31,7 +31,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
     func test_request_dataTask_resumeWasCalledOnURLSessionTask() {
 
         let stubURLSession = NetworkMe.Stub.URLSession()
-        let task = NetworkMe.Stub.URLSessionTask()
+        let task = NetworkMe.Stub.URLSessionDataTask()
         stubURLSession.stubDataTaskResult = task
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
@@ -152,7 +152,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
     func test_upload_dataTask_resumeWasCalledOnURLSessionTask() {
 
         let stubURLSession = NetworkMe.Stub.URLSession()
-        let task = NetworkMe.Stub.URLSessionTask()
+        let task = NetworkMe.Stub.URLSessionUploadTask()
         stubURLSession.stubUploadTaskResult = task
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
@@ -278,7 +278,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
     func test_request_downloadTask_resumeWasCalledOnURLSessionTask() {
 
         let stubURLSession = NetworkMe.Stub.URLSession()
-        let task = NetworkMe.Stub.URLSessionTask()
+        let task = NetworkMe.Stub.URLSessionDownloadTask()
         stubURLSession.stubDownloadTaskResult = task
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(

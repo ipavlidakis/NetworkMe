@@ -32,3 +32,26 @@ public protocol NetworkMeEndpointProtocol {
 
     var headers: [NetworkMeHeaderProtocol] { get }
 }
+
+extension NetworkMeEndpointProtocol {
+
+    var taskType: NetworkMe.TaskType { return .data }
+
+    var body: Data? { return nil }
+
+    var queryItems: [URLQueryItem]? { return nil }
+
+    var scheme: NetworkMe.Scheme { return .https }
+
+    var method: NetworkMe.Method { return .get }
+
+    var cachePolicy: URLRequest.CachePolicy { return .useProtocolCachePolicy }
+
+    var timeoutInterval: TimeInterval { return 30 }
+
+    var decoder: NetworkMeDecoding { return JSONDecoder() }
+
+    var encoder: NetworkMeEncoding { return JSONEncoder() }
+
+    var headers: [NetworkMeHeaderProtocol] { return [] }
+}

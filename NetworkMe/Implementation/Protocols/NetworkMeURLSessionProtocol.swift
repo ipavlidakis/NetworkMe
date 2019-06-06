@@ -12,14 +12,14 @@ public protocol NetworkMeURLSessionProtocol {
 
     func dataTask(
         with request: URLRequest,
-        completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionTask
+        completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
 
     func uploadTask(
         with request: URLRequest,
         from bodyData: Data?,
-        completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionTask
+        completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionUploadTask
 
     func downloadTask(
         with request: URLRequest,
-        completionHandler: @escaping (URL?, URLResponse?, Error?) -> Void) -> URLSessionTask
+        completionHandler: @escaping (URL?, URLResponse?, Error?) -> Void) -> URLSessionDownloadTask
 }

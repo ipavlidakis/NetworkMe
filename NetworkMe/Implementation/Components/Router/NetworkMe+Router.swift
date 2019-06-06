@@ -81,7 +81,7 @@ private extension NetworkMe.Router {
     func dataTask<ResultItem: Codable>(
         with request: URLRequest,
         endpoint: NetworkMeEndpointProtocol,
-        completion: @escaping (Result<ResultItem, NetworkError>) -> Void) -> URLSessionTask {
+        completion: @escaping (Result<ResultItem, NetworkError>) -> Void) -> URLSessionDataTask {
 
         return urlSession.dataTask(with: request) { (data, response, error) in
 
@@ -100,7 +100,7 @@ private extension NetworkMe.Router {
     func uploadTask<ResultItem: Codable>(
         with request: URLRequest,
         endpoint: NetworkMeEndpointProtocol,
-        completion: @escaping (Result<ResultItem, NetworkError>) -> Void) -> URLSessionTask {
+        completion: @escaping (Result<ResultItem, NetworkError>) -> Void) -> URLSessionUploadTask {
 
         return urlSession.uploadTask(with: request, from: request.httpBody) { (data, response, error) in
 
@@ -119,7 +119,7 @@ private extension NetworkMe.Router {
     func downloadTask<ResultItem: Codable>(
         with request: URLRequest,
         endpoint: NetworkMeEndpointProtocol,
-        completion: @escaping (Result<ResultItem, NetworkError>) -> Void) -> URLSessionTask {
+        completion: @escaping (Result<ResultItem, NetworkError>) -> Void) -> URLSessionDownloadTask {
 
         return urlSession.downloadTask(with: request) { [weak self] (url, response, error) in
 

@@ -7,6 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40106E4B22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40106E4A22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift */; };
+		40106E4C22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40106E4A22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift */; };
+		40106E4D22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40106E4A22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift */; };
+		40106E4E22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40106E4A22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift */; };
+		40106E5122A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40106E5022A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift */; };
+		40106E5222A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40106E5022A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift */; };
+		40106E5322A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40106E5022A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift */; };
+		40106E5422A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40106E5022A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift */; };
+		4027AA1E22A8861500B22CD8 /* JSONDecoder+NetworkMeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA1D22A8861500B22CD8 /* JSONDecoder+NetworkMeDecoding.swift */; };
+		4027AA2022A8862600B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA1F22A8862600B22CD8 /* JSONEncoder+NetworkMeEncoding.swift */; };
+		4027AA2122A8862C00B22CD8 /* JSONDecoder+NetworkMeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA1D22A8861500B22CD8 /* JSONDecoder+NetworkMeDecoding.swift */; };
+		4027AA2222A8862C00B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA1F22A8862600B22CD8 /* JSONEncoder+NetworkMeEncoding.swift */; };
+		4027AA2322A8862D00B22CD8 /* JSONDecoder+NetworkMeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA1D22A8861500B22CD8 /* JSONDecoder+NetworkMeDecoding.swift */; };
+		4027AA2422A8862D00B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA1F22A8862600B22CD8 /* JSONEncoder+NetworkMeEncoding.swift */; };
+		4027AA2522A8862E00B22CD8 /* JSONDecoder+NetworkMeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA1D22A8861500B22CD8 /* JSONDecoder+NetworkMeDecoding.swift */; };
+		4027AA2622A8862E00B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA1F22A8862600B22CD8 /* JSONEncoder+NetworkMeEncoding.swift */; };
+		4027AA2722A8862F00B22CD8 /* JSONDecoder+NetworkMeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA1D22A8861500B22CD8 /* JSONDecoder+NetworkMeDecoding.swift */; };
+		4027AA2822A8862F00B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA1F22A8862600B22CD8 /* JSONEncoder+NetworkMeEncoding.swift */; };
+		4027AA2A22A886CB00B22CD8 /* NetworkMe+FileRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA2922A886CB00B22CD8 /* NetworkMe+FileRetriever.swift */; };
+		4027AA2D22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA2C22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift */; };
+		4027AA2E22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA2C22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift */; };
+		4027AA2F22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA2C22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift */; };
+		4027AA3022A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA2C22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift */; };
+		4027AA3122A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA2C22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift */; };
+		4027AA3222A887E500B22CD8 /* NetworkMe+FileRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA2922A886CB00B22CD8 /* NetworkMe+FileRetriever.swift */; };
+		4027AA3322A887E600B22CD8 /* NetworkMe+FileRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA2922A886CB00B22CD8 /* NetworkMe+FileRetriever.swift */; };
+		4027AA3422A887E700B22CD8 /* NetworkMe+FileRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA2922A886CB00B22CD8 /* NetworkMe+FileRetriever.swift */; };
+		4027AA3522A887E800B22CD8 /* NetworkMe+FileRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA2922A886CB00B22CD8 /* NetworkMe+FileRetriever.swift */; };
 		4046A35C22A7E4F500A5AF36 /* NetworkMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4046A35B22A7E4F500A5AF36 /* NetworkMe.swift */; };
 		4046A36922A7E55800A5AF36 /* libNetworkMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4046A35922A7E4F500A5AF36 /* libNetworkMe.a */; };
 		4046A36F22A7E57000A5AF36 /* NetworkMe+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2E22A5C72500AB0539 /* NetworkMe+Tests.swift */; };
@@ -271,6 +299,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		40106E4A22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeEndpointProtocol_Tests.swift; sourceTree = "<group>"; };
+		40106E5022A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeFileRetriever_Tests.swift; sourceTree = "<group>"; };
+		4027AA1D22A8861500B22CD8 /* JSONDecoder+NetworkMeDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+NetworkMeDecoding.swift"; sourceTree = "<group>"; };
+		4027AA1F22A8862600B22CD8 /* JSONEncoder+NetworkMeEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+NetworkMeEncoding.swift"; sourceTree = "<group>"; };
+		4027AA2922A886CB00B22CD8 /* NetworkMe+FileRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+FileRetriever.swift"; sourceTree = "<group>"; };
+		4027AA2C22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkMeURLSessionProtocol.swift"; sourceTree = "<group>"; };
 		4046A35922A7E4F500A5AF36 /* libNetworkMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNetworkMe.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4046A35B22A7E4F500A5AF36 /* NetworkMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMe.swift; sourceTree = "<group>"; };
 		4046A36422A7E55800A5AF36 /* NetworkMe Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NetworkMe Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -402,6 +436,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40106E4922A88DE6001F31F0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				40106E4A22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		40106E4F22A88F35001F31F0 /* FileRetriever */ = {
+			isa = PBXGroup;
+			children = (
+				40106E5022A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift */,
+			);
+			path = FileRetriever;
+			sourceTree = "<group>";
+		};
+		4027AA2B22A887BC00B22CD8 /* FileRetriever */ = {
+			isa = PBXGroup;
+			children = (
+				4027AA2922A886CB00B22CD8 /* NetworkMe+FileRetriever.swift */,
+			);
+			path = FileRetriever;
+			sourceTree = "<group>";
+		};
 		4046A35A22A7E4F500A5AF36 /* NetworkMe */ = {
 			isa = PBXGroup;
 			children = (
@@ -425,6 +483,7 @@
 		404F301422A5DC0B00267175 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				40106E4F22A88F35001F31F0 /* FileRetriever */,
 				404F301522A5DC1300267175 /* Router */,
 			);
 			path = Components;
@@ -541,6 +600,7 @@
 		407A868B22A41E4000588850 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				4027AA2B22A887BC00B22CD8 /* FileRetriever */,
 				407A868A22A41E3300588850 /* Router */,
 			);
 			path = Components;
@@ -595,6 +655,7 @@
 		407A86F222A466D100588850 /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
+				40106E4922A88DE6001F31F0 /* Protocols */,
 				404F301422A5DC0B00267175 /* Components */,
 				407A86F322A466DE00588850 /* Enums */,
 			);
@@ -632,6 +693,9 @@
 			isa = PBXGroup;
 			children = (
 				40A8AE2922A5C5EF00AB0539 /* DateFormatter+NetworkMeDateProviding.swift */,
+				4027AA1D22A8861500B22CD8 /* JSONDecoder+NetworkMeDecoding.swift */,
+				4027AA1F22A8862600B22CD8 /* JSONEncoder+NetworkMeEncoding.swift */,
+				4027AA2C22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -921,6 +985,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4027AA1E22A8861500B22CD8 /* JSONDecoder+NetworkMeDecoding.swift in Sources */,
 				4046A37122A7E5B400A5AF36 /* NetworkMe+TransformableKeyValuePair.swift in Sources */,
 				4046A37B22A7E5B400A5AF36 /* NetworkMeHeaderRequest+CacheControl.swift in Sources */,
 				4046A38722A7E5B400A5AF36 /* NetworkMeFileRetrieving.swift in Sources */,
@@ -934,8 +999,11 @@
 				4046A38022A7E5B400A5AF36 /* NetworkMeEndpointProtocol.swift in Sources */,
 				4046A38822A7E5B400A5AF36 /* NetworkMe+Router.swift in Sources */,
 				4046A38322A7E5B400A5AF36 /* NetworkMeHeaderProtocol.swift in Sources */,
+				4027AA2D22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */,
+				4027AA2022A8862600B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */,
 				4046A37822A7E5B400A5AF36 /* NetworkMeHeader+Response.swift in Sources */,
 				4046A37D22A7E5B400A5AF36 /* NetworkMeHeaderResponse+CacheControl.swift in Sources */,
+				4027AA2A22A886CB00B22CD8 /* NetworkMe+FileRetriever.swift in Sources */,
 				4046A37C22A7E5B400A5AF36 /* NetworkMeHeaderRequest+Authorization.swift in Sources */,
 				4046A37A22A7E5B400A5AF36 /* NetworkMe+Accept.swift in Sources */,
 				4046A37022A7E5B400A5AF36 /* DateFormatter+NetworkMeDateProviding.swift in Sources */,
@@ -956,6 +1024,7 @@
 			files = (
 				4046A38C22A7E5D100A5AF36 /* NetworkMeStub+Decoder.swift in Sources */,
 				4046A39322A7E5D100A5AF36 /* NetworkMeHeader_GenericTests.swift in Sources */,
+				40106E4B22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift in Sources */,
 				4046A39122A7E5D100A5AF36 /* NetworMeScheme_Tests.swift in Sources */,
 				4046A38A22A7E5D100A5AF36 /* NetworkMeStub+Endpoint.swift in Sources */,
 				4046A39022A7E5D100A5AF36 /* NetworkMeRouter_Tests.swift in Sources */,
@@ -968,6 +1037,7 @@
 				4046A39222A7E5D100A5AF36 /* NetworMeMethod_Tests.swift in Sources */,
 				4046A38B22A7E5D100A5AF36 /* NetworkMeStub+Encoder.swift in Sources */,
 				4046A38E22A7E5D100A5AF36 /* NetworkMeStub+URLSessionTask.swift in Sources */,
+				40106E5122A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -977,6 +1047,7 @@
 			files = (
 				404F307E22A5FC4A00267175 /* NetworkMeStub+Decoder.swift in Sources */,
 				404F308522A5FC4A00267175 /* NetworkMeHeader_GenericTests.swift in Sources */,
+				40106E4D22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift in Sources */,
 				404F308322A5FC4A00267175 /* NetworMeScheme_Tests.swift in Sources */,
 				404F307C22A5FC4A00267175 /* NetworkMeStub+Endpoint.swift in Sources */,
 				404F308222A5FC4A00267175 /* NetworkMeRouter_Tests.swift in Sources */,
@@ -989,6 +1060,7 @@
 				404F308422A5FC4A00267175 /* NetworMeMethod_Tests.swift in Sources */,
 				404F307D22A5FC4A00267175 /* NetworkMeStub+Encoder.swift in Sources */,
 				404F308022A5FC4A00267175 /* NetworkMeStub+URLSessionTask.swift in Sources */,
+				40106E5322A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -998,6 +1070,7 @@
 			files = (
 				404F308C22A5FC4B00267175 /* NetworkMeStub+Decoder.swift in Sources */,
 				404F309322A5FC4B00267175 /* NetworkMeHeader_GenericTests.swift in Sources */,
+				40106E4E22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift in Sources */,
 				404F309122A5FC4B00267175 /* NetworMeScheme_Tests.swift in Sources */,
 				404F308A22A5FC4B00267175 /* NetworkMeStub+Endpoint.swift in Sources */,
 				404F309022A5FC4B00267175 /* NetworkMeRouter_Tests.swift in Sources */,
@@ -1010,6 +1083,7 @@
 				404F309222A5FC4B00267175 /* NetworMeMethod_Tests.swift in Sources */,
 				404F308B22A5FC4B00267175 /* NetworkMeStub+Encoder.swift in Sources */,
 				404F308E22A5FC4B00267175 /* NetworkMeStub+URLSessionTask.swift in Sources */,
+				40106E5422A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1021,6 +1095,7 @@
 				404F307A22A5F83D00267175 /* NetworkMe_iOS.swift in Sources */,
 				404F306C22A5F83000267175 /* NetworkMeHeaderRequest+CacheControl.swift in Sources */,
 				404F307822A5F83000267175 /* NetworkMeFileRetrieving.swift in Sources */,
+				4027AA2822A8862F00B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */,
 				404F307222A5F83000267175 /* NetworkMeRouting.swift in Sources */,
 				404F307722A5F83000267175 /* NetworkMeDateProviding.swift in Sources */,
 				404F307322A5F83000267175 /* NetworkMeURLSessionProtocol.swift in Sources */,
@@ -1035,10 +1110,13 @@
 				404F306E22A5F83000267175 /* NetworkMeHeaderResponse+CacheControl.swift in Sources */,
 				404F306D22A5F83000267175 /* NetworkMeHeaderRequest+Authorization.swift in Sources */,
 				404F306B22A5F83000267175 /* NetworkMe+Accept.swift in Sources */,
+				4027AA3122A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */,
 				404F306122A5F83000267175 /* DateFormatter+NetworkMeDateProviding.swift in Sources */,
 				404F306422A5F83000267175 /* NetworMe+Scheme.swift in Sources */,
 				404F306622A5F83000267175 /* NetworkMe+Header.swift in Sources */,
+				4027AA3522A887E800B22CD8 /* NetworkMe+FileRetriever.swift in Sources */,
 				404F306722A5F83000267175 /* NetworkMeHeader+Generic.swift in Sources */,
+				4027AA2722A8862F00B22CD8 /* JSONDecoder+NetworkMeDecoding.swift in Sources */,
 				404F307522A5F83000267175 /* NetworkMeDecoding.swift in Sources */,
 				404F305D22A5F7F700267175 /* NetworkMe_watchOS.swift in Sources */,
 				404F306322A5F83000267175 /* NetworkMe+TaskType.swift in Sources */,
@@ -1058,12 +1136,16 @@
 				407A869C22A424E400588850 /* NetworkMeHeaderResponse+CacheControl.swift in Sources */,
 				407A86A422A42BB900588850 /* NetworkMeEncoding.swift in Sources */,
 				407A869622A4209300588850 /* NetworkMe+Accept.swift in Sources */,
+				4027AA2122A8862C00B22CD8 /* JSONDecoder+NetworkMeDecoding.swift in Sources */,
 				407A869022A41E5E00588850 /* NetworkMe+Method.swift in Sources */,
 				407A869A22A4232300588850 /* NetworkMeHeaderRequest+CacheControl.swift in Sources */,
 				40A8AE2722A5C5C500AB0539 /* NetworkMeDateProviding.swift in Sources */,
+				4027AA2222A8862C00B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */,
 				407A867E22A41D9300588850 /* NetworkMeRouting.swift in Sources */,
 				40A8AE3122A5CC3100AB0539 /* NetworkMeHeader+Generic.swift in Sources */,
 				407A868122A41DA900588850 /* NetworkMe+Router.swift in Sources */,
+				4027AA2E22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */,
+				4027AA3222A887E500B22CD8 /* NetworkMe+FileRetriever.swift in Sources */,
 				407A867422A41D4B00588850 /* NetworkMe_iOS.swift in Sources */,
 				407A868322A41DBA00588850 /* NetworkMeURLSessionProtocol.swift in Sources */,
 				407A869822A4222E00588850 /* NetworkMeHeaderProtocol.swift in Sources */,
@@ -1090,6 +1172,7 @@
 				407A86B522A465B700588850 /* NetworkMe+ContentType.swift in Sources */,
 				404F302D22A5F70C00267175 /* NetworkMeHeader+Response.swift in Sources */,
 				404F302E22A5F70C00267175 /* NetworkMeDateProviding.swift in Sources */,
+				4027AA2422A8862D00B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */,
 				407A86C122A465B700588850 /* NetworkMeEncoding.swift in Sources */,
 				407A86AE22A465A200588850 /* NetworkMe_tvOS.swift in Sources */,
 				407A86C222A465B700588850 /* NetworkMe+Router.swift in Sources */,
@@ -1104,10 +1187,13 @@
 				404F302A22A5F70C00267175 /* NetworkMe+TaskType.swift in Sources */,
 				407A86BB22A465B700588850 /* NetworkMeRouter+NetworkError.swift in Sources */,
 				404F302922A5F70C00267175 /* NetworkMe+TransformableKeyValuePair.swift in Sources */,
+				4027AA2F22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */,
 				407A86B622A465B700588850 /* NetworkMe+Accept.swift in Sources */,
 				407A86B222A465B700588850 /* NetworMe+Scheme.swift in Sources */,
 				404F302C22A5F70C00267175 /* NetworkMeHeader+Request.swift in Sources */,
+				4027AA3322A887E600B22CD8 /* NetworkMe+FileRetriever.swift in Sources */,
 				407A86C022A465B700588850 /* NetworkMeDecoding.swift in Sources */,
+				4027AA2322A8862D00B22CD8 /* JSONDecoder+NetworkMeDecoding.swift in Sources */,
 				407A86BD22A465B700588850 /* NetworkMeRouting.swift in Sources */,
 				407A86B822A465B700588850 /* NetworkMeHeaderRequest+Authorization.swift in Sources */,
 				407A86BA22A465B700588850 /* NetworkMeHeaderGeneric+Connection.swift in Sources */,
@@ -1125,6 +1211,7 @@
 				407A86D422A465D400588850 /* NetworkMe+ContentType.swift in Sources */,
 				404F303522A5F70D00267175 /* NetworkMeHeader+Response.swift in Sources */,
 				404F303622A5F70D00267175 /* NetworkMeDateProviding.swift in Sources */,
+				4027AA2622A8862E00B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */,
 				407A86E022A465D400588850 /* NetworkMeEncoding.swift in Sources */,
 				407A86CD22A465CA00588850 /* NetworkMe_macOS.m in Sources */,
 				407A86E122A465D400588850 /* NetworkMe+Router.swift in Sources */,
@@ -1139,10 +1226,13 @@
 				404F303222A5F70D00267175 /* NetworkMe+TaskType.swift in Sources */,
 				407A86DA22A465D400588850 /* NetworkMeRouter+NetworkError.swift in Sources */,
 				404F303122A5F70D00267175 /* NetworkMe+TransformableKeyValuePair.swift in Sources */,
+				4027AA3022A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */,
 				407A86D522A465D400588850 /* NetworkMe+Accept.swift in Sources */,
 				407A86D122A465D400588850 /* NetworMe+Scheme.swift in Sources */,
 				404F303422A5F70D00267175 /* NetworkMeHeader+Request.swift in Sources */,
+				4027AA3422A887E700B22CD8 /* NetworkMe+FileRetriever.swift in Sources */,
 				407A86DF22A465D400588850 /* NetworkMeDecoding.swift in Sources */,
+				4027AA2522A8862E00B22CD8 /* JSONDecoder+NetworkMeDecoding.swift in Sources */,
 				407A86DC22A465D400588850 /* NetworkMeRouting.swift in Sources */,
 				407A86D722A465D400588850 /* NetworkMeHeaderRequest+Authorization.swift in Sources */,
 				407A86D922A465D400588850 /* NetworkMeHeaderGeneric+Connection.swift in Sources */,
@@ -1158,6 +1248,7 @@
 			files = (
 				404F301322A5D97A00267175 /* NetworkHeader_ResponseTests.swift in Sources */,
 				407A86F522A4670500588850 /* NetworMeScheme_Tests.swift in Sources */,
+				40106E4C22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift in Sources */,
 				404F302722A5F4C600267175 /* NetworkMeStub+FileRetriever.swift in Sources */,
 				407A86F722A4681300588850 /* NetworMeMethod_Tests.swift in Sources */,
 				40A8AE2D22A5C71800AB0539 /* NetworkMeStub+DateFormatter.swift in Sources */,
@@ -1170,6 +1261,7 @@
 				404F302122A5E48600267175 /* NetworkMeStub+URLSession.swift in Sources */,
 				404F301F22A5E2AF00267175 /* NetworkMeStub+Decoder.swift in Sources */,
 				40A8AE3722A5CC7300AB0539 /* NetworkMeHeader_RequestTests.swift in Sources */,
+				40106E5222A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
