@@ -52,13 +52,13 @@ let router: NetworkMe.Router = NetworkMe.Router(
             urlSession: URLSession.shared,
             fileRetriever: NetworkMe.FileRetriever())
 
-        router.request(endpoint: Endpoint.simpleGet) { (result: Result<[Post], NetworkMe.Router.NetworkError>) in
-            
-            switch result {
-            case .success(let response):
-                print(response)
-            case .failure(let error):
-                print(error)
-            }
-        }
+router.request(endpoint: Endpoint.simpleGet) { (result: Result<[Post], NetworkMe.Router.NetworkError>) in
+    
+    switch result {
+    case .success(let response):
+        print(response)
+    case .failure(let error):
+        print(error)
+    }
+}
 ```
