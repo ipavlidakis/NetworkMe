@@ -15,6 +15,13 @@ extension NetworkMe {
         private let urlSession: NetworkMeURLSessionProtocol
         private let fileRetriever: NetworkMeFileRetrieving
 
+        public convenience init() {
+
+            self.init(
+                urlSession: URLSession.shared,
+                fileRetriever: NetworkMe.FileRetriever())
+        }
+
         public init(
             urlSession: NetworkMeURLSessionProtocol,
             fileRetriever: NetworkMeFileRetrieving) {
