@@ -34,7 +34,7 @@ struct CreatePost: Codable {
 }
 ```
 
-# Endpoints
+## Endpoints
 ```swift
 import Foundation
 import NetworkMe
@@ -43,6 +43,8 @@ enum Endpoint {
 
     case simpleGet
     case simplePost(userId: Int, title: String, body: String)
+    case simplePut(id: Int, userId: Int, title: String, body: String)
+    case simpleDelete(id: Int)
 }
 
 extension Endpoint: NetworkMeEndpointProtocol {
@@ -53,24 +55,34 @@ extension Endpoint: NetworkMeEndpointProtocol {
         case .simpleGet,
              .simplePost:
             return URL(string: "https://jsonplaceholder.typicode.com/posts")!
+        case .simplePut(let id):
+            return URL(string: "https://jsonplaceholder.typicode.com/posts/\(id)")!
+        case .simpleDelete(let id):
+            return URL(string: "https://jsonplaceholder.typicode.com/posts/\(id)")!
         }
     }
 
     var taskType: NetworkMe.TaskType {
         switch self {
         case .simpleGet,
-             .simplePost:
+             .simplePost, 
+             .simplePut, 
+             .simpleDelete:
             return .data
         }
     }
 
     var body: Data? {
         switch self {
-        case .simpleGet:
+        case .simpleGet, 
+            .simpleDelete:
             return nil
         case .simplePost(let userId, let title, let body):
             return try? JSONEncoder().encode(
                 CreatePost(userId: userId, title: title, body: body))
+        case .simplePut(let id,let userId, let title, let body):
+            return try? JSONEncoder().encode(
+                Post(id: id, userId: userId, title: title, body: body))
         }
     }
 
@@ -80,6 +92,10 @@ extension Endpoint: NetworkMeEndpointProtocol {
             return .get
         case .simplePost:
             return .post
+        case .simplePut:
+            return .put
+        case .simpleDelete:
+            return .delete
         }
     }
     var headers: [NetworkMeHeaderProtocol] {
@@ -90,32 +106,52 @@ extension Endpoint: NetworkMeEndpointProtocol {
 }
 ```
 
-# ViewController
-## Execution method
+## ViewController
+### Execution method
+
+#### Perform without completion
+```swift
+func performRequestWithoutCompletion(for endpoint: Endpoint) {
+
+    NetworkMe.Router().request(endpoint: endpoint)
+}
+```
+
+#### Perform with completion
 ```swift
 func performRequest<T: Decodable>(for endpoint: Endpoint, resultItem: T.Type) {
 
-        let router: NetworkMe.Router = NetworkMe.Router()
-
-        router.request(endpoint: endpoint) { (result: Result<T, NetworkMe.Router.NetworkError>) in
-            switch result {
-            case .success(let response):
-                print(response)
-            case .failure(let error):
-                print(error)
-            }
+    NetworkMe.Router().request(
+        endpoint: endpoint) { (result: Result<T, NetworkMe.Router.NetworkError>) in
+        
+        switch result {
+        case .success(let response):
+            print(response)
+        case .failure(let error):
+            print(error)
         }
     }
+}
 ```
 
-## Requests
-### Simple Get
+### Requests
+#### Simple Get
 ```swift
 performRequest(for: .simpleGet, resultItem: [Post].self)
 ```
-### Simple Post
+#### Simple Post
 ```swift
 performRequest(
     for: .simplePost(userId: 10, title: "Simple post", body: "A simple post request example"),
     resultItem: Post.self)
+```
+#### Simple Put
+```swift
+performRequest(
+    for: .simplePut(id: 10, userId: 10, title: "Simple put", body: "A simple put request example"),
+    resultItem: Post.self)
+```
+#### Simple Delete
+```swift
+performRequest(for: .simpleDelete(id: 10))
 ```

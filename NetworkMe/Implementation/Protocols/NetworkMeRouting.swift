@@ -10,7 +10,10 @@ import Foundation
 
 public protocol NetworkMeRouting {
 
-    func request<ResultItem: Codable>(
+    func request(
+        endpoint: NetworkMeEndpointProtocol)
+
+    func request<ResultItem: Decodable>(
         endpoint: NetworkMeEndpointProtocol,
         completion: @escaping (Result<ResultItem, NetworkMe.Router.NetworkError>) -> Void)
 }

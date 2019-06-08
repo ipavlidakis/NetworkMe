@@ -164,6 +164,11 @@
 		404F309322A5FC4B00267175 /* NetworkMeHeader_GenericTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2122A5C0C900AB0539 /* NetworkMeHeader_GenericTests.swift */; };
 		404F309422A5FC4B00267175 /* NetworkMeHeader_RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3622A5CC7300AB0539 /* NetworkMeHeader_RequestTests.swift */; };
 		404F309522A5FC4B00267175 /* NetworkHeader_ResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301222A5D97A00267175 /* NetworkHeader_ResponseTests.swift */; };
+		40665F6622ABBE8000703BD0 /* NetworkMe+EmptyDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F6522ABBE8000703BD0 /* NetworkMe+EmptyDecodable.swift */; };
+		40665F6722ABBF0E00703BD0 /* NetworkMe+EmptyDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F6522ABBE8000703BD0 /* NetworkMe+EmptyDecodable.swift */; };
+		40665F6822ABBF0F00703BD0 /* NetworkMe+EmptyDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F6522ABBE8000703BD0 /* NetworkMe+EmptyDecodable.swift */; };
+		40665F6922ABBF1000703BD0 /* NetworkMe+EmptyDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F6522ABBE8000703BD0 /* NetworkMe+EmptyDecodable.swift */; };
+		40665F6A22ABBF1100703BD0 /* NetworkMe+EmptyDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F6522ABBE8000703BD0 /* NetworkMe+EmptyDecodable.swift */; };
 		407A867422A41D4B00588850 /* NetworkMe_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A867322A41D4B00588850 /* NetworkMe_iOS.swift */; };
 		407A867C22A41D8000588850 /* NetworkMeEndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A867B22A41D8000588850 /* NetworkMeEndpointProtocol.swift */; };
 		407A867E22A41D9300588850 /* NetworkMeRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A867D22A41D9300588850 /* NetworkMeRouting.swift */; };
@@ -325,6 +330,7 @@
 		404F304F22A5F74600267175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		404F305A22A5F7F700267175 /* libNetworkMe watchOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libNetworkMe watchOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		404F305C22A5F7F700267175 /* NetworkMe_watchOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMe_watchOS.swift; sourceTree = "<group>"; };
+		40665F6522ABBE8000703BD0 /* NetworkMe+EmptyDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+EmptyDecodable.swift"; sourceTree = "<group>"; };
 		407A867022A41D4B00588850 /* libNetworkMe iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libNetworkMe iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		407A867322A41D4B00588850 /* NetworkMe_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMe_iOS.swift; sourceTree = "<group>"; };
 		407A867B22A41D8000588850 /* NetworkMeEndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeEndpointProtocol.swift; sourceTree = "<group>"; };
@@ -685,6 +691,7 @@
 			isa = PBXGroup;
 			children = (
 				40A8AE2422A5C2E700AB0539 /* NetworkMe+TransformableKeyValuePair.swift */,
+				40665F6522ABBE8000703BD0 /* NetworkMe+EmptyDecodable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1003,6 +1010,7 @@
 				4027AA2022A8862600B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */,
 				4046A37822A7E5B400A5AF36 /* NetworkMeHeader+Response.swift in Sources */,
 				4046A37D22A7E5B400A5AF36 /* NetworkMeHeaderResponse+CacheControl.swift in Sources */,
+				40665F6622ABBE8000703BD0 /* NetworkMe+EmptyDecodable.swift in Sources */,
 				4027AA2A22A886CB00B22CD8 /* NetworkMe+FileRetriever.swift in Sources */,
 				4046A37C22A7E5B400A5AF36 /* NetworkMeHeaderRequest+Authorization.swift in Sources */,
 				4046A37A22A7E5B400A5AF36 /* NetworkMe+Accept.swift in Sources */,
@@ -1097,6 +1105,7 @@
 				404F307822A5F83000267175 /* NetworkMeFileRetrieving.swift in Sources */,
 				4027AA2822A8862F00B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */,
 				404F307222A5F83000267175 /* NetworkMeRouting.swift in Sources */,
+				40665F6A22ABBF1100703BD0 /* NetworkMe+EmptyDecodable.swift in Sources */,
 				404F307722A5F83000267175 /* NetworkMeDateProviding.swift in Sources */,
 				404F307322A5F83000267175 /* NetworkMeURLSessionProtocol.swift in Sources */,
 				404F306522A5F83000267175 /* NetworkMe+Method.swift in Sources */,
@@ -1132,6 +1141,7 @@
 			files = (
 				40A8AE3522A5CC5500AB0539 /* NetworkMeHeader+Response.swift in Sources */,
 				4046A39922A7E7DA00A5AF36 /* NetworkMe.swift in Sources */,
+				40665F6722ABBF0E00703BD0 /* NetworkMe+EmptyDecodable.swift in Sources */,
 				404F301722A5DC8900267175 /* NetworkMe+TaskType.swift in Sources */,
 				407A869C22A424E400588850 /* NetworkMeHeaderResponse+CacheControl.swift in Sources */,
 				407A86A422A42BB900588850 /* NetworkMeEncoding.swift in Sources */,
@@ -1174,6 +1184,7 @@
 				404F302E22A5F70C00267175 /* NetworkMeDateProviding.swift in Sources */,
 				4027AA2422A8862D00B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */,
 				407A86C122A465B700588850 /* NetworkMeEncoding.swift in Sources */,
+				40665F6822ABBF0F00703BD0 /* NetworkMe+EmptyDecodable.swift in Sources */,
 				407A86AE22A465A200588850 /* NetworkMe_tvOS.swift in Sources */,
 				407A86C222A465B700588850 /* NetworkMe+Router.swift in Sources */,
 				407A86B922A465B700588850 /* NetworkMeHeaderResponse+CacheControl.swift in Sources */,
@@ -1213,6 +1224,7 @@
 				404F303622A5F70D00267175 /* NetworkMeDateProviding.swift in Sources */,
 				4027AA2622A8862E00B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */,
 				407A86E022A465D400588850 /* NetworkMeEncoding.swift in Sources */,
+				40665F6922ABBF1000703BD0 /* NetworkMe+EmptyDecodable.swift in Sources */,
 				407A86CD22A465CA00588850 /* NetworkMe_macOS.m in Sources */,
 				407A86E122A465D400588850 /* NetworkMe+Router.swift in Sources */,
 				407A86D822A465D400588850 /* NetworkMeHeaderResponse+CacheControl.swift in Sources */,

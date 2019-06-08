@@ -34,15 +34,22 @@ extension NetworkMe {
 
 extension NetworkMe.Router: NetworkMeRouting {
 
+    public func request(endpoint: NetworkMeEndpointProtocol) {
+
+        request(
+            endpoint: endpoint,
+            completion: { (result: Result<NetworkMe.EmptyDecodable, NetworkMe.Router.NetworkError>) in })
+    }
+
     public func request<ResultItem: Decodable>(
         endpoint: NetworkMeEndpointProtocol,
         completion: @escaping (Result<ResultItem, NetworkError>) -> Void) {
 
         guard
             var components = URLComponents(url: endpoint.url, resolvingAgainstBaseURL: false)
-            else {
-                completion(.failure(NetworkError.invalidEndpoint(endpoint)))
-                return
+        else {
+            completion(.failure(NetworkMe.Router.NetworkError.invalidEndpoint(endpoint)))
+            return
         }
 
         components.scheme = endpoint.scheme.rawValue
@@ -50,9 +57,9 @@ extension NetworkMe.Router: NetworkMeRouting {
 
         guard
             let url = components.url
-            else {
-                completion(.failure(NetworkError.invalidURLComponents(components)))
-                return
+        else {
+            completion(.failure(NetworkMe.Router.NetworkError.invalidURLComponents(components)))
+            return
         }
 
         var request = URLRequest(

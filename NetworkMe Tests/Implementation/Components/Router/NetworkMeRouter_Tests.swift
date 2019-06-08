@@ -24,11 +24,157 @@ final class NetworkMeRouter_Tests: XCTestCase {
 
     private struct CodableItem: Equatable, Codable { let value: String }
 
-    // MARK: -
+    // MARK: - Request without completion
+    // MARK: Data task
 
-    // MARK: - Data task
+    func test_request_withoutCompletion_dataTask_resumeWasCalledOnURLSessionTask() {
 
-    func test_request_dataTask_resumeWasCalledOnURLSessionTask() {
+        let stubURLSession = NetworkMe.Stub.URLSession()
+        let task = NetworkMe.Stub.URLSessionDataTask()
+        stubURLSession.stubDataTaskResult = task
+        let stubFileRetriever = NetworkMe.Stub.FileRetriever()
+        let router = NetworkMe.Router(
+            urlSession: stubURLSession,
+            fileRetriever: stubFileRetriever)
+        let endpoint = NetworkMe.Stub.Endpoint(
+            stubQueryItems: [URLQueryItem(name: "key", value: "value")],
+            stubScheme: NetworkMe.Scheme.https,
+            stubHeaders: [NetworkMe.Header.Request.contentType(.atomXML)]
+        )
+
+        router.request(endpoint: endpoint)
+
+        XCTAssert(task.resumeWasCalled)
+    }
+
+    func test_request_withoutCompletion_dataTask_correctRequestPassedToURLSession() {
+
+        let stubURLSession = NetworkMe.Stub.URLSession()
+        let stubFileRetriever = NetworkMe.Stub.FileRetriever()
+        let router = NetworkMe.Router(
+            urlSession: stubURLSession,
+            fileRetriever: stubFileRetriever)
+        let endpoint = NetworkMe.Stub.Endpoint(
+            stubQueryItems: [URLQueryItem(name: "key", value: "value")],
+            stubScheme: NetworkMe.Scheme.https,
+            stubHeaders: [NetworkMe.Header.Request.contentType(.atomXML)]
+        )
+
+        router.request(endpoint: endpoint)
+
+        XCTAssertEqual(stubURLSession.dataTaskWasCalled?.request.cachePolicy, .useProtocolCachePolicy)
+        XCTAssertEqual(endpoint.timesCachePolicyWasCalled, 1)
+        XCTAssertEqual(stubURLSession.dataTaskWasCalled?.request.timeoutInterval, 0)
+        XCTAssertEqual(endpoint.timesTimeoutIntervalWasCalled, 1)
+        XCTAssertEqual(stubURLSession.dataTaskWasCalled?.request.httpMethod?.lowercased(), endpoint.method.rawValue)
+        XCTAssertEqual(stubURLSession.dataTaskWasCalled?.request.allHTTPHeaderFields, ["Content-Type": "application/atom+xml"])
+        XCTAssertEqual(stubURLSession.dataTaskWasCalled?.request.url, URL(string: "https://test.com?key=value")!)
+    }
+
+    // MARK: Upload task
+
+    func test_upload_withoutCompletion_dataTask_resumeWasCalledOnURLSessionTask() {
+
+        let stubURLSession = NetworkMe.Stub.URLSession()
+        let task = NetworkMe.Stub.URLSessionUploadTask()
+        stubURLSession.stubUploadTaskResult = task
+        let stubFileRetriever = NetworkMe.Stub.FileRetriever()
+        let router = NetworkMe.Router(
+            urlSession: stubURLSession,
+            fileRetriever: stubFileRetriever)
+        let endpoint = NetworkMe.Stub.Endpoint(
+            stubTaskType: .upload,
+            stubQueryItems: [URLQueryItem(name: "key", value: "value")],
+            stubScheme: NetworkMe.Scheme.https,
+            stubHeaders: [NetworkMe.Header.Request.contentType(.atomXML)]
+        )
+
+        router.request(endpoint: endpoint)
+
+        XCTAssert(task.resumeWasCalled)
+    }
+
+    func test_request_withoutCompletion_uploadTask_correctRequestPassedToURLSession() {
+
+        let stubURLSession = NetworkMe.Stub.URLSession()
+        let stubFileRetriever = NetworkMe.Stub.FileRetriever()
+        let router = NetworkMe.Router(
+            urlSession: stubURLSession,
+            fileRetriever: stubFileRetriever)
+        let stubData = Data(base64Encoded: "test")!
+        let endpoint = NetworkMe.Stub.Endpoint(
+            stubTaskType: .upload,
+            stubBody: stubData,
+            stubQueryItems: [URLQueryItem(name: "key", value: "value")],
+            stubScheme: NetworkMe.Scheme.https,
+            stubHeaders: [NetworkMe.Header.Request.contentType(.atomXML)]
+        )
+
+        router.request(endpoint: endpoint)
+
+        XCTAssertEqual(stubURLSession.uploadTaskWasCalled?.request.cachePolicy, .useProtocolCachePolicy)
+        XCTAssertEqual(endpoint.timesCachePolicyWasCalled, 1)
+        XCTAssertEqual(stubURLSession.uploadTaskWasCalled?.request.timeoutInterval, 0)
+        XCTAssertEqual(endpoint.timesTimeoutIntervalWasCalled, 1)
+        XCTAssertEqual(stubURLSession.uploadTaskWasCalled?.request.httpMethod?.lowercased(), endpoint.method.rawValue)
+        XCTAssertEqual(stubURLSession.uploadTaskWasCalled?.request.allHTTPHeaderFields, ["Content-Type": "application/atom+xml"])
+        XCTAssertEqual(stubURLSession.uploadTaskWasCalled?.request.url, URL(string: "https://test.com?key=value")!)
+        XCTAssertEqual(stubURLSession.uploadTaskWasCalled?.data, stubData)
+    }
+
+    // MARK: Download task
+
+    func test_request_withoutCompletion_downloadTask_resumeWasCalledOnURLSessionTask() {
+
+        let stubURLSession = NetworkMe.Stub.URLSession()
+        let task = NetworkMe.Stub.URLSessionDownloadTask()
+        stubURLSession.stubDownloadTaskResult = task
+        let stubFileRetriever = NetworkMe.Stub.FileRetriever()
+        let router = NetworkMe.Router(
+            urlSession: stubURLSession,
+            fileRetriever: stubFileRetriever)
+        let endpoint = NetworkMe.Stub.Endpoint(
+            stubTaskType: .download,
+            stubQueryItems: [URLQueryItem(name: "key", value: "value")],
+            stubScheme: NetworkMe.Scheme.https,
+            stubHeaders: [NetworkMe.Header.Request.contentType(.atomXML)]
+        )
+
+        router.request(endpoint: endpoint)
+
+        XCTAssert(task.resumeWasCalled)
+    }
+
+    func test_request_withoutCompletion_downloadTask_correctRequestPassedToURLSession() {
+
+        let stubURLSession = NetworkMe.Stub.URLSession()
+        let stubFileRetriever = NetworkMe.Stub.FileRetriever()
+        let router = NetworkMe.Router(
+            urlSession: stubURLSession,
+            fileRetriever: stubFileRetriever)
+        let endpoint = NetworkMe.Stub.Endpoint(
+            stubTaskType: .download,
+            stubQueryItems: [URLQueryItem(name: "key", value: "value")],
+            stubScheme: NetworkMe.Scheme.https,
+            stubHeaders: [NetworkMe.Header.Request.contentType(.atomXML)]
+        )
+
+        router.request(endpoint: endpoint)
+
+        XCTAssertEqual(stubURLSession.downloadTaskWasCalled?.request.cachePolicy, .useProtocolCachePolicy)
+        XCTAssertEqual(endpoint.timesCachePolicyWasCalled, 1)
+        XCTAssertEqual(stubURLSession.downloadTaskWasCalled?.request.timeoutInterval, 0)
+        XCTAssertEqual(endpoint.timesTimeoutIntervalWasCalled, 1)
+        XCTAssertEqual(stubURLSession.downloadTaskWasCalled?.request.httpMethod?.lowercased(), endpoint.method.rawValue)
+        XCTAssertEqual(stubURLSession.downloadTaskWasCalled?.request.allHTTPHeaderFields, ["Content-Type": "application/atom+xml"])
+        XCTAssertEqual(stubURLSession.downloadTaskWasCalled?.request.url, URL(string: "https://test.com?key=value")!)
+    }
+
+    // MARK: - Request with completion
+
+    // MARK: Data task
+
+    func test_request_withCompletion_dataTask_resumeWasCalledOnURLSessionTask() {
 
         let stubURLSession = NetworkMe.Stub.URLSession()
         let task = NetworkMe.Stub.URLSessionDataTask()
@@ -48,7 +194,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         XCTAssert(task.resumeWasCalled)
     }
 
-    func test_request_dataTask_correctRequestPassedToURLSession() {
+    func test_request_withCompletion_dataTask_correctRequestPassedToURLSession() {
 
         let stubURLSession = NetworkMe.Stub.URLSession()
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
@@ -72,7 +218,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         XCTAssertEqual(stubURLSession.dataTaskWasCalled?.request.url, URL(string: "https://test.com?key=value")!)
     }
 
-    func test_request_dataTask_urlSessionReturnsData_correctdataPassedToDecoder() {
+    func test_request_withCompletion_dataTask_urlSessionReturnsData_correctDataPassedToDecoder() {
 
         let stubURLSession = NetworkMe.Stub.URLSession()
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
@@ -88,7 +234,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         XCTAssertEqual(endpoint.stubDecoder.decodeWasCalled?.data, stubDataResult)
     }
 
-    func test_request_dataTask_decoderThrows_returnsParsingError() {
+    func test_request_withCompletion_dataTask_decoderThrows_returnsParsingError() {
 
         let stubURLSession = NetworkMe.Stub.URLSession()
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
@@ -118,7 +264,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         }
     }
 
-    func test_request_dataTask_decoderSucceeds_returnsSuccessWithExpectedItem() {
+    func test_request_withCompletion_dataTask_decoderSucceeds_returnsSuccessWithExpectedItem() {
 
         let stubURLSession = NetworkMe.Stub.URLSession()
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
@@ -147,9 +293,9 @@ final class NetworkMeRouter_Tests: XCTestCase {
         }
     }
 
-    // MARK: - Upload task
+    // MARK: Upload task
 
-    func test_upload_dataTask_resumeWasCalledOnURLSessionTask() {
+    func test_upload_withCompletion_dataTask_resumeWasCalledOnURLSessionTask() {
 
         let stubURLSession = NetworkMe.Stub.URLSession()
         let task = NetworkMe.Stub.URLSessionUploadTask()
@@ -170,7 +316,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         XCTAssert(task.resumeWasCalled)
     }
 
-    func test_request_uploadTask_correctRequestPassedToURLSession() {
+    func test_request_withCompletion_uploadTask_correctRequestPassedToURLSession() {
 
         let stubURLSession = NetworkMe.Stub.URLSession()
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
@@ -198,7 +344,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         XCTAssertEqual(stubURLSession.uploadTaskWasCalled?.data, stubData)
     }
 
-    func test_request_uploadTask_urlSessionReturnsData_correctdataPassedToDecoder() {
+    func test_request_withCompletion_uploadTask_urlSessionReturnsData_correctDataPassedToDecoder() {
 
         let stubURLSession = NetworkMe.Stub.URLSession()
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
@@ -214,7 +360,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         XCTAssertEqual(endpoint.stubDecoder.decodeWasCalled?.data, stubDataResult)
     }
 
-    func test_request_uploadTask_decoderThrows_returnsParsingError() {
+    func test_request_withCompletion_uploadTask_decoderThrows_returnsParsingError() {
 
         let stubURLSession = NetworkMe.Stub.URLSession()
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
@@ -244,7 +390,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         }
     }
 
-    func test_request_uploadTask_decoderSucceeds_returnsSuccessWithExpectedItem() {
+    func test_request_withCompletion_uploadTask_decoderSucceeds_returnsSuccessWithExpectedItem() {
 
         let stubURLSession = NetworkMe.Stub.URLSession()
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
@@ -273,9 +419,9 @@ final class NetworkMeRouter_Tests: XCTestCase {
         }
     }
 
-    // MARK: - Download task
+    // MARK: Download task
 
-    func test_request_downloadTask_resumeWasCalledOnURLSessionTask() {
+    func test_request_withCompletion_downloadTask_resumeWasCalledOnURLSessionTask() {
 
         let stubURLSession = NetworkMe.Stub.URLSession()
         let task = NetworkMe.Stub.URLSessionDownloadTask()
@@ -296,7 +442,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         XCTAssert(task.resumeWasCalled)
     }
 
-    func test_request_downloadTask_correctRequestPassedToURLSession() {
+    func test_request_withCompletion_downloadTask_correctRequestPassedToURLSession() {
 
         let stubURLSession = NetworkMe.Stub.URLSession()
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
@@ -321,7 +467,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         XCTAssertEqual(stubURLSession.downloadTaskWasCalled?.request.url, URL(string: "https://test.com?key=value")!)
     }
 
-    func test_request_downloadTask_urlSessionReturnsData_correctURLPassedToFileRetriever() {
+    func test_request_withCompletion_downloadTask_urlSessionReturnsData_correctURLPassedToFileRetriever() {
 
         let stubURLSession = NetworkMe.Stub.URLSession()
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
@@ -337,7 +483,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         XCTAssertEqual(stubFileRetriever.fetchWasCalledWithURL, stubResult)
     }
 
-    func test_request_downloadTask_urlSessionReturnsData_correctdataPassedToDecoder() {
+    func test_request_withCompletion_downloadTask_urlSessionReturnsData_correctDataPassedToDecoder() {
 
         let stubURLSession = NetworkMe.Stub.URLSession()
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
@@ -355,7 +501,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         XCTAssertEqual(endpoint.stubDecoder.decodeWasCalled?.data, stubDataResult)
     }
 
-    func test_request_downloadTask_decoderThrows_returnsParsingError() {
+    func test_request_withCompletion_downloadTask_decoderThrows_returnsParsingError() {
 
         let stubURLSession = NetworkMe.Stub.URLSession()
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
@@ -385,7 +531,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         }
     }
 
-    func test_request_downloadTask_decoderSucceeds_returnsSuccessWithExpectedItem() {
+    func test_request_withCompletion_downloadTask_decoderSucceeds_returnsSuccessWithExpectedItem() {
 
         let stubURLSession = NetworkMe.Stub.URLSession()
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
