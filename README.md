@@ -152,5 +152,5 @@ performRequest(
 ```
 #### Simple Delete
 ```swift
-performRequest(for: .simpleDelete(id: 10))
+performRequestWithoutCompletion(for: .simpleDelete(id: 10))
 ```
