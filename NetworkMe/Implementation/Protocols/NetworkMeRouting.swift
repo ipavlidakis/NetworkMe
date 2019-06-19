@@ -15,5 +15,5 @@ public protocol NetworkMeRouting {
 
     func request<ResultItem: Decodable>(
         endpoint: NetworkMeEndpointProtocol,
-        completion: @escaping (Result<ResultItem, NetworkMe.Router.NetworkError>) -> Void)
+        completion: @escaping (Result<ResultItem, NetworkMe.Router.NetworkError>, [NetworkMe.Header.Response]?) -> Void)
 }

@@ -16,6 +16,6 @@ extension NetworkMe.Router {
         case invalidURLComponents(_ components: URLComponents)
         case noData
         case parsing(_ error: Error)
-        case unauthorized
+        case responseValidationFailed(_ response: URLResponse, _ error: Error)
     }
 }

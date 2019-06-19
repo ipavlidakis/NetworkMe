@@ -28,7 +28,11 @@ public protocol NetworkMeEndpointProtocol {
 
     var decoder: NetworkMeDecoding { get }
 
-    var headers: [NetworkMeHeaderProtocol] { get }
+    var requestHeaders: [NetworkMeHeaderProtocol] { get }
+
+    var responseValidator: NetworMeResponseValidatorProtocol { get }
+
+    var responseHeadersParser: NetworkMeHeaderParserProtocol { get }
 }
 
 public extension NetworkMeEndpointProtocol {
@@ -49,5 +53,15 @@ public extension NetworkMeEndpointProtocol {
 
     var decoder: NetworkMeDecoding { return JSONDecoder() }
 
-    var headers: [NetworkMeHeaderProtocol] { return [] }
+    var requestHeaders: [NetworkMeHeaderProtocol] { return [] }
+
+    var responseValidator: NetworMeResponseValidatorProtocol {
+
+        return NetworkMe.HTTPResponseCodeValidator()
+    }
+
+    var responseHeadersParser: NetworkMeHeaderParserProtocol {
+
+        return NetworkMe.Response.HeaderParser()
+    }
 }

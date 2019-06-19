@@ -10,7 +10,7 @@ import Foundation
 
 public extension NetworkMe.Header.Response {
 
-    enum Accept: String, CaseIterable {
+    enum Accept: String, CaseIterable, RawRepresentable {
 
         case formUnencoded = "application/x-www-form-urlencoded"
         case xml = "application/xml"

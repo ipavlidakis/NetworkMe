@@ -10,13 +10,36 @@ import Foundation
 
 public extension NetworkMe.Header {
 
-    enum Response: NetworkMeHeaderProtocol {
+    enum Response: NetworkMeHeaderProtocol, RawRepresentable {
+
+        public typealias RawValue = NetworkMe.TransformableKeyValuePair<String, String>
+
+        public init?(rawValue: NetworkMe.TransformableKeyValuePair<String, String>) {
+            var result: NetworkMe.Header.Response?
+            switch rawValue.key {
+            case "Cache-Control":
+                if let value = NetworkMe.Header.Response.CacheControl.init(rawValue: rawValue.value) {
+                    result = .cacheControl(value)
+                }
+            case "Accept":
+                if let value = NetworkMe.Header.Response.Accept.init(rawValue: rawValue.value) {
+                    result = .accept(value)
+                }
+            default:
+                break
+            }
+            self = result ?? .custom(key: rawValue.key, value: rawValue.value)
+        }
 
         case cacheControl(_ cacheControls: NetworkMe.Header.Response.CacheControl)
         case custom(key: String, value: String)
         case accept(_ accept: NetworkMe.Header.Response.Accept)
 
         public var keyPair: NetworkMe.TransformableKeyValuePair<String, String> {
+            return rawValue
+        }
+
+        public var rawValue: NetworkMe.TransformableKeyValuePair<String, String> {
             switch self {
             case .cacheControl(let cacheControl):
                 return NetworkMe.TransformableKeyValuePair(
