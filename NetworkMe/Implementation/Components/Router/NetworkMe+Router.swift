@@ -38,18 +38,18 @@ extension NetworkMe.Router: NetworkMeRouting {
 
         request(
             endpoint: endpoint,
-            completion: { (result: Result<NetworkMe.EmptyDecodable, NetworkMe.Router.NetworkError>) in })
+            completion: { (_: Result<NetworkMe.EmptyDecodable, NetworkMe.Router.NetworkError>, _) in })
     }
 
     public func request<ResultItem: Decodable>(
         endpoint: NetworkMeEndpointProtocol,
-        completion: @escaping (Result<ResultItem, NetworkError>) -> Void) {
+        completion: @escaping (Result<ResultItem, NetworkError>, [NetworkMe.Header.Response]?) -> Void) {
 
         guard
             var components = URLComponents(url: endpoint.url, resolvingAgainstBaseURL: false)
-        else {
-            completion(.failure(NetworkMe.Router.NetworkError.invalidEndpoint(endpoint)))
-            return
+            else {
+                completion(.failure(NetworkMe.Router.NetworkError.invalidEndpoint(endpoint)), nil)
+                return
         }
 
         components.scheme = endpoint.scheme.rawValue
@@ -57,9 +57,9 @@ extension NetworkMe.Router: NetworkMeRouting {
 
         guard
             let url = components.url
-        else {
-            completion(.failure(NetworkMe.Router.NetworkError.invalidURLComponents(components)))
-            return
+            else {
+                completion(.failure(NetworkMe.Router.NetworkError.invalidURLComponents(components)), nil)
+                return
         }
 
         var request = URLRequest(
@@ -68,7 +68,7 @@ extension NetworkMe.Router: NetworkMeRouting {
             timeoutInterval: endpoint.timeoutInterval)
         request.httpMethod = endpoint.method.rawValue
         request.httpBody = endpoint.body
-        let requestHeaders = endpoint.headers.map { $0.keyPair }
+        let requestHeaders = endpoint.requestHeaders.map { $0.keyPair }
         request.allHTTPHeaderFields = requestHeaders.reduce([:]) { (headers, header) -> [String: String] in
             var _headers = headers
             _headers[header.key] = header.value
@@ -95,22 +95,31 @@ private extension NetworkMe.Router {
     func dataTask<ResultItem: Decodable>(
         with request: URLRequest,
         endpoint: NetworkMeEndpointProtocol,
-        completion: @escaping (Result<ResultItem, NetworkError>) -> Void) -> URLSessionDataTask {
+        completion: @escaping (Result<ResultItem, NetworkError>, [NetworkMe.Header.Response]?) -> Void) -> URLSessionDataTask {
 
         return urlSession.dataTask(with: request) { (data, response, error) in
 
+            let headers = endpoint.responseHeadersParser.parseHeaders(from: response)
+
+            if let response = response,
+                let validationError = endpoint.responseValidator.validate(response) {
+
+                completion(Result.failure(NetworkError.responseValidationFailed(response, validationError)), headers)
+                return
+            }
+
             guard
                 let data = data
-            else {
-                completion(Result.failure(NetworkError.noData))
-                return
+                else {
+                    completion(Result.failure(NetworkError.noData), headers)
+                    return
             }
 
             do {
                 let decoded = try endpoint.decoder.decode(ResultItem.self, from: data)
-                completion(Result.success(decoded))
+                completion(Result.success(decoded), headers)
             } catch(let exception) {
-                completion(Result.failure(NetworkError.parsing(exception)))
+                completion(Result.failure(NetworkError.parsing(exception)), headers)
             }
         }
     }
@@ -118,22 +127,31 @@ private extension NetworkMe.Router {
     func uploadTask<ResultItem: Decodable>(
         with request: URLRequest,
         endpoint: NetworkMeEndpointProtocol,
-        completion: @escaping (Result<ResultItem, NetworkError>) -> Void) -> URLSessionUploadTask {
+        completion: @escaping (Result<ResultItem, NetworkError>, [NetworkMe.Header.Response]?) -> Void) -> URLSessionUploadTask {
 
         return urlSession.uploadTask(with: request, from: request.httpBody) { (data, response, error) in
 
+            let headers = endpoint.responseHeadersParser.parseHeaders(from: response)
+
+            if let response = response,
+                let validationError = endpoint.responseValidator.validate(response) {
+
+                completion(Result.failure(NetworkError.responseValidationFailed(response, validationError)), headers)
+                return
+            }
+
             guard
                 let data = data
-            else {
-                completion(Result.failure(NetworkError.noData))
-                return
+                else {
+                    completion(Result.failure(NetworkError.noData), headers)
+                    return
             }
 
             do {
                 let decoded = try endpoint.decoder.decode(ResultItem.self, from: data)
-                completion(Result.success(decoded))
+                completion(Result.success(decoded), headers)
             } catch(let exception) {
-                completion(Result.failure(NetworkError.parsing(exception)))
+                completion(Result.failure(NetworkError.parsing(exception)), headers)
             }
         }
     }
@@ -141,23 +159,32 @@ private extension NetworkMe.Router {
     func downloadTask<ResultItem: Decodable>(
         with request: URLRequest,
         endpoint: NetworkMeEndpointProtocol,
-        completion: @escaping (Result<ResultItem, NetworkError>) -> Void) -> URLSessionDownloadTask {
+        completion: @escaping (Result<ResultItem, NetworkError>, [NetworkMe.Header.Response]?) -> Void) -> URLSessionDownloadTask {
 
         return urlSession.downloadTask(with: request) { [weak self] (url, response, error) in
+
+            let headers = endpoint.responseHeadersParser.parseHeaders(from: response)
+
+            if let response = response,
+                let validationError = endpoint.responseValidator.validate(response) {
+
+                completion(Result.failure(NetworkError.responseValidationFailed(response, validationError)), headers)
+                return
+            }
 
             guard
                 let url = url,
                 let data = self?.fileRetriever.fetchData(from: url)
-            else {
-                completion(Result.failure(NetworkError.noData))
-                return
+                else {
+                    completion(Result.failure(NetworkError.noData), headers)
+                    return
             }
 
             do {
                 let decoded = try endpoint.decoder.decode(ResultItem.self, from: data)
-                completion(Result.success(decoded))
+                completion(Result.success(decoded), headers)
             } catch(let exception) {
-                completion(Result.failure(NetworkError.parsing(exception)))
+                completion(Result.failure(NetworkError.parsing(exception)), headers)
             }
         }
     }
