@@ -32,7 +32,7 @@ extension NetworkMe.Stub {
 
             decodeWasCalled = (String(describing: type), data)
 
-            guard let result = stubDecodeResult as? T else { throw NetworkMe.Router.NetworkError.unauthorized }
+            guard let result = stubDecodeResult as? T else { throw NetworkMe.Router.NetworkError.noData }
 
             return result
         }

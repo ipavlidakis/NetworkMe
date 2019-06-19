@@ -147,7 +147,7 @@ extension NetworkMe.Stub.Endpoint: NetworkMeEndpointProtocol {
         return stubEncoder
     }
 
-    var headers: [NetworkMeHeaderProtocol] {
+    var requestHeaders: [NetworkMeHeaderProtocol] {
 
         timesHeadersWasCalled += 1
 

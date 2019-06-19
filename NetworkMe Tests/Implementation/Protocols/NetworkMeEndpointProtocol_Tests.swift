@@ -38,6 +38,6 @@ final class NetworkMeEndpointProtocol_Tests: XCTestCase {
         XCTAssertEqual(Endpoint.test.cachePolicy, .useProtocolCachePolicy)
         XCTAssertEqual(Endpoint.test.timeoutInterval, 30)
         XCTAssert(Endpoint.test.decoder is JSONDecoder)
-        XCTAssert(Endpoint.test.headers.isEmpty)
+        XCTAssert(Endpoint.test.requestHeaders.isEmpty)
     }
 }

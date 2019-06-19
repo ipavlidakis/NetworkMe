@@ -189,7 +189,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
             stubHeaders: [NetworkMe.Header.Request.contentType(.atomXML)]
         )
 
-        router.request(endpoint: endpoint) { (_: Result<CodableItem, NetworkMe.Router.NetworkError>) in }
+        router.request(endpoint: endpoint) { (_: Result<CodableItem, NetworkMe.Router.NetworkError>, responseHeaders) in }
 
         XCTAssert(task.resumeWasCalled)
     }
@@ -207,7 +207,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
             stubHeaders: [NetworkMe.Header.Request.contentType(.atomXML)]
         )
 
-        router.request(endpoint: endpoint) { (_: Result<CodableItem, NetworkMe.Router.NetworkError>) in }
+        router.request(endpoint: endpoint) { (_: Result<CodableItem, NetworkMe.Router.NetworkError>, responseHeaders)  in }
 
         XCTAssertEqual(stubURLSession.dataTaskWasCalled?.request.cachePolicy, .useProtocolCachePolicy)
         XCTAssertEqual(endpoint.timesCachePolicyWasCalled, 1)
@@ -229,7 +229,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         stubURLSession.stubDataTaskCompletionHandlerInput = (stubDataResult, nil, nil)
         let endpoint = NetworkMe.Stub.Endpoint()
 
-        router.request(endpoint: endpoint) { (_: Result<CodableItem, NetworkMe.Router.NetworkError>) in }
+        router.request(endpoint: endpoint) { (_: Result<CodableItem, NetworkMe.Router.NetworkError>, responseHeaders) in }
 
         XCTAssertEqual(endpoint.stubDecoder.decodeWasCalled?.data, stubDataResult)
     }
@@ -245,7 +245,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let endpoint = NetworkMe.Stub.Endpoint()
 
         var _result: Result<CodableItem, NetworkMe.Router.NetworkError>?
-        router.request(endpoint: endpoint) { _result = $0 }
+        router.request(endpoint: endpoint) { result, responseHeaders in _result = result }
 
         guard
             let result = _result
@@ -277,7 +277,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         endpoint.stubDecoder.stubDecodeResult = stubResult
 
         var _result: Result<CodableItem, NetworkMe.Router.NetworkError>?
-        router.request(endpoint: endpoint) { _result = $0 }
+        router.request(endpoint: endpoint) { result, responseHeaders in _result = result }
 
         guard
             let result = _result
@@ -311,7 +311,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
             stubHeaders: [NetworkMe.Header.Request.contentType(.atomXML)]
         )
 
-        router.request(endpoint: endpoint) { (_: Result<CodableItem, NetworkMe.Router.NetworkError>) in }
+        router.request(endpoint: endpoint) { (_: Result<CodableItem, NetworkMe.Router.NetworkError>, _) in }
 
         XCTAssert(task.resumeWasCalled)
     }
@@ -332,7 +332,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
             stubHeaders: [NetworkMe.Header.Request.contentType(.atomXML)]
         )
 
-        router.request(endpoint: endpoint) { (_: Result<CodableItem, NetworkMe.Router.NetworkError>) in }
+        router.request(endpoint: endpoint) { (_: Result<CodableItem, NetworkMe.Router.NetworkError>, _) in }
 
         XCTAssertEqual(stubURLSession.uploadTaskWasCalled?.request.cachePolicy, .useProtocolCachePolicy)
         XCTAssertEqual(endpoint.timesCachePolicyWasCalled, 1)
@@ -355,7 +355,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         stubURLSession.stubUploadTaskCompletionHandlerInput = (stubDataResult, nil, nil)
         let endpoint = NetworkMe.Stub.Endpoint(stubTaskType: .upload)
 
-        router.request(endpoint: endpoint) { (_: Result<CodableItem, NetworkMe.Router.NetworkError>) in }
+        router.request(endpoint: endpoint) { (_: Result<CodableItem, NetworkMe.Router.NetworkError>, _) in }
 
         XCTAssertEqual(endpoint.stubDecoder.decodeWasCalled?.data, stubDataResult)
     }
@@ -371,7 +371,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let endpoint = NetworkMe.Stub.Endpoint(stubTaskType: .upload)
 
         var _result: Result<CodableItem, NetworkMe.Router.NetworkError>?
-        router.request(endpoint: endpoint) { _result = $0 }
+        router.request(endpoint: endpoint) { result, responseHeaders in _result = result }
 
         guard
             let result = _result
@@ -403,7 +403,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         endpoint.stubDecoder.stubDecodeResult = stubResult
 
         var _result: Result<CodableItem, NetworkMe.Router.NetworkError>?
-        router.request(endpoint: endpoint) { _result = $0 }
+        router.request(endpoint: endpoint) { result, responseHeaders in _result = result }
 
         guard
             let result = _result
@@ -437,7 +437,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
             stubHeaders: [NetworkMe.Header.Request.contentType(.atomXML)]
         )
 
-        router.request(endpoint: endpoint) { (_: Result<CodableItem, NetworkMe.Router.NetworkError>) in }
+        router.request(endpoint: endpoint) { (_: Result<CodableItem, NetworkMe.Router.NetworkError>, _) in }
 
         XCTAssert(task.resumeWasCalled)
     }
@@ -456,7 +456,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
             stubHeaders: [NetworkMe.Header.Request.contentType(.atomXML)]
         )
 
-        router.request(endpoint: endpoint) { (_: Result<CodableItem, NetworkMe.Router.NetworkError>) in }
+        router.request(endpoint: endpoint) { (_: Result<CodableItem, NetworkMe.Router.NetworkError>, _) in }
 
         XCTAssertEqual(stubURLSession.downloadTaskWasCalled?.request.cachePolicy, .useProtocolCachePolicy)
         XCTAssertEqual(endpoint.timesCachePolicyWasCalled, 1)
@@ -478,7 +478,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         stubURLSession.stubDownloadTaskCompletionHandlerInput = (stubResult, nil, nil)
         let endpoint = NetworkMe.Stub.Endpoint(stubTaskType: .download)
 
-        router.request(endpoint: endpoint) { (_: Result<CodableItem, NetworkMe.Router.NetworkError>) in }
+        router.request(endpoint: endpoint) { (_: Result<CodableItem, NetworkMe.Router.NetworkError>, _) in }
 
         XCTAssertEqual(stubFileRetriever.fetchWasCalledWithURL, stubResult)
     }
@@ -496,7 +496,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         stubURLSession.stubDownloadTaskCompletionHandlerInput = (stubResult, nil, nil)
         let endpoint = NetworkMe.Stub.Endpoint(stubTaskType: .download)
 
-        router.request(endpoint: endpoint) { (_: Result<CodableItem, NetworkMe.Router.NetworkError>) in }
+        router.request(endpoint: endpoint) { (_: Result<CodableItem, NetworkMe.Router.NetworkError>, _) in }
 
         XCTAssertEqual(endpoint.stubDecoder.decodeWasCalled?.data, stubDataResult)
     }
@@ -512,7 +512,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let endpoint = NetworkMe.Stub.Endpoint(stubTaskType: .download)
 
         var _result: Result<CodableItem, NetworkMe.Router.NetworkError>?
-        router.request(endpoint: endpoint) { _result = $0 }
+        router.request(endpoint: endpoint) { result, responseHeaders in _result = result }
 
         guard
             let result = _result
@@ -546,7 +546,7 @@ final class NetworkMeRouter_Tests: XCTestCase {
         endpoint.stubDecoder.stubDecodeResult = stubResult
 
         var _result: Result<CodableItem, NetworkMe.Router.NetworkError>?
-        router.request(endpoint: endpoint) { _result = $0 }
+        router.request(endpoint: endpoint) { result, responseHeaders in _result = result }
 
         guard
             let result = _result
