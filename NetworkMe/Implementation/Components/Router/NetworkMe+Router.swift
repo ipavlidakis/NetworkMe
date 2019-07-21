@@ -120,6 +120,7 @@ private extension NetworkMe.Router {
                 completion(Result.success(decoded), headers)
             } catch(let exception) {
                 completion(Result.failure(NetworkError.parsing(exception)), headers)
+                debugPrint(String(data: data, encoding: .utf8) ?? "")
             }
         }
     }
@@ -152,6 +153,7 @@ private extension NetworkMe.Router {
                 completion(Result.success(decoded), headers)
             } catch(let exception) {
                 completion(Result.failure(NetworkError.parsing(exception)), headers)
+                debugPrint(String(data: data, encoding: .utf8) ?? "")
             }
         }
     }
@@ -185,6 +187,7 @@ private extension NetworkMe.Router {
                 completion(Result.success(decoded), headers)
             } catch(let exception) {
                 completion(Result.failure(NetworkError.parsing(exception)), headers)
+                debugPrint(String(data: data, encoding: .utf8) ?? "")
             }
         }
     }

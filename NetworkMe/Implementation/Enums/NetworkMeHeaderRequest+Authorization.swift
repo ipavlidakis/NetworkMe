@@ -45,7 +45,7 @@ extension NetworkMe.Header.Request.Authorization: RawRepresentable {
                 assertionFailure("Failed to encode basic authorization header")
                 return ""
             }
-            return encoded
+            return "Basic \(encoded)"
         case .bearer(let token):
             return "Bearer \(token)"
         }

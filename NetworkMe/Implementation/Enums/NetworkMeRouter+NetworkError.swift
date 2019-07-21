@@ -17,5 +17,6 @@ extension NetworkMe.Router {
         case noData
         case parsing(_ error: Error)
         case responseValidationFailed(_ response: URLResponse, _ error: Error)
+        case invalidDataDuringDecode
     }
 }
