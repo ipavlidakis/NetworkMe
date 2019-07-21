@@ -3,810 +3,434 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		"NetworkMe::NetworkMePackageTests::ProductTarget" /* NetworkMePackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_138 /* Build configuration list for PBXAggregateTarget "NetworkMePackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_141 /* PBXTargetDependency */,
+			);
+			name = NetworkMePackageTests;
+			productName = NetworkMePackageTests;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		40106E4B22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40106E4A22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift */; };
-		40106E4C22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40106E4A22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift */; };
-		40106E4D22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40106E4A22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift */; };
-		40106E4E22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40106E4A22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift */; };
-		40106E5122A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40106E5022A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift */; };
-		40106E5222A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40106E5022A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift */; };
-		40106E5322A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40106E5022A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift */; };
-		40106E5422A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40106E5022A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift */; };
-		4027AA1E22A8861500B22CD8 /* JSONDecoder+NetworkMeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA1D22A8861500B22CD8 /* JSONDecoder+NetworkMeDecoding.swift */; };
-		4027AA2022A8862600B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA1F22A8862600B22CD8 /* JSONEncoder+NetworkMeEncoding.swift */; };
-		4027AA2122A8862C00B22CD8 /* JSONDecoder+NetworkMeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA1D22A8861500B22CD8 /* JSONDecoder+NetworkMeDecoding.swift */; };
-		4027AA2222A8862C00B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA1F22A8862600B22CD8 /* JSONEncoder+NetworkMeEncoding.swift */; };
-		4027AA2322A8862D00B22CD8 /* JSONDecoder+NetworkMeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA1D22A8861500B22CD8 /* JSONDecoder+NetworkMeDecoding.swift */; };
-		4027AA2422A8862D00B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA1F22A8862600B22CD8 /* JSONEncoder+NetworkMeEncoding.swift */; };
-		4027AA2522A8862E00B22CD8 /* JSONDecoder+NetworkMeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA1D22A8861500B22CD8 /* JSONDecoder+NetworkMeDecoding.swift */; };
-		4027AA2622A8862E00B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA1F22A8862600B22CD8 /* JSONEncoder+NetworkMeEncoding.swift */; };
-		4027AA2722A8862F00B22CD8 /* JSONDecoder+NetworkMeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA1D22A8861500B22CD8 /* JSONDecoder+NetworkMeDecoding.swift */; };
-		4027AA2822A8862F00B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA1F22A8862600B22CD8 /* JSONEncoder+NetworkMeEncoding.swift */; };
-		4027AA2A22A886CB00B22CD8 /* NetworkMe+FileRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA2922A886CB00B22CD8 /* NetworkMe+FileRetriever.swift */; };
-		4027AA2D22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA2C22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift */; };
-		4027AA2E22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA2C22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift */; };
-		4027AA2F22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA2C22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift */; };
-		4027AA3022A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA2C22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift */; };
-		4027AA3122A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA2C22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift */; };
-		4027AA3222A887E500B22CD8 /* NetworkMe+FileRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA2922A886CB00B22CD8 /* NetworkMe+FileRetriever.swift */; };
-		4027AA3322A887E600B22CD8 /* NetworkMe+FileRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA2922A886CB00B22CD8 /* NetworkMe+FileRetriever.swift */; };
-		4027AA3422A887E700B22CD8 /* NetworkMe+FileRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA2922A886CB00B22CD8 /* NetworkMe+FileRetriever.swift */; };
-		4027AA3522A887E800B22CD8 /* NetworkMe+FileRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AA2922A886CB00B22CD8 /* NetworkMe+FileRetriever.swift */; };
-		4046A35C22A7E4F500A5AF36 /* NetworkMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4046A35B22A7E4F500A5AF36 /* NetworkMe.swift */; };
-		4046A36922A7E55800A5AF36 /* libNetworkMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4046A35922A7E4F500A5AF36 /* libNetworkMe.a */; };
-		4046A36F22A7E57000A5AF36 /* NetworkMe+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2E22A5C72500AB0539 /* NetworkMe+Tests.swift */; };
-		4046A37022A7E5B400A5AF36 /* DateFormatter+NetworkMeDateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2922A5C5EF00AB0539 /* DateFormatter+NetworkMeDateProviding.swift */; };
-		4046A37122A7E5B400A5AF36 /* NetworkMe+TransformableKeyValuePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2422A5C2E700AB0539 /* NetworkMe+TransformableKeyValuePair.swift */; };
-		4046A37222A7E5B400A5AF36 /* NetworkMe+TaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301622A5DC8900267175 /* NetworkMe+TaskType.swift */; };
-		4046A37322A7E5B400A5AF36 /* NetworMe+Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A868D22A41E5300588850 /* NetworMe+Scheme.swift */; };
-		4046A37422A7E5B400A5AF36 /* NetworkMe+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A868F22A41E5E00588850 /* NetworkMe+Method.swift */; };
-		4046A37522A7E5B400A5AF36 /* NetworkMe+Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869122A41EAF00588850 /* NetworkMe+Header.swift */; };
-		4046A37622A7E5B400A5AF36 /* NetworkMeHeader+Generic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3022A5CC3100AB0539 /* NetworkMeHeader+Generic.swift */; };
-		4046A37722A7E5B400A5AF36 /* NetworkMeHeader+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3222A5CC4600AB0539 /* NetworkMeHeader+Request.swift */; };
-		4046A37822A7E5B400A5AF36 /* NetworkMeHeader+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3422A5CC5500AB0539 /* NetworkMeHeader+Response.swift */; };
-		4046A37922A7E5B400A5AF36 /* NetworkMe+ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869322A41F0C00588850 /* NetworkMe+ContentType.swift */; };
-		4046A37A22A7E5B400A5AF36 /* NetworkMe+Accept.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869522A4209300588850 /* NetworkMe+Accept.swift */; };
-		4046A37B22A7E5B400A5AF36 /* NetworkMeHeaderRequest+CacheControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869922A4232300588850 /* NetworkMeHeaderRequest+CacheControl.swift */; };
-		4046A37C22A7E5B400A5AF36 /* NetworkMeHeaderRequest+Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869F22A4282300588850 /* NetworkMeHeaderRequest+Authorization.swift */; };
-		4046A37D22A7E5B400A5AF36 /* NetworkMeHeaderResponse+CacheControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869B22A424E400588850 /* NetworkMeHeaderResponse+CacheControl.swift */; };
-		4046A37E22A7E5B400A5AF36 /* NetworkMeHeaderGeneric+Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869D22A426EF00588850 /* NetworkMeHeaderGeneric+Connection.swift */; };
-		4046A37F22A7E5B400A5AF36 /* NetworkMeRouter+NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86A522A464BC00588850 /* NetworkMeRouter+NetworkError.swift */; };
-		4046A38022A7E5B400A5AF36 /* NetworkMeEndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A867B22A41D8000588850 /* NetworkMeEndpointProtocol.swift */; };
-		4046A38122A7E5B400A5AF36 /* NetworkMeRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A867D22A41D9300588850 /* NetworkMeRouting.swift */; };
-		4046A38222A7E5B400A5AF36 /* NetworkMeURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A868222A41DBA00588850 /* NetworkMeURLSessionProtocol.swift */; };
-		4046A38322A7E5B400A5AF36 /* NetworkMeHeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869722A4222E00588850 /* NetworkMeHeaderProtocol.swift */; };
-		4046A38422A7E5B400A5AF36 /* NetworkMeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86A122A42B8D00588850 /* NetworkMeDecoding.swift */; };
-		4046A38522A7E5B400A5AF36 /* NetworkMeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86A322A42BB900588850 /* NetworkMeEncoding.swift */; };
-		4046A38622A7E5B400A5AF36 /* NetworkMeDateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2622A5C5C500AB0539 /* NetworkMeDateProviding.swift */; };
-		4046A38722A7E5B400A5AF36 /* NetworkMeFileRetrieving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302422A5F47700267175 /* NetworkMeFileRetrieving.swift */; };
-		4046A38822A7E5B400A5AF36 /* NetworkMe+Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A868022A41DA900588850 /* NetworkMe+Router.swift */; };
-		4046A38922A7E5D100A5AF36 /* NetworkMeStub+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2C22A5C71800AB0539 /* NetworkMeStub+DateFormatter.swift */; };
-		4046A38A22A7E5D100A5AF36 /* NetworkMeStub+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301A22A5E09900267175 /* NetworkMeStub+Endpoint.swift */; };
-		4046A38B22A7E5D100A5AF36 /* NetworkMeStub+Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301C22A5E2A900267175 /* NetworkMeStub+Encoder.swift */; };
-		4046A38C22A7E5D100A5AF36 /* NetworkMeStub+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301E22A5E2AF00267175 /* NetworkMeStub+Decoder.swift */; };
-		4046A38D22A7E5D100A5AF36 /* NetworkMeStub+URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302022A5E48600267175 /* NetworkMeStub+URLSession.swift */; };
-		4046A38E22A7E5D100A5AF36 /* NetworkMeStub+URLSessionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302222A5E56000267175 /* NetworkMeStub+URLSessionTask.swift */; };
-		4046A38F22A7E5D100A5AF36 /* NetworkMeStub+FileRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302622A5F4C600267175 /* NetworkMeStub+FileRetriever.swift */; };
-		4046A39022A7E5D100A5AF36 /* NetworkMeRouter_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301822A5E06900267175 /* NetworkMeRouter_Tests.swift */; };
-		4046A39122A7E5D100A5AF36 /* NetworMeScheme_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86F422A4670500588850 /* NetworMeScheme_Tests.swift */; };
-		4046A39222A7E5D100A5AF36 /* NetworMeMethod_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86F622A4681300588850 /* NetworMeMethod_Tests.swift */; };
-		4046A39322A7E5D100A5AF36 /* NetworkMeHeader_GenericTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2122A5C0C900AB0539 /* NetworkMeHeader_GenericTests.swift */; };
-		4046A39422A7E5D100A5AF36 /* NetworkMeHeader_RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3622A5CC7300AB0539 /* NetworkMeHeader_RequestTests.swift */; };
-		4046A39522A7E5D100A5AF36 /* NetworkHeader_ResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301222A5D97A00267175 /* NetworkHeader_ResponseTests.swift */; };
-		4046A39622A7E5D200A5AF36 /* NetworkMe+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2E22A5C72500AB0539 /* NetworkMe+Tests.swift */; };
-		4046A39722A7E5D200A5AF36 /* NetworkMe+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2E22A5C72500AB0539 /* NetworkMe+Tests.swift */; };
-		4046A39822A7E5D300A5AF36 /* NetworkMe+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2E22A5C72500AB0539 /* NetworkMe+Tests.swift */; };
-		4046A39922A7E7DA00A5AF36 /* NetworkMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4046A35B22A7E4F500A5AF36 /* NetworkMe.swift */; };
-		4046A39A22A7E7DB00A5AF36 /* NetworkMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4046A35B22A7E4F500A5AF36 /* NetworkMe.swift */; };
-		4046A39B22A7E7DC00A5AF36 /* NetworkMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4046A35B22A7E4F500A5AF36 /* NetworkMe.swift */; };
-		4046A39C22A7E7DD00A5AF36 /* NetworkMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4046A35B22A7E4F500A5AF36 /* NetworkMe.swift */; };
-		404F301322A5D97A00267175 /* NetworkHeader_ResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301222A5D97A00267175 /* NetworkHeader_ResponseTests.swift */; };
-		404F301722A5DC8900267175 /* NetworkMe+TaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301622A5DC8900267175 /* NetworkMe+TaskType.swift */; };
-		404F301922A5E06900267175 /* NetworkMeRouter_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301822A5E06900267175 /* NetworkMeRouter_Tests.swift */; };
-		404F301B22A5E09900267175 /* NetworkMeStub+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301A22A5E09900267175 /* NetworkMeStub+Endpoint.swift */; };
-		404F301D22A5E2A900267175 /* NetworkMeStub+Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301C22A5E2A900267175 /* NetworkMeStub+Encoder.swift */; };
-		404F301F22A5E2AF00267175 /* NetworkMeStub+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301E22A5E2AF00267175 /* NetworkMeStub+Decoder.swift */; };
-		404F302122A5E48600267175 /* NetworkMeStub+URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302022A5E48600267175 /* NetworkMeStub+URLSession.swift */; };
-		404F302322A5E56000267175 /* NetworkMeStub+URLSessionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302222A5E56000267175 /* NetworkMeStub+URLSessionTask.swift */; };
-		404F302522A5F47700267175 /* NetworkMeFileRetrieving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302422A5F47700267175 /* NetworkMeFileRetrieving.swift */; };
-		404F302722A5F4C600267175 /* NetworkMeStub+FileRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302622A5F4C600267175 /* NetworkMeStub+FileRetriever.swift */; };
-		404F302822A5F70C00267175 /* DateFormatter+NetworkMeDateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2922A5C5EF00AB0539 /* DateFormatter+NetworkMeDateProviding.swift */; };
-		404F302922A5F70C00267175 /* NetworkMe+TransformableKeyValuePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2422A5C2E700AB0539 /* NetworkMe+TransformableKeyValuePair.swift */; };
-		404F302A22A5F70C00267175 /* NetworkMe+TaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301622A5DC8900267175 /* NetworkMe+TaskType.swift */; };
-		404F302B22A5F70C00267175 /* NetworkMeHeader+Generic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3022A5CC3100AB0539 /* NetworkMeHeader+Generic.swift */; };
-		404F302C22A5F70C00267175 /* NetworkMeHeader+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3222A5CC4600AB0539 /* NetworkMeHeader+Request.swift */; };
-		404F302D22A5F70C00267175 /* NetworkMeHeader+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3422A5CC5500AB0539 /* NetworkMeHeader+Response.swift */; };
-		404F302E22A5F70C00267175 /* NetworkMeDateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2622A5C5C500AB0539 /* NetworkMeDateProviding.swift */; };
-		404F302F22A5F70C00267175 /* NetworkMeFileRetrieving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302422A5F47700267175 /* NetworkMeFileRetrieving.swift */; };
-		404F303022A5F70D00267175 /* DateFormatter+NetworkMeDateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2922A5C5EF00AB0539 /* DateFormatter+NetworkMeDateProviding.swift */; };
-		404F303122A5F70D00267175 /* NetworkMe+TransformableKeyValuePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2422A5C2E700AB0539 /* NetworkMe+TransformableKeyValuePair.swift */; };
-		404F303222A5F70D00267175 /* NetworkMe+TaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301622A5DC8900267175 /* NetworkMe+TaskType.swift */; };
-		404F303322A5F70D00267175 /* NetworkMeHeader+Generic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3022A5CC3100AB0539 /* NetworkMeHeader+Generic.swift */; };
-		404F303422A5F70D00267175 /* NetworkMeHeader+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3222A5CC4600AB0539 /* NetworkMeHeader+Request.swift */; };
-		404F303522A5F70D00267175 /* NetworkMeHeader+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3422A5CC5500AB0539 /* NetworkMeHeader+Response.swift */; };
-		404F303622A5F70D00267175 /* NetworkMeDateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2622A5C5C500AB0539 /* NetworkMeDateProviding.swift */; };
-		404F303722A5F70D00267175 /* NetworkMeFileRetrieving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302422A5F47700267175 /* NetworkMeFileRetrieving.swift */; };
-		404F304122A5F72B00267175 /* libNetworkMe tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 407A86AB22A465A200588850 /* libNetworkMe tvOS.a */; };
-		404F305022A5F74600267175 /* libNetworkMe macOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 407A86C822A465CA00588850 /* libNetworkMe macOS.a */; };
-		404F305D22A5F7F700267175 /* NetworkMe_watchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F305C22A5F7F700267175 /* NetworkMe_watchOS.swift */; };
-		404F306122A5F83000267175 /* DateFormatter+NetworkMeDateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2922A5C5EF00AB0539 /* DateFormatter+NetworkMeDateProviding.swift */; };
-		404F306222A5F83000267175 /* NetworkMe+TransformableKeyValuePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2422A5C2E700AB0539 /* NetworkMe+TransformableKeyValuePair.swift */; };
-		404F306322A5F83000267175 /* NetworkMe+TaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301622A5DC8900267175 /* NetworkMe+TaskType.swift */; };
-		404F306422A5F83000267175 /* NetworMe+Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A868D22A41E5300588850 /* NetworMe+Scheme.swift */; };
-		404F306522A5F83000267175 /* NetworkMe+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A868F22A41E5E00588850 /* NetworkMe+Method.swift */; };
-		404F306622A5F83000267175 /* NetworkMe+Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869122A41EAF00588850 /* NetworkMe+Header.swift */; };
-		404F306722A5F83000267175 /* NetworkMeHeader+Generic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3022A5CC3100AB0539 /* NetworkMeHeader+Generic.swift */; };
-		404F306822A5F83000267175 /* NetworkMeHeader+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3222A5CC4600AB0539 /* NetworkMeHeader+Request.swift */; };
-		404F306922A5F83000267175 /* NetworkMeHeader+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3422A5CC5500AB0539 /* NetworkMeHeader+Response.swift */; };
-		404F306A22A5F83000267175 /* NetworkMe+ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869322A41F0C00588850 /* NetworkMe+ContentType.swift */; };
-		404F306B22A5F83000267175 /* NetworkMe+Accept.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869522A4209300588850 /* NetworkMe+Accept.swift */; };
-		404F306C22A5F83000267175 /* NetworkMeHeaderRequest+CacheControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869922A4232300588850 /* NetworkMeHeaderRequest+CacheControl.swift */; };
-		404F306D22A5F83000267175 /* NetworkMeHeaderRequest+Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869F22A4282300588850 /* NetworkMeHeaderRequest+Authorization.swift */; };
-		404F306E22A5F83000267175 /* NetworkMeHeaderResponse+CacheControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869B22A424E400588850 /* NetworkMeHeaderResponse+CacheControl.swift */; };
-		404F306F22A5F83000267175 /* NetworkMeHeaderGeneric+Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869D22A426EF00588850 /* NetworkMeHeaderGeneric+Connection.swift */; };
-		404F307022A5F83000267175 /* NetworkMeRouter+NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86A522A464BC00588850 /* NetworkMeRouter+NetworkError.swift */; };
-		404F307122A5F83000267175 /* NetworkMeEndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A867B22A41D8000588850 /* NetworkMeEndpointProtocol.swift */; };
-		404F307222A5F83000267175 /* NetworkMeRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A867D22A41D9300588850 /* NetworkMeRouting.swift */; };
-		404F307322A5F83000267175 /* NetworkMeURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A868222A41DBA00588850 /* NetworkMeURLSessionProtocol.swift */; };
-		404F307422A5F83000267175 /* NetworkMeHeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869722A4222E00588850 /* NetworkMeHeaderProtocol.swift */; };
-		404F307522A5F83000267175 /* NetworkMeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86A122A42B8D00588850 /* NetworkMeDecoding.swift */; };
-		404F307622A5F83000267175 /* NetworkMeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86A322A42BB900588850 /* NetworkMeEncoding.swift */; };
-		404F307722A5F83000267175 /* NetworkMeDateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2622A5C5C500AB0539 /* NetworkMeDateProviding.swift */; };
-		404F307822A5F83000267175 /* NetworkMeFileRetrieving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302422A5F47700267175 /* NetworkMeFileRetrieving.swift */; };
-		404F307922A5F83000267175 /* NetworkMe+Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A868022A41DA900588850 /* NetworkMe+Router.swift */; };
-		404F307A22A5F83D00267175 /* NetworkMe_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A867322A41D4B00588850 /* NetworkMe_iOS.swift */; };
-		404F307B22A5FC4A00267175 /* NetworkMeStub+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2C22A5C71800AB0539 /* NetworkMeStub+DateFormatter.swift */; };
-		404F307C22A5FC4A00267175 /* NetworkMeStub+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301A22A5E09900267175 /* NetworkMeStub+Endpoint.swift */; };
-		404F307D22A5FC4A00267175 /* NetworkMeStub+Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301C22A5E2A900267175 /* NetworkMeStub+Encoder.swift */; };
-		404F307E22A5FC4A00267175 /* NetworkMeStub+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301E22A5E2AF00267175 /* NetworkMeStub+Decoder.swift */; };
-		404F307F22A5FC4A00267175 /* NetworkMeStub+URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302022A5E48600267175 /* NetworkMeStub+URLSession.swift */; };
-		404F308022A5FC4A00267175 /* NetworkMeStub+URLSessionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302222A5E56000267175 /* NetworkMeStub+URLSessionTask.swift */; };
-		404F308122A5FC4A00267175 /* NetworkMeStub+FileRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302622A5F4C600267175 /* NetworkMeStub+FileRetriever.swift */; };
-		404F308222A5FC4A00267175 /* NetworkMeRouter_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301822A5E06900267175 /* NetworkMeRouter_Tests.swift */; };
-		404F308322A5FC4A00267175 /* NetworMeScheme_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86F422A4670500588850 /* NetworMeScheme_Tests.swift */; };
-		404F308422A5FC4A00267175 /* NetworMeMethod_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86F622A4681300588850 /* NetworMeMethod_Tests.swift */; };
-		404F308522A5FC4A00267175 /* NetworkMeHeader_GenericTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2122A5C0C900AB0539 /* NetworkMeHeader_GenericTests.swift */; };
-		404F308622A5FC4A00267175 /* NetworkMeHeader_RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3622A5CC7300AB0539 /* NetworkMeHeader_RequestTests.swift */; };
-		404F308722A5FC4A00267175 /* NetworkHeader_ResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301222A5D97A00267175 /* NetworkHeader_ResponseTests.swift */; };
-		404F308922A5FC4B00267175 /* NetworkMeStub+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2C22A5C71800AB0539 /* NetworkMeStub+DateFormatter.swift */; };
-		404F308A22A5FC4B00267175 /* NetworkMeStub+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301A22A5E09900267175 /* NetworkMeStub+Endpoint.swift */; };
-		404F308B22A5FC4B00267175 /* NetworkMeStub+Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301C22A5E2A900267175 /* NetworkMeStub+Encoder.swift */; };
-		404F308C22A5FC4B00267175 /* NetworkMeStub+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301E22A5E2AF00267175 /* NetworkMeStub+Decoder.swift */; };
-		404F308D22A5FC4B00267175 /* NetworkMeStub+URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302022A5E48600267175 /* NetworkMeStub+URLSession.swift */; };
-		404F308E22A5FC4B00267175 /* NetworkMeStub+URLSessionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302222A5E56000267175 /* NetworkMeStub+URLSessionTask.swift */; };
-		404F308F22A5FC4B00267175 /* NetworkMeStub+FileRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F302622A5F4C600267175 /* NetworkMeStub+FileRetriever.swift */; };
-		404F309022A5FC4B00267175 /* NetworkMeRouter_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301822A5E06900267175 /* NetworkMeRouter_Tests.swift */; };
-		404F309122A5FC4B00267175 /* NetworMeScheme_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86F422A4670500588850 /* NetworMeScheme_Tests.swift */; };
-		404F309222A5FC4B00267175 /* NetworMeMethod_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86F622A4681300588850 /* NetworMeMethod_Tests.swift */; };
-		404F309322A5FC4B00267175 /* NetworkMeHeader_GenericTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2122A5C0C900AB0539 /* NetworkMeHeader_GenericTests.swift */; };
-		404F309422A5FC4B00267175 /* NetworkMeHeader_RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3622A5CC7300AB0539 /* NetworkMeHeader_RequestTests.swift */; };
-		404F309522A5FC4B00267175 /* NetworkHeader_ResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404F301222A5D97A00267175 /* NetworkHeader_ResponseTests.swift */; };
-		40665F6622ABBE8000703BD0 /* NetworkMe+EmptyDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F6522ABBE8000703BD0 /* NetworkMe+EmptyDecodable.swift */; };
-		40665F6722ABBF0E00703BD0 /* NetworkMe+EmptyDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F6522ABBE8000703BD0 /* NetworkMe+EmptyDecodable.swift */; };
-		40665F6822ABBF0F00703BD0 /* NetworkMe+EmptyDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F6522ABBE8000703BD0 /* NetworkMe+EmptyDecodable.swift */; };
-		40665F6922ABBF1000703BD0 /* NetworkMe+EmptyDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F6522ABBE8000703BD0 /* NetworkMe+EmptyDecodable.swift */; };
-		40665F6A22ABBF1100703BD0 /* NetworkMe+EmptyDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F6522ABBE8000703BD0 /* NetworkMe+EmptyDecodable.swift */; };
-		40665F6D22ABC52C00703BD0 /* NetworkMe+HTTPResponseCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F6C22ABC52C00703BD0 /* NetworkMe+HTTPResponseCodeValidator.swift */; };
-		40665F6E22ABC52C00703BD0 /* NetworkMe+HTTPResponseCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F6C22ABC52C00703BD0 /* NetworkMe+HTTPResponseCodeValidator.swift */; };
-		40665F6F22ABC52C00703BD0 /* NetworkMe+HTTPResponseCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F6C22ABC52C00703BD0 /* NetworkMe+HTTPResponseCodeValidator.swift */; };
-		40665F7022ABC52C00703BD0 /* NetworkMe+HTTPResponseCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F6C22ABC52C00703BD0 /* NetworkMe+HTTPResponseCodeValidator.swift */; };
-		40665F7122ABC52C00703BD0 /* NetworkMe+HTTPResponseCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F6C22ABC52C00703BD0 /* NetworkMe+HTTPResponseCodeValidator.swift */; };
-		40665F7322ABC61900703BD0 /* NetworMeResponseValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F7222ABC61900703BD0 /* NetworMeResponseValidatorProtocol.swift */; };
-		40665F7422ABC61900703BD0 /* NetworMeResponseValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F7222ABC61900703BD0 /* NetworMeResponseValidatorProtocol.swift */; };
-		40665F7522ABC61900703BD0 /* NetworMeResponseValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F7222ABC61900703BD0 /* NetworMeResponseValidatorProtocol.swift */; };
-		40665F7622ABC61900703BD0 /* NetworMeResponseValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F7222ABC61900703BD0 /* NetworMeResponseValidatorProtocol.swift */; };
-		40665F7722ABC61900703BD0 /* NetworMeResponseValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F7222ABC61900703BD0 /* NetworMeResponseValidatorProtocol.swift */; };
-		40665F7922ABC8D200703BD0 /* NetworkMeResponse+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F7822ABC8D200703BD0 /* NetworkMeResponse+Error.swift */; };
-		40665F7A22ABC8D200703BD0 /* NetworkMeResponse+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F7822ABC8D200703BD0 /* NetworkMeResponse+Error.swift */; };
-		40665F7B22ABC8D200703BD0 /* NetworkMeResponse+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F7822ABC8D200703BD0 /* NetworkMeResponse+Error.swift */; };
-		40665F7C22ABC8D200703BD0 /* NetworkMeResponse+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F7822ABC8D200703BD0 /* NetworkMeResponse+Error.swift */; };
-		40665F7D22ABC8D200703BD0 /* NetworkMeResponse+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F7822ABC8D200703BD0 /* NetworkMeResponse+Error.swift */; };
-		40665F7F22ABCD7600703BD0 /* NetworkeMeResponse+HeaderParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F7E22ABCD7600703BD0 /* NetworkeMeResponse+HeaderParser.swift */; };
-		40665F8022ABCD7600703BD0 /* NetworkeMeResponse+HeaderParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F7E22ABCD7600703BD0 /* NetworkeMeResponse+HeaderParser.swift */; };
-		40665F8122ABCD7600703BD0 /* NetworkeMeResponse+HeaderParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F7E22ABCD7600703BD0 /* NetworkeMeResponse+HeaderParser.swift */; };
-		40665F8222ABCD7600703BD0 /* NetworkeMeResponse+HeaderParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F7E22ABCD7600703BD0 /* NetworkeMeResponse+HeaderParser.swift */; };
-		40665F8322ABCD7600703BD0 /* NetworkeMeResponse+HeaderParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F7E22ABCD7600703BD0 /* NetworkeMeResponse+HeaderParser.swift */; };
-		40665F8522ABD1AB00703BD0 /* NetworkMeHeaderParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F8422ABD1AB00703BD0 /* NetworkMeHeaderParserProtocol.swift */; };
-		40665F8622ABD1AB00703BD0 /* NetworkMeHeaderParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F8422ABD1AB00703BD0 /* NetworkMeHeaderParserProtocol.swift */; };
-		40665F8722ABD1AB00703BD0 /* NetworkMeHeaderParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F8422ABD1AB00703BD0 /* NetworkMeHeaderParserProtocol.swift */; };
-		40665F8822ABD1AB00703BD0 /* NetworkMeHeaderParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F8422ABD1AB00703BD0 /* NetworkMeHeaderParserProtocol.swift */; };
-		40665F8922ABD1AB00703BD0 /* NetworkMeHeaderParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40665F8422ABD1AB00703BD0 /* NetworkMeHeaderParserProtocol.swift */; };
-		406DEA8922BAEB4B00C864EB /* NetworkMe+URLQueryItemEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406DEA8822BAEB4B00C864EB /* NetworkMe+URLQueryItemEncoder.swift */; };
-		406DEA8B22BAEC2200C864EB /* NetworkMe+HTTPParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406DEA8A22BAEC2200C864EB /* NetworkMe+HTTPParameter.swift */; };
-		406DEA8C22BAEC2200C864EB /* NetworkMe+HTTPParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406DEA8A22BAEC2200C864EB /* NetworkMe+HTTPParameter.swift */; };
-		406DEA8D22BAEC2200C864EB /* NetworkMe+HTTPParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406DEA8A22BAEC2200C864EB /* NetworkMe+HTTPParameter.swift */; };
-		406DEA8E22BAEC2200C864EB /* NetworkMe+HTTPParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406DEA8A22BAEC2200C864EB /* NetworkMe+HTTPParameter.swift */; };
-		406DEA8F22BAEC2200C864EB /* NetworkMe+HTTPParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406DEA8A22BAEC2200C864EB /* NetworkMe+HTTPParameter.swift */; };
-		406DEA9022BAED5900C864EB /* NetworkMe+URLQueryItemEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406DEA8822BAEB4B00C864EB /* NetworkMe+URLQueryItemEncoder.swift */; };
-		406DEA9122BAED5A00C864EB /* NetworkMe+URLQueryItemEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406DEA8822BAEB4B00C864EB /* NetworkMe+URLQueryItemEncoder.swift */; };
-		406DEA9222BAED5B00C864EB /* NetworkMe+URLQueryItemEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406DEA8822BAEB4B00C864EB /* NetworkMe+URLQueryItemEncoder.swift */; };
-		406DEA9322BAED5C00C864EB /* NetworkMe+URLQueryItemEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406DEA8822BAEB4B00C864EB /* NetworkMe+URLQueryItemEncoder.swift */; };
-		407A867422A41D4B00588850 /* NetworkMe_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A867322A41D4B00588850 /* NetworkMe_iOS.swift */; };
-		407A867C22A41D8000588850 /* NetworkMeEndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A867B22A41D8000588850 /* NetworkMeEndpointProtocol.swift */; };
-		407A867E22A41D9300588850 /* NetworkMeRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A867D22A41D9300588850 /* NetworkMeRouting.swift */; };
-		407A868122A41DA900588850 /* NetworkMe+Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A868022A41DA900588850 /* NetworkMe+Router.swift */; };
-		407A868322A41DBA00588850 /* NetworkMeURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A868222A41DBA00588850 /* NetworkMeURLSessionProtocol.swift */; };
-		407A868E22A41E5300588850 /* NetworMe+Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A868D22A41E5300588850 /* NetworMe+Scheme.swift */; };
-		407A869022A41E5E00588850 /* NetworkMe+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A868F22A41E5E00588850 /* NetworkMe+Method.swift */; };
-		407A869222A41EAF00588850 /* NetworkMe+Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869122A41EAF00588850 /* NetworkMe+Header.swift */; };
-		407A869422A41F0C00588850 /* NetworkMe+ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869322A41F0C00588850 /* NetworkMe+ContentType.swift */; };
-		407A869622A4209300588850 /* NetworkMe+Accept.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869522A4209300588850 /* NetworkMe+Accept.swift */; };
-		407A869822A4222E00588850 /* NetworkMeHeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869722A4222E00588850 /* NetworkMeHeaderProtocol.swift */; };
-		407A869A22A4232300588850 /* NetworkMeHeaderRequest+CacheControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869922A4232300588850 /* NetworkMeHeaderRequest+CacheControl.swift */; };
-		407A869C22A424E400588850 /* NetworkMeHeaderResponse+CacheControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869B22A424E400588850 /* NetworkMeHeaderResponse+CacheControl.swift */; };
-		407A869E22A426EF00588850 /* NetworkMeHeaderGeneric+Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869D22A426EF00588850 /* NetworkMeHeaderGeneric+Connection.swift */; };
-		407A86A022A4282300588850 /* NetworkMeHeaderRequest+Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869F22A4282300588850 /* NetworkMeHeaderRequest+Authorization.swift */; };
-		407A86A222A42B8D00588850 /* NetworkMeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86A122A42B8D00588850 /* NetworkMeDecoding.swift */; };
-		407A86A422A42BB900588850 /* NetworkMeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86A322A42BB900588850 /* NetworkMeEncoding.swift */; };
-		407A86A622A464BC00588850 /* NetworkMeRouter+NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86A522A464BC00588850 /* NetworkMeRouter+NetworkError.swift */; };
-		407A86AE22A465A200588850 /* NetworkMe_tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86AD22A465A200588850 /* NetworkMe_tvOS.swift */; };
-		407A86B222A465B700588850 /* NetworMe+Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A868D22A41E5300588850 /* NetworMe+Scheme.swift */; };
-		407A86B322A465B700588850 /* NetworkMe+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A868F22A41E5E00588850 /* NetworkMe+Method.swift */; };
-		407A86B422A465B700588850 /* NetworkMe+Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869122A41EAF00588850 /* NetworkMe+Header.swift */; };
-		407A86B522A465B700588850 /* NetworkMe+ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869322A41F0C00588850 /* NetworkMe+ContentType.swift */; };
-		407A86B622A465B700588850 /* NetworkMe+Accept.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869522A4209300588850 /* NetworkMe+Accept.swift */; };
-		407A86B722A465B700588850 /* NetworkMeHeaderRequest+CacheControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869922A4232300588850 /* NetworkMeHeaderRequest+CacheControl.swift */; };
-		407A86B822A465B700588850 /* NetworkMeHeaderRequest+Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869F22A4282300588850 /* NetworkMeHeaderRequest+Authorization.swift */; };
-		407A86B922A465B700588850 /* NetworkMeHeaderResponse+CacheControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869B22A424E400588850 /* NetworkMeHeaderResponse+CacheControl.swift */; };
-		407A86BA22A465B700588850 /* NetworkMeHeaderGeneric+Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869D22A426EF00588850 /* NetworkMeHeaderGeneric+Connection.swift */; };
-		407A86BB22A465B700588850 /* NetworkMeRouter+NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86A522A464BC00588850 /* NetworkMeRouter+NetworkError.swift */; };
-		407A86BC22A465B700588850 /* NetworkMeEndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A867B22A41D8000588850 /* NetworkMeEndpointProtocol.swift */; };
-		407A86BD22A465B700588850 /* NetworkMeRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A867D22A41D9300588850 /* NetworkMeRouting.swift */; };
-		407A86BE22A465B700588850 /* NetworkMeURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A868222A41DBA00588850 /* NetworkMeURLSessionProtocol.swift */; };
-		407A86BF22A465B700588850 /* NetworkMeHeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869722A4222E00588850 /* NetworkMeHeaderProtocol.swift */; };
-		407A86C022A465B700588850 /* NetworkMeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86A122A42B8D00588850 /* NetworkMeDecoding.swift */; };
-		407A86C122A465B700588850 /* NetworkMeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86A322A42BB900588850 /* NetworkMeEncoding.swift */; };
-		407A86C222A465B700588850 /* NetworkMe+Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A868022A41DA900588850 /* NetworkMe+Router.swift */; };
-		407A86C322A465B700588850 /* NetworkMe_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A867322A41D4B00588850 /* NetworkMe_iOS.swift */; };
-		407A86CB22A465CA00588850 /* NetworkMe_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 407A86CA22A465CA00588850 /* NetworkMe_macOS.h */; };
-		407A86CD22A465CA00588850 /* NetworkMe_macOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 407A86CC22A465CA00588850 /* NetworkMe_macOS.m */; };
-		407A86D122A465D400588850 /* NetworMe+Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A868D22A41E5300588850 /* NetworMe+Scheme.swift */; };
-		407A86D222A465D400588850 /* NetworkMe+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A868F22A41E5E00588850 /* NetworkMe+Method.swift */; };
-		407A86D322A465D400588850 /* NetworkMe+Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869122A41EAF00588850 /* NetworkMe+Header.swift */; };
-		407A86D422A465D400588850 /* NetworkMe+ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869322A41F0C00588850 /* NetworkMe+ContentType.swift */; };
-		407A86D522A465D400588850 /* NetworkMe+Accept.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869522A4209300588850 /* NetworkMe+Accept.swift */; };
-		407A86D622A465D400588850 /* NetworkMeHeaderRequest+CacheControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869922A4232300588850 /* NetworkMeHeaderRequest+CacheControl.swift */; };
-		407A86D722A465D400588850 /* NetworkMeHeaderRequest+Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869F22A4282300588850 /* NetworkMeHeaderRequest+Authorization.swift */; };
-		407A86D822A465D400588850 /* NetworkMeHeaderResponse+CacheControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869B22A424E400588850 /* NetworkMeHeaderResponse+CacheControl.swift */; };
-		407A86D922A465D400588850 /* NetworkMeHeaderGeneric+Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869D22A426EF00588850 /* NetworkMeHeaderGeneric+Connection.swift */; };
-		407A86DA22A465D400588850 /* NetworkMeRouter+NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86A522A464BC00588850 /* NetworkMeRouter+NetworkError.swift */; };
-		407A86DB22A465D400588850 /* NetworkMeEndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A867B22A41D8000588850 /* NetworkMeEndpointProtocol.swift */; };
-		407A86DC22A465D400588850 /* NetworkMeRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A867D22A41D9300588850 /* NetworkMeRouting.swift */; };
-		407A86DD22A465D400588850 /* NetworkMeURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A868222A41DBA00588850 /* NetworkMeURLSessionProtocol.swift */; };
-		407A86DE22A465D400588850 /* NetworkMeHeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A869722A4222E00588850 /* NetworkMeHeaderProtocol.swift */; };
-		407A86DF22A465D400588850 /* NetworkMeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86A122A42B8D00588850 /* NetworkMeDecoding.swift */; };
-		407A86E022A465D400588850 /* NetworkMeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86A322A42BB900588850 /* NetworkMeEncoding.swift */; };
-		407A86E122A465D400588850 /* NetworkMe+Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A868022A41DA900588850 /* NetworkMe+Router.swift */; };
-		407A86E222A465D400588850 /* NetworkMe_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A867322A41D4B00588850 /* NetworkMe_iOS.swift */; };
-		407A86F522A4670500588850 /* NetworMeScheme_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86F422A4670500588850 /* NetworMeScheme_Tests.swift */; };
-		407A86F722A4681300588850 /* NetworMeMethod_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A86F622A4681300588850 /* NetworMeMethod_Tests.swift */; };
-		407A86FD22A468F200588850 /* libNetworkMe iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 407A867022A41D4B00588850 /* libNetworkMe iOS.a */; };
-		40A8AE2222A5C0C900AB0539 /* NetworkMeHeader_GenericTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2122A5C0C900AB0539 /* NetworkMeHeader_GenericTests.swift */; };
-		40A8AE2522A5C2E700AB0539 /* NetworkMe+TransformableKeyValuePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2422A5C2E700AB0539 /* NetworkMe+TransformableKeyValuePair.swift */; };
-		40A8AE2722A5C5C500AB0539 /* NetworkMeDateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2622A5C5C500AB0539 /* NetworkMeDateProviding.swift */; };
-		40A8AE2A22A5C5EF00AB0539 /* DateFormatter+NetworkMeDateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2922A5C5EF00AB0539 /* DateFormatter+NetworkMeDateProviding.swift */; };
-		40A8AE2D22A5C71800AB0539 /* NetworkMeStub+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE2C22A5C71800AB0539 /* NetworkMeStub+DateFormatter.swift */; };
-		40A8AE3122A5CC3100AB0539 /* NetworkMeHeader+Generic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3022A5CC3100AB0539 /* NetworkMeHeader+Generic.swift */; };
-		40A8AE3322A5CC4600AB0539 /* NetworkMeHeader+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3222A5CC4600AB0539 /* NetworkMeHeader+Request.swift */; };
-		40A8AE3522A5CC5500AB0539 /* NetworkMeHeader+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3422A5CC5500AB0539 /* NetworkMeHeader+Response.swift */; };
-		40A8AE3722A5CC7300AB0539 /* NetworkMeHeader_RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8AE3622A5CC7300AB0539 /* NetworkMeHeader_RequestTests.swift */; };
+		OBJ_100 /* NetworkMe+ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* NetworkMe+ContentType.swift */; };
+		OBJ_101 /* NetworkMe+Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* NetworkMe+Header.swift */; };
+		OBJ_102 /* NetworkMe+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* NetworkMe+Method.swift */; };
+		OBJ_103 /* NetworkMe+TaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* NetworkMe+TaskType.swift */; };
+		OBJ_104 /* NetworkMeHeader+Generic.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* NetworkMeHeader+Generic.swift */; };
+		OBJ_105 /* NetworkMeHeader+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* NetworkMeHeader+Request.swift */; };
+		OBJ_106 /* NetworkMeHeader+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* NetworkMeHeader+Response.swift */; };
+		OBJ_107 /* NetworkMeHeaderGeneric+Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* NetworkMeHeaderGeneric+Connection.swift */; };
+		OBJ_108 /* NetworkMeHeaderRequest+Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* NetworkMeHeaderRequest+Authorization.swift */; };
+		OBJ_109 /* NetworkMeHeaderRequest+CacheControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* NetworkMeHeaderRequest+CacheControl.swift */; };
+		OBJ_110 /* NetworkMeHeaderResponse+CacheControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* NetworkMeHeaderResponse+CacheControl.swift */; };
+		OBJ_111 /* NetworkMeResponse+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* NetworkMeResponse+Error.swift */; };
+		OBJ_112 /* NetworkMeRouter+NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* NetworkMeRouter+NetworkError.swift */; };
+		OBJ_113 /* DateFormatter+NetworkMeDateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* DateFormatter+NetworkMeDateProviding.swift */; };
+		OBJ_114 /* JSONDecoder+NetworkMeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* JSONDecoder+NetworkMeDecoding.swift */; };
+		OBJ_115 /* JSONEncoder+NetworkMeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* JSONEncoder+NetworkMeEncoding.swift */; };
+		OBJ_116 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* URLSession+NetworkMeURLSessionProtocol.swift */; };
+		OBJ_117 /* NetworkMe+EmptyDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* NetworkMe+EmptyDecodable.swift */; };
+		OBJ_118 /* NetworkMe+TransformableKeyValuePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* NetworkMe+TransformableKeyValuePair.swift */; };
+		OBJ_119 /* NetworMeResponseValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* NetworMeResponseValidatorProtocol.swift */; };
+		OBJ_120 /* NetworkMeDateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* NetworkMeDateProviding.swift */; };
+		OBJ_121 /* NetworkMeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* NetworkMeDecoding.swift */; };
+		OBJ_122 /* NetworkMeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* NetworkMeEncoding.swift */; };
+		OBJ_123 /* NetworkMeEndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* NetworkMeEndpointProtocol.swift */; };
+		OBJ_124 /* NetworkMeFileRetrieving.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* NetworkMeFileRetrieving.swift */; };
+		OBJ_125 /* NetworkMeHeaderParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* NetworkMeHeaderParserProtocol.swift */; };
+		OBJ_126 /* NetworkMeHeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* NetworkMeHeaderProtocol.swift */; };
+		OBJ_127 /* NetworkMeRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* NetworkMeRouting.swift */; };
+		OBJ_128 /* NetworkMeURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* NetworkMeURLSessionProtocol.swift */; };
+		OBJ_129 /* NetworkMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* NetworkMe.swift */; };
+		OBJ_136 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_147 /* NetworkMeFileRetriever_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* NetworkMeFileRetriever_Tests.swift */; };
+		OBJ_148 /* NetworkMeRouter_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* NetworkMeRouter_Tests.swift */; };
+		OBJ_149 /* NetworMeMethod_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* NetworMeMethod_Tests.swift */; };
+		OBJ_150 /* NetworMeScheme_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* NetworMeScheme_Tests.swift */; };
+		OBJ_151 /* NetworkHeader_ResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* NetworkHeader_ResponseTests.swift */; };
+		OBJ_152 /* NetworkMeHeader_GenericTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* NetworkMeHeader_GenericTests.swift */; };
+		OBJ_153 /* NetworkMeHeader_RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* NetworkMeHeader_RequestTests.swift */; };
+		OBJ_154 /* NetworkMeEndpointProtocol_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* NetworkMeEndpointProtocol_Tests.swift */; };
+		OBJ_155 /* NetworkMe+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* NetworkMe+Tests.swift */; };
+		OBJ_156 /* NetworkMeStub+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* NetworkMeStub+DateFormatter.swift */; };
+		OBJ_157 /* NetworkMeStub+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* NetworkMeStub+Decoder.swift */; };
+		OBJ_158 /* NetworkMeStub+Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* NetworkMeStub+Encoder.swift */; };
+		OBJ_159 /* NetworkMeStub+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* NetworkMeStub+Endpoint.swift */; };
+		OBJ_160 /* NetworkMeStub+FileRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* NetworkMeStub+FileRetriever.swift */; };
+		OBJ_161 /* NetworkMeStub+URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* NetworkMeStub+URLSession.swift */; };
+		OBJ_162 /* NetworkMeStub+URLSessionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* NetworkMeStub+URLSessionTask.swift */; };
+		OBJ_163 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* XCTestManifests.swift */; };
+		OBJ_165 /* NetworkMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "NetworkMe::NetworkMe::Product" /* NetworkMe.framework */; };
+		OBJ_92 /* NetworkMe+FileRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* NetworkMe+FileRetriever.swift */; };
+		OBJ_93 /* NetworkeMeResponse+HeaderParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* NetworkeMeResponse+HeaderParser.swift */; };
+		OBJ_94 /* NetworkMe+HTTPResponseCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* NetworkMe+HTTPResponseCodeValidator.swift */; };
+		OBJ_95 /* NetworkMe+Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* NetworkMe+Router.swift */; };
+		OBJ_96 /* NetworkMe+HTTPParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* NetworkMe+HTTPParameter.swift */; };
+		OBJ_97 /* NetworkMe+URLQueryItemEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* NetworkMe+URLQueryItemEncoder.swift */; };
+		OBJ_98 /* NetworMe+Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* NetworMe+Scheme.swift */; };
+		OBJ_99 /* NetworkMe+Accept.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* NetworkMe+Accept.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4046A36A22A7E55800A5AF36 /* PBXContainerItemProxy */ = {
+		4033AEB022E4BD4A0045168B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 407A866822A41D4B00588850 /* Project object */;
+			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4046A35822A7E4F500A5AF36;
+			remoteGlobalIDString = "NetworkMe::NetworkMe";
 			remoteInfo = NetworkMe;
 		};
-		404F304222A5F72B00267175 /* PBXContainerItemProxy */ = {
+		4033AEB122E4BD4B0045168B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 407A866822A41D4B00588850 /* Project object */;
+			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 407A86AA22A465A200588850;
-			remoteInfo = "NetworkMe tvOS";
-		};
-		404F305122A5F74600267175 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 407A866822A41D4B00588850 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 407A86C722A465CA00588850;
-			remoteInfo = "NetworkMe macOS";
+			remoteGlobalIDString = "NetworkMe::NetworkMeTests";
+			remoteInfo = NetworkMeTests;
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		4046A35722A7E4F500A5AF36 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		404F305822A5F7F700267175 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		407A866E22A41D4B00588850 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		407A86A922A465A200588850 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		40106E4A22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeEndpointProtocol_Tests.swift; sourceTree = "<group>"; };
-		40106E5022A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeFileRetriever_Tests.swift; sourceTree = "<group>"; };
-		4027AA1D22A8861500B22CD8 /* JSONDecoder+NetworkMeDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+NetworkMeDecoding.swift"; sourceTree = "<group>"; };
-		4027AA1F22A8862600B22CD8 /* JSONEncoder+NetworkMeEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+NetworkMeEncoding.swift"; sourceTree = "<group>"; };
-		4027AA2922A886CB00B22CD8 /* NetworkMe+FileRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+FileRetriever.swift"; sourceTree = "<group>"; };
-		4027AA2C22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkMeURLSessionProtocol.swift"; sourceTree = "<group>"; };
-		4046A35922A7E4F500A5AF36 /* libNetworkMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNetworkMe.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4046A35B22A7E4F500A5AF36 /* NetworkMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMe.swift; sourceTree = "<group>"; };
-		4046A36422A7E55800A5AF36 /* NetworkMe Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NetworkMe Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4046A36822A7E55800A5AF36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		404F301222A5D97A00267175 /* NetworkHeader_ResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHeader_ResponseTests.swift; sourceTree = "<group>"; };
-		404F301622A5DC8900267175 /* NetworkMe+TaskType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+TaskType.swift"; sourceTree = "<group>"; };
-		404F301822A5E06900267175 /* NetworkMeRouter_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeRouter_Tests.swift; sourceTree = "<group>"; };
-		404F301A22A5E09900267175 /* NetworkMeStub+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeStub+Endpoint.swift"; sourceTree = "<group>"; };
-		404F301C22A5E2A900267175 /* NetworkMeStub+Encoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeStub+Encoder.swift"; sourceTree = "<group>"; };
-		404F301E22A5E2AF00267175 /* NetworkMeStub+Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeStub+Decoder.swift"; sourceTree = "<group>"; };
-		404F302022A5E48600267175 /* NetworkMeStub+URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeStub+URLSession.swift"; sourceTree = "<group>"; };
-		404F302222A5E56000267175 /* NetworkMeStub+URLSessionTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeStub+URLSessionTask.swift"; sourceTree = "<group>"; };
-		404F302422A5F47700267175 /* NetworkMeFileRetrieving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeFileRetrieving.swift; sourceTree = "<group>"; };
-		404F302622A5F4C600267175 /* NetworkMeStub+FileRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeStub+FileRetriever.swift"; sourceTree = "<group>"; };
-		404F303C22A5F72B00267175 /* NetworkMe tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NetworkMe tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		404F304022A5F72B00267175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		404F304B22A5F74600267175 /* NetworkMe macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NetworkMe macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		404F304F22A5F74600267175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		404F305A22A5F7F700267175 /* libNetworkMe watchOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libNetworkMe watchOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		404F305C22A5F7F700267175 /* NetworkMe_watchOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMe_watchOS.swift; sourceTree = "<group>"; };
-		40665F6522ABBE8000703BD0 /* NetworkMe+EmptyDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+EmptyDecodable.swift"; sourceTree = "<group>"; };
-		40665F6C22ABC52C00703BD0 /* NetworkMe+HTTPResponseCodeValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+HTTPResponseCodeValidator.swift"; sourceTree = "<group>"; };
-		40665F7222ABC61900703BD0 /* NetworMeResponseValidatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworMeResponseValidatorProtocol.swift; sourceTree = "<group>"; };
-		40665F7822ABC8D200703BD0 /* NetworkMeResponse+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeResponse+Error.swift"; sourceTree = "<group>"; };
-		40665F7E22ABCD7600703BD0 /* NetworkeMeResponse+HeaderParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkeMeResponse+HeaderParser.swift"; sourceTree = "<group>"; };
-		40665F8422ABD1AB00703BD0 /* NetworkMeHeaderParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeHeaderParserProtocol.swift; sourceTree = "<group>"; };
-		406DEA8822BAEB4B00C864EB /* NetworkMe+URLQueryItemEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+URLQueryItemEncoder.swift"; sourceTree = "<group>"; };
-		406DEA8A22BAEC2200C864EB /* NetworkMe+HTTPParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+HTTPParameter.swift"; sourceTree = "<group>"; };
-		407A867022A41D4B00588850 /* libNetworkMe iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libNetworkMe iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		407A867322A41D4B00588850 /* NetworkMe_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMe_iOS.swift; sourceTree = "<group>"; };
-		407A867B22A41D8000588850 /* NetworkMeEndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeEndpointProtocol.swift; sourceTree = "<group>"; };
-		407A867D22A41D9300588850 /* NetworkMeRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeRouting.swift; sourceTree = "<group>"; };
-		407A868022A41DA900588850 /* NetworkMe+Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+Router.swift"; sourceTree = "<group>"; };
-		407A868222A41DBA00588850 /* NetworkMeURLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeURLSessionProtocol.swift; sourceTree = "<group>"; };
-		407A868D22A41E5300588850 /* NetworMe+Scheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworMe+Scheme.swift"; sourceTree = "<group>"; };
-		407A868F22A41E5E00588850 /* NetworkMe+Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+Method.swift"; sourceTree = "<group>"; };
-		407A869122A41EAF00588850 /* NetworkMe+Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+Header.swift"; sourceTree = "<group>"; };
-		407A869322A41F0C00588850 /* NetworkMe+ContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+ContentType.swift"; sourceTree = "<group>"; };
-		407A869522A4209300588850 /* NetworkMe+Accept.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+Accept.swift"; sourceTree = "<group>"; };
-		407A869722A4222E00588850 /* NetworkMeHeaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeHeaderProtocol.swift; sourceTree = "<group>"; };
-		407A869922A4232300588850 /* NetworkMeHeaderRequest+CacheControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeHeaderRequest+CacheControl.swift"; sourceTree = "<group>"; };
-		407A869B22A424E400588850 /* NetworkMeHeaderResponse+CacheControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeHeaderResponse+CacheControl.swift"; sourceTree = "<group>"; };
-		407A869D22A426EF00588850 /* NetworkMeHeaderGeneric+Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeHeaderGeneric+Connection.swift"; sourceTree = "<group>"; };
-		407A869F22A4282300588850 /* NetworkMeHeaderRequest+Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeHeaderRequest+Authorization.swift"; sourceTree = "<group>"; };
-		407A86A122A42B8D00588850 /* NetworkMeDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeDecoding.swift; sourceTree = "<group>"; };
-		407A86A322A42BB900588850 /* NetworkMeEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeEncoding.swift; sourceTree = "<group>"; };
-		407A86A522A464BC00588850 /* NetworkMeRouter+NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeRouter+NetworkError.swift"; sourceTree = "<group>"; };
-		407A86AB22A465A200588850 /* libNetworkMe tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libNetworkMe tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		407A86AD22A465A200588850 /* NetworkMe_tvOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMe_tvOS.swift; sourceTree = "<group>"; };
-		407A86C822A465CA00588850 /* libNetworkMe macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libNetworkMe macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		407A86CA22A465CA00588850 /* NetworkMe_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkMe_macOS.h; sourceTree = "<group>"; };
-		407A86CC22A465CA00588850 /* NetworkMe_macOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkMe_macOS.m; sourceTree = "<group>"; };
-		407A86E722A4667C00588850 /* NetworkMe iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NetworkMe iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		407A86EB22A4667C00588850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		407A86F422A4670500588850 /* NetworMeScheme_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworMeScheme_Tests.swift; sourceTree = "<group>"; };
-		407A86F622A4681300588850 /* NetworMeMethod_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworMeMethod_Tests.swift; sourceTree = "<group>"; };
-		40A8AE2122A5C0C900AB0539 /* NetworkMeHeader_GenericTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeHeader_GenericTests.swift; sourceTree = "<group>"; };
-		40A8AE2422A5C2E700AB0539 /* NetworkMe+TransformableKeyValuePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+TransformableKeyValuePair.swift"; sourceTree = "<group>"; };
-		40A8AE2622A5C5C500AB0539 /* NetworkMeDateProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeDateProviding.swift; sourceTree = "<group>"; };
-		40A8AE2922A5C5EF00AB0539 /* DateFormatter+NetworkMeDateProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+NetworkMeDateProviding.swift"; sourceTree = "<group>"; };
-		40A8AE2C22A5C71800AB0539 /* NetworkMeStub+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeStub+DateFormatter.swift"; sourceTree = "<group>"; };
-		40A8AE2E22A5C72500AB0539 /* NetworkMe+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+Tests.swift"; sourceTree = "<group>"; };
-		40A8AE3022A5CC3100AB0539 /* NetworkMeHeader+Generic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeHeader+Generic.swift"; sourceTree = "<group>"; };
-		40A8AE3222A5CC4600AB0539 /* NetworkMeHeader+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeHeader+Request.swift"; sourceTree = "<group>"; };
-		40A8AE3422A5CC5500AB0539 /* NetworkMeHeader+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeHeader+Response.swift"; sourceTree = "<group>"; };
-		40A8AE3622A5CC7300AB0539 /* NetworkMeHeader_RequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeHeader_RequestTests.swift; sourceTree = "<group>"; };
+		"NetworkMe::NetworkMe::Product" /* NetworkMe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NetworkMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"NetworkMe::NetworkMeTests::Product" /* NetworkMeTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = NetworkMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_12 /* NetworkMe+FileRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+FileRetriever.swift"; sourceTree = "<group>"; };
+		OBJ_13 /* NetworkeMeResponse+HeaderParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkeMeResponse+HeaderParser.swift"; sourceTree = "<group>"; };
+		OBJ_15 /* NetworkMe+HTTPResponseCodeValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+HTTPResponseCodeValidator.swift"; sourceTree = "<group>"; };
+		OBJ_17 /* NetworkMe+Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+Router.swift"; sourceTree = "<group>"; };
+		OBJ_19 /* NetworkMe+HTTPParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+HTTPParameter.swift"; sourceTree = "<group>"; };
+		OBJ_20 /* NetworkMe+URLQueryItemEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+URLQueryItemEncoder.swift"; sourceTree = "<group>"; };
+		OBJ_22 /* NetworMe+Scheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworMe+Scheme.swift"; sourceTree = "<group>"; };
+		OBJ_23 /* NetworkMe+Accept.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+Accept.swift"; sourceTree = "<group>"; };
+		OBJ_24 /* NetworkMe+ContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+ContentType.swift"; sourceTree = "<group>"; };
+		OBJ_25 /* NetworkMe+Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+Header.swift"; sourceTree = "<group>"; };
+		OBJ_26 /* NetworkMe+Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+Method.swift"; sourceTree = "<group>"; };
+		OBJ_27 /* NetworkMe+TaskType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+TaskType.swift"; sourceTree = "<group>"; };
+		OBJ_28 /* NetworkMeHeader+Generic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeHeader+Generic.swift"; sourceTree = "<group>"; };
+		OBJ_29 /* NetworkMeHeader+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeHeader+Request.swift"; sourceTree = "<group>"; };
+		OBJ_30 /* NetworkMeHeader+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeHeader+Response.swift"; sourceTree = "<group>"; };
+		OBJ_31 /* NetworkMeHeaderGeneric+Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeHeaderGeneric+Connection.swift"; sourceTree = "<group>"; };
+		OBJ_32 /* NetworkMeHeaderRequest+Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeHeaderRequest+Authorization.swift"; sourceTree = "<group>"; };
+		OBJ_33 /* NetworkMeHeaderRequest+CacheControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeHeaderRequest+CacheControl.swift"; sourceTree = "<group>"; };
+		OBJ_34 /* NetworkMeHeaderResponse+CacheControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeHeaderResponse+CacheControl.swift"; sourceTree = "<group>"; };
+		OBJ_35 /* NetworkMeResponse+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeResponse+Error.swift"; sourceTree = "<group>"; };
+		OBJ_36 /* NetworkMeRouter+NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeRouter+NetworkError.swift"; sourceTree = "<group>"; };
+		OBJ_38 /* DateFormatter+NetworkMeDateProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+NetworkMeDateProviding.swift"; sourceTree = "<group>"; };
+		OBJ_39 /* JSONDecoder+NetworkMeDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+NetworkMeDecoding.swift"; sourceTree = "<group>"; };
+		OBJ_40 /* JSONEncoder+NetworkMeEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+NetworkMeEncoding.swift"; sourceTree = "<group>"; };
+		OBJ_41 /* URLSession+NetworkMeURLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkMeURLSessionProtocol.swift"; sourceTree = "<group>"; };
+		OBJ_43 /* NetworkMe+EmptyDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+EmptyDecodable.swift"; sourceTree = "<group>"; };
+		OBJ_44 /* NetworkMe+TransformableKeyValuePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+TransformableKeyValuePair.swift"; sourceTree = "<group>"; };
+		OBJ_46 /* NetworMeResponseValidatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworMeResponseValidatorProtocol.swift; sourceTree = "<group>"; };
+		OBJ_47 /* NetworkMeDateProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeDateProviding.swift; sourceTree = "<group>"; };
+		OBJ_48 /* NetworkMeDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeDecoding.swift; sourceTree = "<group>"; };
+		OBJ_49 /* NetworkMeEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeEncoding.swift; sourceTree = "<group>"; };
+		OBJ_50 /* NetworkMeEndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeEndpointProtocol.swift; sourceTree = "<group>"; };
+		OBJ_51 /* NetworkMeFileRetrieving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeFileRetrieving.swift; sourceTree = "<group>"; };
+		OBJ_52 /* NetworkMeHeaderParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeHeaderParserProtocol.swift; sourceTree = "<group>"; };
+		OBJ_53 /* NetworkMeHeaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeHeaderProtocol.swift; sourceTree = "<group>"; };
+		OBJ_54 /* NetworkMeRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeRouting.swift; sourceTree = "<group>"; };
+		OBJ_55 /* NetworkMeURLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeURLSessionProtocol.swift; sourceTree = "<group>"; };
+		OBJ_56 /* NetworkMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMe.swift; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_62 /* NetworkMeFileRetriever_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeFileRetriever_Tests.swift; sourceTree = "<group>"; };
+		OBJ_64 /* NetworkMeRouter_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeRouter_Tests.swift; sourceTree = "<group>"; };
+		OBJ_66 /* NetworMeMethod_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworMeMethod_Tests.swift; sourceTree = "<group>"; };
+		OBJ_67 /* NetworMeScheme_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworMeScheme_Tests.swift; sourceTree = "<group>"; };
+		OBJ_68 /* NetworkHeader_ResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHeader_ResponseTests.swift; sourceTree = "<group>"; };
+		OBJ_69 /* NetworkMeHeader_GenericTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeHeader_GenericTests.swift; sourceTree = "<group>"; };
+		OBJ_70 /* NetworkMeHeader_RequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeHeader_RequestTests.swift; sourceTree = "<group>"; };
+		OBJ_72 /* NetworkMeEndpointProtocol_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeEndpointProtocol_Tests.swift; sourceTree = "<group>"; };
+		OBJ_73 /* NetworkMe+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+Tests.swift"; sourceTree = "<group>"; };
+		OBJ_75 /* NetworkMeStub+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeStub+DateFormatter.swift"; sourceTree = "<group>"; };
+		OBJ_76 /* NetworkMeStub+Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeStub+Decoder.swift"; sourceTree = "<group>"; };
+		OBJ_77 /* NetworkMeStub+Encoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeStub+Encoder.swift"; sourceTree = "<group>"; };
+		OBJ_78 /* NetworkMeStub+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeStub+Endpoint.swift"; sourceTree = "<group>"; };
+		OBJ_79 /* NetworkMeStub+FileRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeStub+FileRetriever.swift"; sourceTree = "<group>"; };
+		OBJ_80 /* NetworkMeStub+URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeStub+URLSession.swift"; sourceTree = "<group>"; };
+		OBJ_81 /* NetworkMeStub+URLSessionTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeStub+URLSessionTask.swift"; sourceTree = "<group>"; };
+		OBJ_82 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_86 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4046A35622A7E4F500A5AF36 /* Frameworks */ = {
+		OBJ_130 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4046A36122A7E55800A5AF36 /* Frameworks */ = {
+		OBJ_164 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				4046A36922A7E55800A5AF36 /* libNetworkMe.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		404F303922A5F72B00267175 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				404F304122A5F72B00267175 /* libNetworkMe tvOS.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		404F304822A5F74600267175 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				404F305022A5F74600267175 /* libNetworkMe macOS.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		404F305722A5F7F700267175 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		407A866D22A41D4B00588850 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		407A86A822A465A200588850 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		407A86C622A465CA00588850 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		407A86E422A4667C00588850 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				407A86FD22A468F200588850 /* libNetworkMe iOS.a in Frameworks */,
+				OBJ_165 /* NetworkMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		40106E4922A88DE6001F31F0 /* Protocols */ = {
+		OBJ_10 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				40106E4A22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		40106E4F22A88F35001F31F0 /* FileRetriever */ = {
-			isa = PBXGroup;
-			children = (
-				40106E5022A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift */,
-			);
-			path = FileRetriever;
-			sourceTree = "<group>";
-		};
-		4027AA2B22A887BC00B22CD8 /* FileRetriever */ = {
-			isa = PBXGroup;
-			children = (
-				4027AA2922A886CB00B22CD8 /* NetworkMe+FileRetriever.swift */,
-			);
-			path = FileRetriever;
-			sourceTree = "<group>";
-		};
-		4046A35A22A7E4F500A5AF36 /* NetworkMe */ = {
-			isa = PBXGroup;
-			children = (
-				407A867F22A41D9900588850 /* Implementation */,
-				4046A35B22A7E4F500A5AF36 /* NetworkMe.swift */,
-			);
-			path = NetworkMe;
-			sourceTree = "<group>";
-		};
-		4046A36522A7E55800A5AF36 /* NetworkMe Tests */ = {
-			isa = PBXGroup;
-			children = (
-				40A8AE2B22A5C70200AB0539 /* Stubs */,
-				407A86F222A466D100588850 /* Implementation */,
-				40A8AE2E22A5C72500AB0539 /* NetworkMe+Tests.swift */,
-				4046A36822A7E55800A5AF36 /* Info.plist */,
-			);
-			path = "NetworkMe Tests";
-			sourceTree = "<group>";
-		};
-		404F301422A5DC0B00267175 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				40106E4F22A88F35001F31F0 /* FileRetriever */,
-				404F301522A5DC1300267175 /* Router */,
+				OBJ_11 /* FileRetriever */,
+				OBJ_13 /* NetworkeMeResponse+HeaderParser.swift */,
+				OBJ_14 /* ResponseValidator */,
+				OBJ_16 /* Router */,
+				OBJ_18 /* URLQueryItemEncoder */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		404F301522A5DC1300267175 /* Router */ = {
+		OBJ_11 /* FileRetriever */ = {
 			isa = PBXGroup;
 			children = (
-				404F301822A5E06900267175 /* NetworkMeRouter_Tests.swift */,
+				OBJ_12 /* NetworkMe+FileRetriever.swift */,
 			);
-			path = Router;
+			path = FileRetriever;
 			sourceTree = "<group>";
 		};
-		404F303D22A5F72B00267175 /* NetworkMe tvOS Tests */ = {
+		OBJ_14 /* ResponseValidator */ = {
 			isa = PBXGroup;
 			children = (
-				404F304022A5F72B00267175 /* Info.plist */,
-			);
-			path = "NetworkMe tvOS Tests";
-			sourceTree = "<group>";
-		};
-		404F304C22A5F74600267175 /* NetworkMe macOS Tests */ = {
-			isa = PBXGroup;
-			children = (
-				404F304F22A5F74600267175 /* Info.plist */,
-			);
-			path = "NetworkMe macOS Tests";
-			sourceTree = "<group>";
-		};
-		404F305B22A5F7F700267175 /* NetworkMe watchOS */ = {
-			isa = PBXGroup;
-			children = (
-				404F305C22A5F7F700267175 /* NetworkMe_watchOS.swift */,
-			);
-			path = "NetworkMe watchOS";
-			sourceTree = "<group>";
-		};
-		40665F6B22ABC4EB00703BD0 /* ResponseValidator */ = {
-			isa = PBXGroup;
-			children = (
-				40665F6C22ABC52C00703BD0 /* NetworkMe+HTTPResponseCodeValidator.swift */,
+				OBJ_15 /* NetworkMe+HTTPResponseCodeValidator.swift */,
 			);
 			path = ResponseValidator;
 			sourceTree = "<group>";
 		};
-		406DEA8722BAEB3B00C864EB /* URLQueryItemEncoder */ = {
+		OBJ_16 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				406DEA8822BAEB4B00C864EB /* NetworkMe+URLQueryItemEncoder.swift */,
-				406DEA8A22BAEC2200C864EB /* NetworkMe+HTTPParameter.swift */,
-			);
-			path = URLQueryItemEncoder;
-			sourceTree = "<group>";
-		};
-		407A866722A41D4B00588850 = {
-			isa = PBXGroup;
-			children = (
-				4046A35A22A7E4F500A5AF36 /* NetworkMe */,
-				4046A36522A7E55800A5AF36 /* NetworkMe Tests */,
-				407A867222A41D4B00588850 /* NetworkMe iOS */,
-				407A86E822A4667C00588850 /* NetworkMe iOS Tests */,
-				407A86AC22A465A200588850 /* NetworkMe tvOS */,
-				404F303D22A5F72B00267175 /* NetworkMe tvOS Tests */,
-				407A86C922A465CA00588850 /* NetworkMe macOS */,
-				404F304C22A5F74600267175 /* NetworkMe macOS Tests */,
-				404F305B22A5F7F700267175 /* NetworkMe watchOS */,
-				407A867122A41D4B00588850 /* Products */,
-				407A86FC22A468F200588850 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		407A867122A41D4B00588850 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				407A867022A41D4B00588850 /* libNetworkMe iOS.a */,
-				407A86AB22A465A200588850 /* libNetworkMe tvOS.a */,
-				407A86C822A465CA00588850 /* libNetworkMe macOS.a */,
-				407A86E722A4667C00588850 /* NetworkMe iOS Tests.xctest */,
-				404F303C22A5F72B00267175 /* NetworkMe tvOS Tests.xctest */,
-				404F304B22A5F74600267175 /* NetworkMe macOS Tests.xctest */,
-				404F305A22A5F7F700267175 /* libNetworkMe watchOS.a */,
-				4046A35922A7E4F500A5AF36 /* libNetworkMe.a */,
-				4046A36422A7E55800A5AF36 /* NetworkMe Tests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		407A867222A41D4B00588850 /* NetworkMe iOS */ = {
-			isa = PBXGroup;
-			children = (
-				407A867322A41D4B00588850 /* NetworkMe_iOS.swift */,
-			);
-			path = "NetworkMe iOS";
-			sourceTree = "<group>";
-		};
-		407A867A22A41D6700588850 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				407A867B22A41D8000588850 /* NetworkMeEndpointProtocol.swift */,
-				407A867D22A41D9300588850 /* NetworkMeRouting.swift */,
-				407A868222A41DBA00588850 /* NetworkMeURLSessionProtocol.swift */,
-				407A869722A4222E00588850 /* NetworkMeHeaderProtocol.swift */,
-				407A86A122A42B8D00588850 /* NetworkMeDecoding.swift */,
-				407A86A322A42BB900588850 /* NetworkMeEncoding.swift */,
-				40A8AE2622A5C5C500AB0539 /* NetworkMeDateProviding.swift */,
-				404F302422A5F47700267175 /* NetworkMeFileRetrieving.swift */,
-				40665F7222ABC61900703BD0 /* NetworMeResponseValidatorProtocol.swift */,
-				40665F8422ABD1AB00703BD0 /* NetworkMeHeaderParserProtocol.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		407A867F22A41D9900588850 /* Implementation */ = {
-			isa = PBXGroup;
-			children = (
-				40A8AE2822A5C5D700AB0539 /* Extensions */,
-				40A8AE2322A5C2D500AB0539 /* Models */,
-				407A868C22A41E4800588850 /* Enums */,
-				407A867A22A41D6700588850 /* Protocols */,
-				407A868B22A41E4000588850 /* Components */,
-			);
-			path = Implementation;
-			sourceTree = "<group>";
-		};
-		407A868A22A41E3300588850 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				407A868022A41DA900588850 /* NetworkMe+Router.swift */,
+				OBJ_17 /* NetworkMe+Router.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
 		};
-		407A868B22A41E4000588850 /* Components */ = {
+		OBJ_18 /* URLQueryItemEncoder */ = {
 			isa = PBXGroup;
 			children = (
-				406DEA8722BAEB3B00C864EB /* URLQueryItemEncoder */,
-				40665F6B22ABC4EB00703BD0 /* ResponseValidator */,
-				4027AA2B22A887BC00B22CD8 /* FileRetriever */,
-				407A868A22A41E3300588850 /* Router */,
-				40665F7E22ABCD7600703BD0 /* NetworkeMeResponse+HeaderParser.swift */,
+				OBJ_19 /* NetworkMe+HTTPParameter.swift */,
+				OBJ_20 /* NetworkMe+URLQueryItemEncoder.swift */,
 			);
-			path = Components;
+			path = URLQueryItemEncoder;
 			sourceTree = "<group>";
 		};
-		407A868C22A41E4800588850 /* Enums */ = {
+		OBJ_21 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				404F301622A5DC8900267175 /* NetworkMe+TaskType.swift */,
-				407A868D22A41E5300588850 /* NetworMe+Scheme.swift */,
-				407A868F22A41E5E00588850 /* NetworkMe+Method.swift */,
-				407A869122A41EAF00588850 /* NetworkMe+Header.swift */,
-				40A8AE3022A5CC3100AB0539 /* NetworkMeHeader+Generic.swift */,
-				40A8AE3222A5CC4600AB0539 /* NetworkMeHeader+Request.swift */,
-				40A8AE3422A5CC5500AB0539 /* NetworkMeHeader+Response.swift */,
-				407A869322A41F0C00588850 /* NetworkMe+ContentType.swift */,
-				407A869522A4209300588850 /* NetworkMe+Accept.swift */,
-				407A869922A4232300588850 /* NetworkMeHeaderRequest+CacheControl.swift */,
-				407A869F22A4282300588850 /* NetworkMeHeaderRequest+Authorization.swift */,
-				407A869B22A424E400588850 /* NetworkMeHeaderResponse+CacheControl.swift */,
-				407A869D22A426EF00588850 /* NetworkMeHeaderGeneric+Connection.swift */,
-				407A86A522A464BC00588850 /* NetworkMeRouter+NetworkError.swift */,
-				40665F7822ABC8D200703BD0 /* NetworkMeResponse+Error.swift */,
+				OBJ_22 /* NetworMe+Scheme.swift */,
+				OBJ_23 /* NetworkMe+Accept.swift */,
+				OBJ_24 /* NetworkMe+ContentType.swift */,
+				OBJ_25 /* NetworkMe+Header.swift */,
+				OBJ_26 /* NetworkMe+Method.swift */,
+				OBJ_27 /* NetworkMe+TaskType.swift */,
+				OBJ_28 /* NetworkMeHeader+Generic.swift */,
+				OBJ_29 /* NetworkMeHeader+Request.swift */,
+				OBJ_30 /* NetworkMeHeader+Response.swift */,
+				OBJ_31 /* NetworkMeHeaderGeneric+Connection.swift */,
+				OBJ_32 /* NetworkMeHeaderRequest+Authorization.swift */,
+				OBJ_33 /* NetworkMeHeaderRequest+CacheControl.swift */,
+				OBJ_34 /* NetworkMeHeaderResponse+CacheControl.swift */,
+				OBJ_35 /* NetworkMeResponse+Error.swift */,
+				OBJ_36 /* NetworkMeRouter+NetworkError.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
 		};
-		407A86AC22A465A200588850 /* NetworkMe tvOS */ = {
+		OBJ_37 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				407A86AD22A465A200588850 /* NetworkMe_tvOS.swift */,
-			);
-			path = "NetworkMe tvOS";
-			sourceTree = "<group>";
-		};
-		407A86C922A465CA00588850 /* NetworkMe macOS */ = {
-			isa = PBXGroup;
-			children = (
-				407A86CA22A465CA00588850 /* NetworkMe_macOS.h */,
-				407A86CC22A465CA00588850 /* NetworkMe_macOS.m */,
-			);
-			path = "NetworkMe macOS";
-			sourceTree = "<group>";
-		};
-		407A86E822A4667C00588850 /* NetworkMe iOS Tests */ = {
-			isa = PBXGroup;
-			children = (
-				407A86EB22A4667C00588850 /* Info.plist */,
-			);
-			path = "NetworkMe iOS Tests";
-			sourceTree = "<group>";
-		};
-		407A86F222A466D100588850 /* Implementation */ = {
-			isa = PBXGroup;
-			children = (
-				40106E4922A88DE6001F31F0 /* Protocols */,
-				404F301422A5DC0B00267175 /* Components */,
-				407A86F322A466DE00588850 /* Enums */,
-			);
-			path = Implementation;
-			sourceTree = "<group>";
-		};
-		407A86F322A466DE00588850 /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-				407A86F422A4670500588850 /* NetworMeScheme_Tests.swift */,
-				407A86F622A4681300588850 /* NetworMeMethod_Tests.swift */,
-				40A8AE2122A5C0C900AB0539 /* NetworkMeHeader_GenericTests.swift */,
-				40A8AE3622A5CC7300AB0539 /* NetworkMeHeader_RequestTests.swift */,
-				404F301222A5D97A00267175 /* NetworkHeader_ResponseTests.swift */,
-			);
-			path = Enums;
-			sourceTree = "<group>";
-		};
-		407A86FC22A468F200588850 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		40A8AE2322A5C2D500AB0539 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				40A8AE2422A5C2E700AB0539 /* NetworkMe+TransformableKeyValuePair.swift */,
-				40665F6522ABBE8000703BD0 /* NetworkMe+EmptyDecodable.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		40A8AE2822A5C5D700AB0539 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				40A8AE2922A5C5EF00AB0539 /* DateFormatter+NetworkMeDateProviding.swift */,
-				4027AA1D22A8861500B22CD8 /* JSONDecoder+NetworkMeDecoding.swift */,
-				4027AA1F22A8862600B22CD8 /* JSONEncoder+NetworkMeEncoding.swift */,
-				4027AA2C22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift */,
+				OBJ_38 /* DateFormatter+NetworkMeDateProviding.swift */,
+				OBJ_39 /* JSONDecoder+NetworkMeDecoding.swift */,
+				OBJ_40 /* JSONEncoder+NetworkMeEncoding.swift */,
+				OBJ_41 /* URLSession+NetworkMeURLSessionProtocol.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		40A8AE2B22A5C70200AB0539 /* Stubs */ = {
+		OBJ_42 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				40A8AE2C22A5C71800AB0539 /* NetworkMeStub+DateFormatter.swift */,
-				404F301A22A5E09900267175 /* NetworkMeStub+Endpoint.swift */,
-				404F301C22A5E2A900267175 /* NetworkMeStub+Encoder.swift */,
-				404F301E22A5E2AF00267175 /* NetworkMeStub+Decoder.swift */,
-				404F302022A5E48600267175 /* NetworkMeStub+URLSession.swift */,
-				404F302222A5E56000267175 /* NetworkMeStub+URLSessionTask.swift */,
-				404F302622A5F4C600267175 /* NetworkMeStub+FileRetriever.swift */,
+				OBJ_43 /* NetworkMe+EmptyDecodable.swift */,
+				OBJ_44 /* NetworkMe+TransformableKeyValuePair.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		OBJ_45 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_46 /* NetworMeResponseValidatorProtocol.swift */,
+				OBJ_47 /* NetworkMeDateProviding.swift */,
+				OBJ_48 /* NetworkMeDecoding.swift */,
+				OBJ_49 /* NetworkMeEncoding.swift */,
+				OBJ_50 /* NetworkMeEndpointProtocol.swift */,
+				OBJ_51 /* NetworkMeFileRetrieving.swift */,
+				OBJ_52 /* NetworkMeHeaderParserProtocol.swift */,
+				OBJ_53 /* NetworkMeHeaderProtocol.swift */,
+				OBJ_54 /* NetworkMeRouting.swift */,
+				OBJ_55 /* NetworkMeURLSessionProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_57 /* Tests */,
+				OBJ_83 /* Products */,
+				OBJ_86 /* README.md */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_57 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_58 /* NetworkMeTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_58 /* NetworkMeTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_59 /* Implementation */,
+				OBJ_74 /* Stubs */,
+				OBJ_73 /* NetworkMe+Tests.swift */,
+				OBJ_82 /* XCTestManifests.swift */,
+			);
+			name = NetworkMeTests;
+			path = Tests/NetworkMeTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_59 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_60 /* Components */,
+				OBJ_65 /* Enums */,
+				OBJ_71 /* Protocols */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		OBJ_60 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_61 /* FileRetriever */,
+				OBJ_63 /* Router */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		OBJ_61 /* FileRetriever */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_62 /* NetworkMeFileRetriever_Tests.swift */,
+			);
+			path = FileRetriever;
+			sourceTree = "<group>";
+		};
+		OBJ_63 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_64 /* NetworkMeRouter_Tests.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		OBJ_65 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_66 /* NetworMeMethod_Tests.swift */,
+				OBJ_67 /* NetworMeScheme_Tests.swift */,
+				OBJ_68 /* NetworkHeader_ResponseTests.swift */,
+				OBJ_69 /* NetworkMeHeader_GenericTests.swift */,
+				OBJ_70 /* NetworkMeHeader_RequestTests.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* NetworkMe */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_71 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_72 /* NetworkMeEndpointProtocol_Tests.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		OBJ_74 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_75 /* NetworkMeStub+DateFormatter.swift */,
+				OBJ_76 /* NetworkMeStub+Decoder.swift */,
+				OBJ_77 /* NetworkMeStub+Encoder.swift */,
+				OBJ_78 /* NetworkMeStub+Endpoint.swift */,
+				OBJ_79 /* NetworkMeStub+FileRetriever.swift */,
+				OBJ_80 /* NetworkMeStub+URLSession.swift */,
+				OBJ_81 /* NetworkMeStub+URLSessionTask.swift */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
 		};
+		OBJ_8 /* NetworkMe */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* Implementation */,
+				OBJ_56 /* NetworkMe.swift */,
+			);
+			name = NetworkMe;
+			path = Sources/NetworkMe;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"NetworkMe::NetworkMe::Product" /* NetworkMe.framework */,
+				"NetworkMe::NetworkMeTests::Product" /* NetworkMeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_9 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_10 /* Components */,
+				OBJ_21 /* Enums */,
+				OBJ_37 /* Extensions */,
+				OBJ_42 /* Models */,
+				OBJ_45 /* Protocols */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		407A86C422A465CA00588850 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				407A86CB22A465CA00588850 /* NetworkMe_macOS.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		4046A35822A7E4F500A5AF36 /* NetworkMe */ = {
+		"NetworkMe::NetworkMe" /* NetworkMe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4046A35F22A7E4F500A5AF36 /* Build configuration list for PBXNativeTarget "NetworkMe" */;
+			buildConfigurationList = OBJ_88 /* Build configuration list for PBXNativeTarget "NetworkMe" */;
 			buildPhases = (
-				4046A35522A7E4F500A5AF36 /* Sources */,
-				4046A35622A7E4F500A5AF36 /* Frameworks */,
-				4046A35722A7E4F500A5AF36 /* CopyFiles */,
+				OBJ_91 /* Sources */,
+				OBJ_130 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -814,1115 +438,400 @@
 			);
 			name = NetworkMe;
 			productName = NetworkMe;
-			productReference = 4046A35922A7E4F500A5AF36 /* libNetworkMe.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = "NetworkMe::NetworkMe::Product" /* NetworkMe.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		4046A36322A7E55800A5AF36 /* NetworkMe Tests */ = {
+		"NetworkMe::NetworkMeTests" /* NetworkMeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4046A36C22A7E55800A5AF36 /* Build configuration list for PBXNativeTarget "NetworkMe Tests" */;
+			buildConfigurationList = OBJ_143 /* Build configuration list for PBXNativeTarget "NetworkMeTests" */;
 			buildPhases = (
-				4046A36022A7E55800A5AF36 /* Sources */,
-				4046A36122A7E55800A5AF36 /* Frameworks */,
-				4046A36222A7E55800A5AF36 /* Resources */,
+				OBJ_146 /* Sources */,
+				OBJ_164 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4046A36B22A7E55800A5AF36 /* PBXTargetDependency */,
+				OBJ_166 /* PBXTargetDependency */,
 			);
-			name = "NetworkMe Tests";
-			productName = "NetworkMe Tests";
-			productReference = 4046A36422A7E55800A5AF36 /* NetworkMe Tests.xctest */;
+			name = NetworkMeTests;
+			productName = NetworkMeTests;
+			productReference = "NetworkMe::NetworkMeTests::Product" /* NetworkMeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		404F303B22A5F72B00267175 /* NetworkMe tvOS Tests */ = {
+		"NetworkMe::SwiftPMPackageDescription" /* NetworkMePackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 404F304422A5F72B00267175 /* Build configuration list for PBXNativeTarget "NetworkMe tvOS Tests" */;
+			buildConfigurationList = OBJ_132 /* Build configuration list for PBXNativeTarget "NetworkMePackageDescription" */;
 			buildPhases = (
-				404F303822A5F72B00267175 /* Sources */,
-				404F303922A5F72B00267175 /* Frameworks */,
-				404F303A22A5F72B00267175 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				404F304322A5F72B00267175 /* PBXTargetDependency */,
-			);
-			name = "NetworkMe tvOS Tests";
-			productName = "NetworkMe tvOS Tests";
-			productReference = 404F303C22A5F72B00267175 /* NetworkMe tvOS Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		404F304A22A5F74600267175 /* NetworkMe macOS Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 404F305322A5F74600267175 /* Build configuration list for PBXNativeTarget "NetworkMe macOS Tests" */;
-			buildPhases = (
-				404F304722A5F74600267175 /* Sources */,
-				404F304822A5F74600267175 /* Frameworks */,
-				404F304922A5F74600267175 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				404F305222A5F74600267175 /* PBXTargetDependency */,
-			);
-			name = "NetworkMe macOS Tests";
-			productName = "NetworkMe macOS Tests";
-			productReference = 404F304B22A5F74600267175 /* NetworkMe macOS Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		404F305922A5F7F700267175 /* NetworkMe watchOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 404F305E22A5F7F700267175 /* Build configuration list for PBXNativeTarget "NetworkMe watchOS" */;
-			buildPhases = (
-				404F305622A5F7F700267175 /* Sources */,
-				404F305722A5F7F700267175 /* Frameworks */,
-				404F305822A5F7F700267175 /* CopyFiles */,
+				OBJ_135 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "NetworkMe watchOS";
-			productName = "NetworkMe watchOS";
-			productReference = 404F305A22A5F7F700267175 /* libNetworkMe watchOS.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		407A866F22A41D4B00588850 /* NetworkMe iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 407A867722A41D4B00588850 /* Build configuration list for PBXNativeTarget "NetworkMe iOS" */;
-			buildPhases = (
-				407A866C22A41D4B00588850 /* Sources */,
-				407A866D22A41D4B00588850 /* Frameworks */,
-				407A866E22A41D4B00588850 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "NetworkMe iOS";
-			productName = NetworkMe;
-			productReference = 407A867022A41D4B00588850 /* libNetworkMe iOS.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		407A86AA22A465A200588850 /* NetworkMe tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 407A86AF22A465A200588850 /* Build configuration list for PBXNativeTarget "NetworkMe tvOS" */;
-			buildPhases = (
-				407A86A722A465A200588850 /* Sources */,
-				407A86A822A465A200588850 /* Frameworks */,
-				407A86A922A465A200588850 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "NetworkMe tvOS";
-			productName = "NetworkMe tvOS";
-			productReference = 407A86AB22A465A200588850 /* libNetworkMe tvOS.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		407A86C722A465CA00588850 /* NetworkMe macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 407A86CE22A465CA00588850 /* Build configuration list for PBXNativeTarget "NetworkMe macOS" */;
-			buildPhases = (
-				407A86C422A465CA00588850 /* Headers */,
-				407A86C522A465CA00588850 /* Sources */,
-				407A86C622A465CA00588850 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "NetworkMe macOS";
-			productName = "NetworkMe macOS";
-			productReference = 407A86C822A465CA00588850 /* libNetworkMe macOS.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		407A86E622A4667C00588850 /* NetworkMe iOS Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 407A86F122A4667C00588850 /* Build configuration list for PBXNativeTarget "NetworkMe iOS Tests" */;
-			buildPhases = (
-				407A86E422A4667C00588850 /* Frameworks */,
-				407A86E322A4667C00588850 /* Sources */,
-				407A86E522A4667C00588850 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "NetworkMe iOS Tests";
-			productName = "NetworkMe iOS Tests";
-			productReference = 407A86E722A4667C00588850 /* NetworkMe iOS Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = NetworkMePackageDescription;
+			productName = NetworkMePackageDescription;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		407A866822A41D4B00588850 /* Project object */ = {
+		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = "Ilias Pavlidakis";
-				TargetAttributes = {
-					4046A35822A7E4F500A5AF36 = {
-						CreatedOnToolsVersion = 10.2;
-					};
-					4046A36322A7E55800A5AF36 = {
-						CreatedOnToolsVersion = 10.2;
-					};
-					404F303B22A5F72B00267175 = {
-						CreatedOnToolsVersion = 10.2.1;
-					};
-					404F304A22A5F74600267175 = {
-						CreatedOnToolsVersion = 10.2.1;
-					};
-					404F305922A5F7F700267175 = {
-						CreatedOnToolsVersion = 10.2.1;
-					};
-					407A866F22A41D4B00588850 = {
-						CreatedOnToolsVersion = 10.2.1;
-					};
-					407A86AA22A465A200588850 = {
-						CreatedOnToolsVersion = 10.2.1;
-					};
-					407A86C722A465CA00588850 = {
-						CreatedOnToolsVersion = 10.2.1;
-					};
-					407A86E622A4667C00588850 = {
-						CreatedOnToolsVersion = 10.2.1;
-						LastSwiftMigration = 1020;
-					};
-				};
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 9999;
 			};
-			buildConfigurationList = 407A866B22A41D4B00588850 /* Build configuration list for PBXProject "NetworkMe" */;
-			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "NetworkMe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
-			mainGroup = 407A866722A41D4B00588850;
-			productRefGroup = 407A867122A41D4B00588850 /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_83 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4046A35822A7E4F500A5AF36 /* NetworkMe */,
-				4046A36322A7E55800A5AF36 /* NetworkMe Tests */,
-				407A866F22A41D4B00588850 /* NetworkMe iOS */,
-				407A86E622A4667C00588850 /* NetworkMe iOS Tests */,
-				407A86AA22A465A200588850 /* NetworkMe tvOS */,
-				404F303B22A5F72B00267175 /* NetworkMe tvOS Tests */,
-				407A86C722A465CA00588850 /* NetworkMe macOS */,
-				404F304A22A5F74600267175 /* NetworkMe macOS Tests */,
-				404F305922A5F7F700267175 /* NetworkMe watchOS */,
+				"NetworkMe::NetworkMe" /* NetworkMe */,
+				"NetworkMe::SwiftPMPackageDescription" /* NetworkMePackageDescription */,
+				"NetworkMe::NetworkMePackageTests::ProductTarget" /* NetworkMePackageTests */,
+				"NetworkMe::NetworkMeTests" /* NetworkMeTests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		4046A36222A7E55800A5AF36 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		404F303A22A5F72B00267175 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		404F304922A5F74600267175 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		407A86E522A4667C00588850 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		4046A35522A7E4F500A5AF36 /* Sources */ = {
+		OBJ_135 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				4027AA1E22A8861500B22CD8 /* JSONDecoder+NetworkMeDecoding.swift in Sources */,
-				4046A37122A7E5B400A5AF36 /* NetworkMe+TransformableKeyValuePair.swift in Sources */,
-				40665F8522ABD1AB00703BD0 /* NetworkMeHeaderParserProtocol.swift in Sources */,
-				40665F7922ABC8D200703BD0 /* NetworkMeResponse+Error.swift in Sources */,
-				4046A37B22A7E5B400A5AF36 /* NetworkMeHeaderRequest+CacheControl.swift in Sources */,
-				4046A38722A7E5B400A5AF36 /* NetworkMeFileRetrieving.swift in Sources */,
-				4046A38122A7E5B400A5AF36 /* NetworkMeRouting.swift in Sources */,
-				4046A38622A7E5B400A5AF36 /* NetworkMeDateProviding.swift in Sources */,
-				4046A38222A7E5B400A5AF36 /* NetworkMeURLSessionProtocol.swift in Sources */,
-				4046A37422A7E5B400A5AF36 /* NetworkMe+Method.swift in Sources */,
-				406DEA8922BAEB4B00C864EB /* NetworkMe+URLQueryItemEncoder.swift in Sources */,
-				40665F6D22ABC52C00703BD0 /* NetworkMe+HTTPResponseCodeValidator.swift in Sources */,
-				4046A37922A7E5B400A5AF36 /* NetworkMe+ContentType.swift in Sources */,
-				4046A37F22A7E5B400A5AF36 /* NetworkMeRouter+NetworkError.swift in Sources */,
-				4046A38522A7E5B400A5AF36 /* NetworkMeEncoding.swift in Sources */,
-				4046A38022A7E5B400A5AF36 /* NetworkMeEndpointProtocol.swift in Sources */,
-				4046A38822A7E5B400A5AF36 /* NetworkMe+Router.swift in Sources */,
-				4046A38322A7E5B400A5AF36 /* NetworkMeHeaderProtocol.swift in Sources */,
-				406DEA8B22BAEC2200C864EB /* NetworkMe+HTTPParameter.swift in Sources */,
-				4027AA2D22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */,
-				4027AA2022A8862600B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */,
-				4046A37822A7E5B400A5AF36 /* NetworkMeHeader+Response.swift in Sources */,
-				4046A37D22A7E5B400A5AF36 /* NetworkMeHeaderResponse+CacheControl.swift in Sources */,
-				40665F6622ABBE8000703BD0 /* NetworkMe+EmptyDecodable.swift in Sources */,
-				40665F7322ABC61900703BD0 /* NetworMeResponseValidatorProtocol.swift in Sources */,
-				4027AA2A22A886CB00B22CD8 /* NetworkMe+FileRetriever.swift in Sources */,
-				4046A37C22A7E5B400A5AF36 /* NetworkMeHeaderRequest+Authorization.swift in Sources */,
-				4046A37A22A7E5B400A5AF36 /* NetworkMe+Accept.swift in Sources */,
-				4046A37022A7E5B400A5AF36 /* DateFormatter+NetworkMeDateProviding.swift in Sources */,
-				4046A37322A7E5B400A5AF36 /* NetworMe+Scheme.swift in Sources */,
-				4046A37522A7E5B400A5AF36 /* NetworkMe+Header.swift in Sources */,
-				4046A37622A7E5B400A5AF36 /* NetworkMeHeader+Generic.swift in Sources */,
-				4046A38422A7E5B400A5AF36 /* NetworkMeDecoding.swift in Sources */,
-				40665F7F22ABCD7600703BD0 /* NetworkeMeResponse+HeaderParser.swift in Sources */,
-				4046A35C22A7E4F500A5AF36 /* NetworkMe.swift in Sources */,
-				4046A37222A7E5B400A5AF36 /* NetworkMe+TaskType.swift in Sources */,
-				4046A37722A7E5B400A5AF36 /* NetworkMeHeader+Request.swift in Sources */,
-				4046A37E22A7E5B400A5AF36 /* NetworkMeHeaderGeneric+Connection.swift in Sources */,
+				OBJ_136 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4046A36022A7E55800A5AF36 /* Sources */ = {
+		OBJ_146 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				4046A38C22A7E5D100A5AF36 /* NetworkMeStub+Decoder.swift in Sources */,
-				4046A39322A7E5D100A5AF36 /* NetworkMeHeader_GenericTests.swift in Sources */,
-				40106E4B22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift in Sources */,
-				4046A39122A7E5D100A5AF36 /* NetworMeScheme_Tests.swift in Sources */,
-				4046A38A22A7E5D100A5AF36 /* NetworkMeStub+Endpoint.swift in Sources */,
-				4046A39022A7E5D100A5AF36 /* NetworkMeRouter_Tests.swift in Sources */,
-				4046A36F22A7E57000A5AF36 /* NetworkMe+Tests.swift in Sources */,
-				4046A38F22A7E5D100A5AF36 /* NetworkMeStub+FileRetriever.swift in Sources */,
-				4046A38D22A7E5D100A5AF36 /* NetworkMeStub+URLSession.swift in Sources */,
-				4046A39522A7E5D100A5AF36 /* NetworkHeader_ResponseTests.swift in Sources */,
-				4046A39422A7E5D100A5AF36 /* NetworkMeHeader_RequestTests.swift in Sources */,
-				4046A38922A7E5D100A5AF36 /* NetworkMeStub+DateFormatter.swift in Sources */,
-				4046A39222A7E5D100A5AF36 /* NetworMeMethod_Tests.swift in Sources */,
-				4046A38B22A7E5D100A5AF36 /* NetworkMeStub+Encoder.swift in Sources */,
-				4046A38E22A7E5D100A5AF36 /* NetworkMeStub+URLSessionTask.swift in Sources */,
-				40106E5122A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift in Sources */,
+				OBJ_147 /* NetworkMeFileRetriever_Tests.swift in Sources */,
+				OBJ_148 /* NetworkMeRouter_Tests.swift in Sources */,
+				OBJ_149 /* NetworMeMethod_Tests.swift in Sources */,
+				OBJ_150 /* NetworMeScheme_Tests.swift in Sources */,
+				OBJ_151 /* NetworkHeader_ResponseTests.swift in Sources */,
+				OBJ_152 /* NetworkMeHeader_GenericTests.swift in Sources */,
+				OBJ_153 /* NetworkMeHeader_RequestTests.swift in Sources */,
+				OBJ_154 /* NetworkMeEndpointProtocol_Tests.swift in Sources */,
+				OBJ_155 /* NetworkMe+Tests.swift in Sources */,
+				OBJ_156 /* NetworkMeStub+DateFormatter.swift in Sources */,
+				OBJ_157 /* NetworkMeStub+Decoder.swift in Sources */,
+				OBJ_158 /* NetworkMeStub+Encoder.swift in Sources */,
+				OBJ_159 /* NetworkMeStub+Endpoint.swift in Sources */,
+				OBJ_160 /* NetworkMeStub+FileRetriever.swift in Sources */,
+				OBJ_161 /* NetworkMeStub+URLSession.swift in Sources */,
+				OBJ_162 /* NetworkMeStub+URLSessionTask.swift in Sources */,
+				OBJ_163 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		404F303822A5F72B00267175 /* Sources */ = {
+		OBJ_91 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				404F307E22A5FC4A00267175 /* NetworkMeStub+Decoder.swift in Sources */,
-				404F308522A5FC4A00267175 /* NetworkMeHeader_GenericTests.swift in Sources */,
-				40106E4D22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift in Sources */,
-				404F308322A5FC4A00267175 /* NetworMeScheme_Tests.swift in Sources */,
-				404F307C22A5FC4A00267175 /* NetworkMeStub+Endpoint.swift in Sources */,
-				404F308222A5FC4A00267175 /* NetworkMeRouter_Tests.swift in Sources */,
-				404F308122A5FC4A00267175 /* NetworkMeStub+FileRetriever.swift in Sources */,
-				404F307F22A5FC4A00267175 /* NetworkMeStub+URLSession.swift in Sources */,
-				404F308722A5FC4A00267175 /* NetworkHeader_ResponseTests.swift in Sources */,
-				404F308622A5FC4A00267175 /* NetworkMeHeader_RequestTests.swift in Sources */,
-				404F307B22A5FC4A00267175 /* NetworkMeStub+DateFormatter.swift in Sources */,
-				4046A39722A7E5D200A5AF36 /* NetworkMe+Tests.swift in Sources */,
-				404F308422A5FC4A00267175 /* NetworMeMethod_Tests.swift in Sources */,
-				404F307D22A5FC4A00267175 /* NetworkMeStub+Encoder.swift in Sources */,
-				404F308022A5FC4A00267175 /* NetworkMeStub+URLSessionTask.swift in Sources */,
-				40106E5322A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		404F304722A5F74600267175 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				404F308C22A5FC4B00267175 /* NetworkMeStub+Decoder.swift in Sources */,
-				404F309322A5FC4B00267175 /* NetworkMeHeader_GenericTests.swift in Sources */,
-				40106E4E22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift in Sources */,
-				404F309122A5FC4B00267175 /* NetworMeScheme_Tests.swift in Sources */,
-				404F308A22A5FC4B00267175 /* NetworkMeStub+Endpoint.swift in Sources */,
-				404F309022A5FC4B00267175 /* NetworkMeRouter_Tests.swift in Sources */,
-				404F308F22A5FC4B00267175 /* NetworkMeStub+FileRetriever.swift in Sources */,
-				404F308D22A5FC4B00267175 /* NetworkMeStub+URLSession.swift in Sources */,
-				404F309522A5FC4B00267175 /* NetworkHeader_ResponseTests.swift in Sources */,
-				404F309422A5FC4B00267175 /* NetworkMeHeader_RequestTests.swift in Sources */,
-				404F308922A5FC4B00267175 /* NetworkMeStub+DateFormatter.swift in Sources */,
-				4046A39822A7E5D300A5AF36 /* NetworkMe+Tests.swift in Sources */,
-				404F309222A5FC4B00267175 /* NetworMeMethod_Tests.swift in Sources */,
-				404F308B22A5FC4B00267175 /* NetworkMeStub+Encoder.swift in Sources */,
-				404F308E22A5FC4B00267175 /* NetworkMeStub+URLSessionTask.swift in Sources */,
-				40106E5422A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		404F305622A5F7F700267175 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				404F306222A5F83000267175 /* NetworkMe+TransformableKeyValuePair.swift in Sources */,
-				404F307A22A5F83D00267175 /* NetworkMe_iOS.swift in Sources */,
-				404F306C22A5F83000267175 /* NetworkMeHeaderRequest+CacheControl.swift in Sources */,
-				406DEA8F22BAEC2200C864EB /* NetworkMe+HTTPParameter.swift in Sources */,
-				404F307822A5F83000267175 /* NetworkMeFileRetrieving.swift in Sources */,
-				4027AA2822A8862F00B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */,
-				404F307222A5F83000267175 /* NetworkMeRouting.swift in Sources */,
-				40665F8922ABD1AB00703BD0 /* NetworkMeHeaderParserProtocol.swift in Sources */,
-				40665F6A22ABBF1100703BD0 /* NetworkMe+EmptyDecodable.swift in Sources */,
-				404F307722A5F83000267175 /* NetworkMeDateProviding.swift in Sources */,
-				404F307322A5F83000267175 /* NetworkMeURLSessionProtocol.swift in Sources */,
-				404F306522A5F83000267175 /* NetworkMe+Method.swift in Sources */,
-				404F306A22A5F83000267175 /* NetworkMe+ContentType.swift in Sources */,
-				40665F8322ABCD7600703BD0 /* NetworkeMeResponse+HeaderParser.swift in Sources */,
-				404F307022A5F83000267175 /* NetworkMeRouter+NetworkError.swift in Sources */,
-				404F307622A5F83000267175 /* NetworkMeEncoding.swift in Sources */,
-				404F307122A5F83000267175 /* NetworkMeEndpointProtocol.swift in Sources */,
-				404F307922A5F83000267175 /* NetworkMe+Router.swift in Sources */,
-				404F307422A5F83000267175 /* NetworkMeHeaderProtocol.swift in Sources */,
-				404F306922A5F83000267175 /* NetworkMeHeader+Response.swift in Sources */,
-				404F306E22A5F83000267175 /* NetworkMeHeaderResponse+CacheControl.swift in Sources */,
-				406DEA9322BAED5C00C864EB /* NetworkMe+URLQueryItemEncoder.swift in Sources */,
-				40665F7122ABC52C00703BD0 /* NetworkMe+HTTPResponseCodeValidator.swift in Sources */,
-				404F306D22A5F83000267175 /* NetworkMeHeaderRequest+Authorization.swift in Sources */,
-				404F306B22A5F83000267175 /* NetworkMe+Accept.swift in Sources */,
-				4027AA3122A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */,
-				404F306122A5F83000267175 /* DateFormatter+NetworkMeDateProviding.swift in Sources */,
-				404F306422A5F83000267175 /* NetworMe+Scheme.swift in Sources */,
-				404F306622A5F83000267175 /* NetworkMe+Header.swift in Sources */,
-				40665F7722ABC61900703BD0 /* NetworMeResponseValidatorProtocol.swift in Sources */,
-				4027AA3522A887E800B22CD8 /* NetworkMe+FileRetriever.swift in Sources */,
-				404F306722A5F83000267175 /* NetworkMeHeader+Generic.swift in Sources */,
-				4027AA2722A8862F00B22CD8 /* JSONDecoder+NetworkMeDecoding.swift in Sources */,
-				404F307522A5F83000267175 /* NetworkMeDecoding.swift in Sources */,
-				404F305D22A5F7F700267175 /* NetworkMe_watchOS.swift in Sources */,
-				404F306322A5F83000267175 /* NetworkMe+TaskType.swift in Sources */,
-				40665F7D22ABC8D200703BD0 /* NetworkMeResponse+Error.swift in Sources */,
-				404F306822A5F83000267175 /* NetworkMeHeader+Request.swift in Sources */,
-				4046A39C22A7E7DD00A5AF36 /* NetworkMe.swift in Sources */,
-				404F306F22A5F83000267175 /* NetworkMeHeaderGeneric+Connection.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		407A866C22A41D4B00588850 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				40A8AE3522A5CC5500AB0539 /* NetworkMeHeader+Response.swift in Sources */,
-				40665F7A22ABC8D200703BD0 /* NetworkMeResponse+Error.swift in Sources */,
-				40665F6E22ABC52C00703BD0 /* NetworkMe+HTTPResponseCodeValidator.swift in Sources */,
-				4046A39922A7E7DA00A5AF36 /* NetworkMe.swift in Sources */,
-				40665F6722ABBF0E00703BD0 /* NetworkMe+EmptyDecodable.swift in Sources */,
-				404F301722A5DC8900267175 /* NetworkMe+TaskType.swift in Sources */,
-				407A869C22A424E400588850 /* NetworkMeHeaderResponse+CacheControl.swift in Sources */,
-				40665F8622ABD1AB00703BD0 /* NetworkMeHeaderParserProtocol.swift in Sources */,
-				407A86A422A42BB900588850 /* NetworkMeEncoding.swift in Sources */,
-				407A869622A4209300588850 /* NetworkMe+Accept.swift in Sources */,
-				406DEA9022BAED5900C864EB /* NetworkMe+URLQueryItemEncoder.swift in Sources */,
-				4027AA2122A8862C00B22CD8 /* JSONDecoder+NetworkMeDecoding.swift in Sources */,
-				407A869022A41E5E00588850 /* NetworkMe+Method.swift in Sources */,
-				407A869A22A4232300588850 /* NetworkMeHeaderRequest+CacheControl.swift in Sources */,
-				40A8AE2722A5C5C500AB0539 /* NetworkMeDateProviding.swift in Sources */,
-				4027AA2222A8862C00B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */,
-				407A867E22A41D9300588850 /* NetworkMeRouting.swift in Sources */,
-				40A8AE3122A5CC3100AB0539 /* NetworkMeHeader+Generic.swift in Sources */,
-				407A868122A41DA900588850 /* NetworkMe+Router.swift in Sources */,
-				406DEA8C22BAEC2200C864EB /* NetworkMe+HTTPParameter.swift in Sources */,
-				4027AA2E22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */,
-				4027AA3222A887E500B22CD8 /* NetworkMe+FileRetriever.swift in Sources */,
-				407A867422A41D4B00588850 /* NetworkMe_iOS.swift in Sources */,
-				407A868322A41DBA00588850 /* NetworkMeURLSessionProtocol.swift in Sources */,
-				407A869822A4222E00588850 /* NetworkMeHeaderProtocol.swift in Sources */,
-				407A86A622A464BC00588850 /* NetworkMeRouter+NetworkError.swift in Sources */,
-				40665F7422ABC61900703BD0 /* NetworMeResponseValidatorProtocol.swift in Sources */,
-				40A8AE2522A5C2E700AB0539 /* NetworkMe+TransformableKeyValuePair.swift in Sources */,
-				407A869422A41F0C00588850 /* NetworkMe+ContentType.swift in Sources */,
-				407A86A022A4282300588850 /* NetworkMeHeaderRequest+Authorization.swift in Sources */,
-				407A86A222A42B8D00588850 /* NetworkMeDecoding.swift in Sources */,
-				404F302522A5F47700267175 /* NetworkMeFileRetrieving.swift in Sources */,
-				40A8AE2A22A5C5EF00AB0539 /* DateFormatter+NetworkMeDateProviding.swift in Sources */,
-				407A869222A41EAF00588850 /* NetworkMe+Header.swift in Sources */,
-				407A867C22A41D8000588850 /* NetworkMeEndpointProtocol.swift in Sources */,
-				40A8AE3322A5CC4600AB0539 /* NetworkMeHeader+Request.swift in Sources */,
-				40665F8022ABCD7600703BD0 /* NetworkeMeResponse+HeaderParser.swift in Sources */,
-				407A868E22A41E5300588850 /* NetworMe+Scheme.swift in Sources */,
-				407A869E22A426EF00588850 /* NetworkMeHeaderGeneric+Connection.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		407A86A722A465A200588850 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				407A86C322A465B700588850 /* NetworkMe_iOS.swift in Sources */,
-				407A86B522A465B700588850 /* NetworkMe+ContentType.swift in Sources */,
-				404F302D22A5F70C00267175 /* NetworkMeHeader+Response.swift in Sources */,
-				406DEA8D22BAEC2200C864EB /* NetworkMe+HTTPParameter.swift in Sources */,
-				404F302E22A5F70C00267175 /* NetworkMeDateProviding.swift in Sources */,
-				4027AA2422A8862D00B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */,
-				407A86C122A465B700588850 /* NetworkMeEncoding.swift in Sources */,
-				40665F8722ABD1AB00703BD0 /* NetworkMeHeaderParserProtocol.swift in Sources */,
-				40665F6822ABBF0F00703BD0 /* NetworkMe+EmptyDecodable.swift in Sources */,
-				407A86AE22A465A200588850 /* NetworkMe_tvOS.swift in Sources */,
-				407A86C222A465B700588850 /* NetworkMe+Router.swift in Sources */,
-				407A86B922A465B700588850 /* NetworkMeHeaderResponse+CacheControl.swift in Sources */,
-				407A86B422A465B700588850 /* NetworkMe+Header.swift in Sources */,
-				40665F8122ABCD7600703BD0 /* NetworkeMeResponse+HeaderParser.swift in Sources */,
-				404F302F22A5F70C00267175 /* NetworkMeFileRetrieving.swift in Sources */,
-				407A86B322A465B700588850 /* NetworkMe+Method.swift in Sources */,
-				407A86BC22A465B700588850 /* NetworkMeEndpointProtocol.swift in Sources */,
-				407A86B722A465B700588850 /* NetworkMeHeaderRequest+CacheControl.swift in Sources */,
-				407A86BE22A465B700588850 /* NetworkMeURLSessionProtocol.swift in Sources */,
-				404F302B22A5F70C00267175 /* NetworkMeHeader+Generic.swift in Sources */,
-				404F302A22A5F70C00267175 /* NetworkMe+TaskType.swift in Sources */,
-				406DEA9122BAED5A00C864EB /* NetworkMe+URLQueryItemEncoder.swift in Sources */,
-				40665F6F22ABC52C00703BD0 /* NetworkMe+HTTPResponseCodeValidator.swift in Sources */,
-				407A86BB22A465B700588850 /* NetworkMeRouter+NetworkError.swift in Sources */,
-				404F302922A5F70C00267175 /* NetworkMe+TransformableKeyValuePair.swift in Sources */,
-				4027AA2F22A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */,
-				407A86B622A465B700588850 /* NetworkMe+Accept.swift in Sources */,
-				407A86B222A465B700588850 /* NetworMe+Scheme.swift in Sources */,
-				404F302C22A5F70C00267175 /* NetworkMeHeader+Request.swift in Sources */,
-				40665F7522ABC61900703BD0 /* NetworMeResponseValidatorProtocol.swift in Sources */,
-				4027AA3322A887E600B22CD8 /* NetworkMe+FileRetriever.swift in Sources */,
-				407A86C022A465B700588850 /* NetworkMeDecoding.swift in Sources */,
-				4027AA2322A8862D00B22CD8 /* JSONDecoder+NetworkMeDecoding.swift in Sources */,
-				407A86BD22A465B700588850 /* NetworkMeRouting.swift in Sources */,
-				407A86B822A465B700588850 /* NetworkMeHeaderRequest+Authorization.swift in Sources */,
-				407A86BA22A465B700588850 /* NetworkMeHeaderGeneric+Connection.swift in Sources */,
-				40665F7B22ABC8D200703BD0 /* NetworkMeResponse+Error.swift in Sources */,
-				404F302822A5F70C00267175 /* DateFormatter+NetworkMeDateProviding.swift in Sources */,
-				4046A39A22A7E7DB00A5AF36 /* NetworkMe.swift in Sources */,
-				407A86BF22A465B700588850 /* NetworkMeHeaderProtocol.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		407A86C522A465CA00588850 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				407A86E222A465D400588850 /* NetworkMe_iOS.swift in Sources */,
-				407A86D422A465D400588850 /* NetworkMe+ContentType.swift in Sources */,
-				404F303522A5F70D00267175 /* NetworkMeHeader+Response.swift in Sources */,
-				406DEA8E22BAEC2200C864EB /* NetworkMe+HTTPParameter.swift in Sources */,
-				404F303622A5F70D00267175 /* NetworkMeDateProviding.swift in Sources */,
-				4027AA2622A8862E00B22CD8 /* JSONEncoder+NetworkMeEncoding.swift in Sources */,
-				407A86E022A465D400588850 /* NetworkMeEncoding.swift in Sources */,
-				40665F8822ABD1AB00703BD0 /* NetworkMeHeaderParserProtocol.swift in Sources */,
-				40665F6922ABBF1000703BD0 /* NetworkMe+EmptyDecodable.swift in Sources */,
-				407A86CD22A465CA00588850 /* NetworkMe_macOS.m in Sources */,
-				407A86E122A465D400588850 /* NetworkMe+Router.swift in Sources */,
-				407A86D822A465D400588850 /* NetworkMeHeaderResponse+CacheControl.swift in Sources */,
-				407A86D322A465D400588850 /* NetworkMe+Header.swift in Sources */,
-				40665F8222ABCD7600703BD0 /* NetworkeMeResponse+HeaderParser.swift in Sources */,
-				404F303722A5F70D00267175 /* NetworkMeFileRetrieving.swift in Sources */,
-				407A86D222A465D400588850 /* NetworkMe+Method.swift in Sources */,
-				407A86DB22A465D400588850 /* NetworkMeEndpointProtocol.swift in Sources */,
-				407A86D622A465D400588850 /* NetworkMeHeaderRequest+CacheControl.swift in Sources */,
-				407A86DD22A465D400588850 /* NetworkMeURLSessionProtocol.swift in Sources */,
-				404F303322A5F70D00267175 /* NetworkMeHeader+Generic.swift in Sources */,
-				404F303222A5F70D00267175 /* NetworkMe+TaskType.swift in Sources */,
-				406DEA9222BAED5B00C864EB /* NetworkMe+URLQueryItemEncoder.swift in Sources */,
-				40665F7022ABC52C00703BD0 /* NetworkMe+HTTPResponseCodeValidator.swift in Sources */,
-				407A86DA22A465D400588850 /* NetworkMeRouter+NetworkError.swift in Sources */,
-				404F303122A5F70D00267175 /* NetworkMe+TransformableKeyValuePair.swift in Sources */,
-				4027AA3022A887DD00B22CD8 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */,
-				407A86D522A465D400588850 /* NetworkMe+Accept.swift in Sources */,
-				407A86D122A465D400588850 /* NetworMe+Scheme.swift in Sources */,
-				404F303422A5F70D00267175 /* NetworkMeHeader+Request.swift in Sources */,
-				40665F7622ABC61900703BD0 /* NetworMeResponseValidatorProtocol.swift in Sources */,
-				4027AA3422A887E700B22CD8 /* NetworkMe+FileRetriever.swift in Sources */,
-				407A86DF22A465D400588850 /* NetworkMeDecoding.swift in Sources */,
-				4027AA2522A8862E00B22CD8 /* JSONDecoder+NetworkMeDecoding.swift in Sources */,
-				407A86DC22A465D400588850 /* NetworkMeRouting.swift in Sources */,
-				407A86D722A465D400588850 /* NetworkMeHeaderRequest+Authorization.swift in Sources */,
-				407A86D922A465D400588850 /* NetworkMeHeaderGeneric+Connection.swift in Sources */,
-				40665F7C22ABC8D200703BD0 /* NetworkMeResponse+Error.swift in Sources */,
-				404F303022A5F70D00267175 /* DateFormatter+NetworkMeDateProviding.swift in Sources */,
-				4046A39B22A7E7DC00A5AF36 /* NetworkMe.swift in Sources */,
-				407A86DE22A465D400588850 /* NetworkMeHeaderProtocol.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		407A86E322A4667C00588850 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				404F301322A5D97A00267175 /* NetworkHeader_ResponseTests.swift in Sources */,
-				407A86F522A4670500588850 /* NetworMeScheme_Tests.swift in Sources */,
-				40106E4C22A88E02001F31F0 /* NetworkMeEndpointProtocol_Tests.swift in Sources */,
-				404F302722A5F4C600267175 /* NetworkMeStub+FileRetriever.swift in Sources */,
-				407A86F722A4681300588850 /* NetworMeMethod_Tests.swift in Sources */,
-				40A8AE2D22A5C71800AB0539 /* NetworkMeStub+DateFormatter.swift in Sources */,
-				404F301D22A5E2A900267175 /* NetworkMeStub+Encoder.swift in Sources */,
-				404F301922A5E06900267175 /* NetworkMeRouter_Tests.swift in Sources */,
-				404F301B22A5E09900267175 /* NetworkMeStub+Endpoint.swift in Sources */,
-				40A8AE2222A5C0C900AB0539 /* NetworkMeHeader_GenericTests.swift in Sources */,
-				404F302322A5E56000267175 /* NetworkMeStub+URLSessionTask.swift in Sources */,
-				4046A39622A7E5D200A5AF36 /* NetworkMe+Tests.swift in Sources */,
-				404F302122A5E48600267175 /* NetworkMeStub+URLSession.swift in Sources */,
-				404F301F22A5E2AF00267175 /* NetworkMeStub+Decoder.swift in Sources */,
-				40A8AE3722A5CC7300AB0539 /* NetworkMeHeader_RequestTests.swift in Sources */,
-				40106E5222A88F46001F31F0 /* NetworkMeFileRetriever_Tests.swift in Sources */,
+				OBJ_92 /* NetworkMe+FileRetriever.swift in Sources */,
+				OBJ_93 /* NetworkeMeResponse+HeaderParser.swift in Sources */,
+				OBJ_94 /* NetworkMe+HTTPResponseCodeValidator.swift in Sources */,
+				OBJ_95 /* NetworkMe+Router.swift in Sources */,
+				OBJ_96 /* NetworkMe+HTTPParameter.swift in Sources */,
+				OBJ_97 /* NetworkMe+URLQueryItemEncoder.swift in Sources */,
+				OBJ_98 /* NetworMe+Scheme.swift in Sources */,
+				OBJ_99 /* NetworkMe+Accept.swift in Sources */,
+				OBJ_100 /* NetworkMe+ContentType.swift in Sources */,
+				OBJ_101 /* NetworkMe+Header.swift in Sources */,
+				OBJ_102 /* NetworkMe+Method.swift in Sources */,
+				OBJ_103 /* NetworkMe+TaskType.swift in Sources */,
+				OBJ_104 /* NetworkMeHeader+Generic.swift in Sources */,
+				OBJ_105 /* NetworkMeHeader+Request.swift in Sources */,
+				OBJ_106 /* NetworkMeHeader+Response.swift in Sources */,
+				OBJ_107 /* NetworkMeHeaderGeneric+Connection.swift in Sources */,
+				OBJ_108 /* NetworkMeHeaderRequest+Authorization.swift in Sources */,
+				OBJ_109 /* NetworkMeHeaderRequest+CacheControl.swift in Sources */,
+				OBJ_110 /* NetworkMeHeaderResponse+CacheControl.swift in Sources */,
+				OBJ_111 /* NetworkMeResponse+Error.swift in Sources */,
+				OBJ_112 /* NetworkMeRouter+NetworkError.swift in Sources */,
+				OBJ_113 /* DateFormatter+NetworkMeDateProviding.swift in Sources */,
+				OBJ_114 /* JSONDecoder+NetworkMeDecoding.swift in Sources */,
+				OBJ_115 /* JSONEncoder+NetworkMeEncoding.swift in Sources */,
+				OBJ_116 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */,
+				OBJ_117 /* NetworkMe+EmptyDecodable.swift in Sources */,
+				OBJ_118 /* NetworkMe+TransformableKeyValuePair.swift in Sources */,
+				OBJ_119 /* NetworMeResponseValidatorProtocol.swift in Sources */,
+				OBJ_120 /* NetworkMeDateProviding.swift in Sources */,
+				OBJ_121 /* NetworkMeDecoding.swift in Sources */,
+				OBJ_122 /* NetworkMeEncoding.swift in Sources */,
+				OBJ_123 /* NetworkMeEndpointProtocol.swift in Sources */,
+				OBJ_124 /* NetworkMeFileRetrieving.swift in Sources */,
+				OBJ_125 /* NetworkMeHeaderParserProtocol.swift in Sources */,
+				OBJ_126 /* NetworkMeHeaderProtocol.swift in Sources */,
+				OBJ_127 /* NetworkMeRouting.swift in Sources */,
+				OBJ_128 /* NetworkMeURLSessionProtocol.swift in Sources */,
+				OBJ_129 /* NetworkMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4046A36B22A7E55800A5AF36 /* PBXTargetDependency */ = {
+		OBJ_141 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4046A35822A7E4F500A5AF36 /* NetworkMe */;
-			targetProxy = 4046A36A22A7E55800A5AF36 /* PBXContainerItemProxy */;
+			target = "NetworkMe::NetworkMeTests" /* NetworkMeTests */;
+			targetProxy = 4033AEB122E4BD4B0045168B /* PBXContainerItemProxy */;
 		};
-		404F304322A5F72B00267175 /* PBXTargetDependency */ = {
+		OBJ_166 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 407A86AA22A465A200588850 /* NetworkMe tvOS */;
-			targetProxy = 404F304222A5F72B00267175 /* PBXContainerItemProxy */;
-		};
-		404F305222A5F74600267175 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 407A86C722A465CA00588850 /* NetworkMe macOS */;
-			targetProxy = 404F305122A5F74600267175 /* PBXContainerItemProxy */;
+			target = "NetworkMe::NetworkMe" /* NetworkMe */;
+			targetProxy = 4033AEB022E4BD4A0045168B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		4046A35D22A7E4F500A5AF36 /* Debug */ = {
+		OBJ_133 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KMXEE635M6;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		4046A35E22A7E4F500A5AF36 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KMXEE635M6;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		4046A36D22A7E55800A5AF36 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KMXEE635M6;
-				INFOPLIST_FILE = "NetworkMe Tests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ipavlidakis.networkMe.tests.NetworkMe-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		4046A36E22A7E55800A5AF36 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KMXEE635M6;
-				INFOPLIST_FILE = "NetworkMe Tests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ipavlidakis.networkMe.tests.NetworkMe-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		404F304522A5F72B00267175 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UBW6JB7T2F;
-				INFOPLIST_FILE = "NetworkMe tvOS Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.network.me.tvOS-Tests.NetworkMe-tvOS-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 10.0;
-			};
-			name = Debug;
-		};
-		404F304622A5F72B00267175 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UBW6JB7T2F;
-				INFOPLIST_FILE = "NetworkMe tvOS Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.network.me.tvOS-Tests.NetworkMe-tvOS-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 10.0;
-			};
-			name = Release;
-		};
-		404F305422A5F74600267175 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = UBW6JB7T2F;
-				INFOPLIST_FILE = "NetworkMe macOS Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.network.me.macOS.tests.NetworkMe-macOS-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		404F305522A5F74600267175 /* Release */ = {
+		OBJ_134 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = UBW6JB7T2F;
-				INFOPLIST_FILE = "NetworkMe macOS Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.network.me.macOS.tests.NetworkMe-macOS-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-		404F305F22A5F7F700267175 /* Debug */ = {
+		OBJ_139 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UBW6JB7T2F;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ipavlidakis.networkMe.watchos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
-		404F306022A5F7F700267175 /* Release */ = {
+		OBJ_140 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UBW6JB7T2F;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ipavlidakis.networkMe.watchos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
-		407A867522A41D4B00588850 /* Debug */ = {
+		OBJ_144 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = NetworkMe.xcodeproj/NetworkMeTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = NetworkMeTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = NetworkMe.xcodeproj/NetworkMeTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = NetworkMeTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
 					"DEBUG=1",
-					"$(inherited)",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ipavlidakis.networkMe;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
-		407A867622A41D4B00588850 /* Release */ = {
+		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ipavlidakis.networkMe;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		407A867822A41D4B00588850 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UBW6JB7T2F;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ipavlidakis.networkMe.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		407A867922A41D4B00588850 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UBW6JB7T2F;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ipavlidakis.networkMe.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		407A86B022A465A200588850 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UBW6JB7T2F;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ipavlidakis.networkMe.tvos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 10.0;
-			};
-			name = Debug;
-		};
-		407A86B122A465A200588850 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UBW6JB7T2F;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ipavlidakis.networkMe.tvos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 10.0;
-			};
-			name = Release;
-		};
-		407A86CF22A465CA00588850 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UBW6JB7T2F;
-				EXECUTABLE_PREFIX = lib;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ipavlidakis.networkMe.macos;
+				OTHER_SWIFT_FLAGS = "-DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		407A86D022A465CA00588850 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UBW6JB7T2F;
-				EXECUTABLE_PREFIX = lib;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ipavlidakis.networkMe.macos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
-		407A86EF22A4667C00588850 /* Debug */ = {
+		OBJ_89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UBW6JB7T2F;
-				INFOPLIST_FILE = "NetworkMe iOS Tests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.network.me.ios.tests.NetworkMe-iOS-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = NetworkMe.xcodeproj/NetworkMe_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = NetworkMe;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGET_NAME = NetworkMe;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
-		407A86F022A4667C00588850 /* Release */ = {
+		OBJ_90 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UBW6JB7T2F;
-				INFOPLIST_FILE = "NetworkMe iOS Tests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.network.me.ios.tests.NetworkMe-iOS-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = NetworkMe.xcodeproj/NetworkMe_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = NetworkMe;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGET_NAME = NetworkMe;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4046A35F22A7E4F500A5AF36 /* Build configuration list for PBXNativeTarget "NetworkMe" */ = {
+		OBJ_132 /* Build configuration list for PBXNativeTarget "NetworkMePackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4046A35D22A7E4F500A5AF36 /* Debug */,
-				4046A35E22A7E4F500A5AF36 /* Release */,
+				OBJ_133 /* Debug */,
+				OBJ_134 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4046A36C22A7E55800A5AF36 /* Build configuration list for PBXNativeTarget "NetworkMe Tests" */ = {
+		OBJ_138 /* Build configuration list for PBXAggregateTarget "NetworkMePackageTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4046A36D22A7E55800A5AF36 /* Debug */,
-				4046A36E22A7E55800A5AF36 /* Release */,
+				OBJ_139 /* Debug */,
+				OBJ_140 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		404F304422A5F72B00267175 /* Build configuration list for PBXNativeTarget "NetworkMe tvOS Tests" */ = {
+		OBJ_143 /* Build configuration list for PBXNativeTarget "NetworkMeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				404F304522A5F72B00267175 /* Debug */,
-				404F304622A5F72B00267175 /* Release */,
+				OBJ_144 /* Debug */,
+				OBJ_145 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		404F305322A5F74600267175 /* Build configuration list for PBXNativeTarget "NetworkMe macOS Tests" */ = {
+		OBJ_2 /* Build configuration list for PBXProject "NetworkMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				404F305422A5F74600267175 /* Debug */,
-				404F305522A5F74600267175 /* Release */,
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		404F305E22A5F7F700267175 /* Build configuration list for PBXNativeTarget "NetworkMe watchOS" */ = {
+		OBJ_88 /* Build configuration list for PBXNativeTarget "NetworkMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				404F305F22A5F7F700267175 /* Debug */,
-				404F306022A5F7F700267175 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		407A866B22A41D4B00588850 /* Build configuration list for PBXProject "NetworkMe" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				407A867522A41D4B00588850 /* Debug */,
-				407A867622A41D4B00588850 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		407A867722A41D4B00588850 /* Build configuration list for PBXNativeTarget "NetworkMe iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				407A867822A41D4B00588850 /* Debug */,
-				407A867922A41D4B00588850 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		407A86AF22A465A200588850 /* Build configuration list for PBXNativeTarget "NetworkMe tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				407A86B022A465A200588850 /* Debug */,
-				407A86B122A465A200588850 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		407A86CE22A465CA00588850 /* Build configuration list for PBXNativeTarget "NetworkMe macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				407A86CF22A465CA00588850 /* Debug */,
-				407A86D022A465CA00588850 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		407A86F122A4667C00588850 /* Build configuration list for PBXNativeTarget "NetworkMe iOS Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				407A86EF22A4667C00588850 /* Debug */,
-				407A86F022A4667C00588850 /* Release */,
+				OBJ_89 /* Debug */,
+				OBJ_90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 407A866822A41D4B00588850 /* Project object */;
+	rootObject = OBJ_1 /* Project object */;
 }
