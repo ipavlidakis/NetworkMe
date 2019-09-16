@@ -186,6 +186,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4006CEE62330586C00565632 /* HeaderParser */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_13 /* NetworkeMeResponse+HeaderParser.swift */,
+			);
+			path = HeaderParser;
+			sourceTree = "<group>";
+		};
 		40D9C40A23304CAB009C85AF /* Authorizers */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,7 +215,7 @@
 			children = (
 				40D9C40A23304CAB009C85AF /* Authorizers */,
 				OBJ_11 /* FileRetriever */,
-				OBJ_13 /* NetworkeMeResponse+HeaderParser.swift */,
+				4006CEE62330586C00565632 /* HeaderParser */,
 				OBJ_14 /* ResponseValidator */,
 				OBJ_16 /* Router */,
 				OBJ_18 /* URLQueryItemEncoder */,
