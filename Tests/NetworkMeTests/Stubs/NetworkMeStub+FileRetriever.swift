@@ -11,7 +11,7 @@ import NetworkMe
 
 extension NetworkMe.Stub {
 
-    final class FileRetriever: NetworkMeFileRetrieving {
+    final class FileRetriever: FileRetrieving {
 
         private(set) var fetchWasCalledWithURL: URL?
         var stubFetchResult: Data?

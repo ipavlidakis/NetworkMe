@@ -11,7 +11,7 @@ import NetworkMe
 
 extension NetworkMe.Stub {
 
-    final class Encoder: NetworkMeEncoding {
+    final class Encoder: Encoding {
 
         private(set) var encodeWasCalledWithValue: Any?
         var stubEncodeResult: Data = Data()

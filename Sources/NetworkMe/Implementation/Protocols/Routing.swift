@@ -1,5 +1,5 @@
 //
-//  NetworkMeRouting.swift
+//  Routing.swift
 //  NetworkMe
 //
 //  Created by Ilias Pavlidakis on 02/06/2019.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-public protocol NetworkMeRouting {
+public protocol Routing {
 
     func request(
-        endpoint: NetworkMeEndpointProtocol)
+        endpoint: EndpointProtocol)
 
     func request<ResultItem: Decodable>(
-        endpoint: NetworkMeEndpointProtocol,
+        endpoint: EndpointProtocol,
         completion: @escaping (Result<ResultItem, NetworkMe.Router.NetworkError>, [NetworkMe.Header.Response]?) -> Void)
 }

@@ -10,7 +10,7 @@ import Foundation
 
 extension NetworkMe.Response {
 
-    struct HeaderParser: NetworkMeHeaderParserProtocol {
+    struct HeaderParser: HeaderParserProtocol {
 
         func parseHeaders(from response: URLResponse?) -> [NetworkMe.Header.Response] {
 

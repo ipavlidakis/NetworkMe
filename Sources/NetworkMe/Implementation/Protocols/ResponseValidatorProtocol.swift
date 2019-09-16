@@ -1,5 +1,5 @@
 //
-//  NetworMeResponseValidatorProtocol.swift
+//  ResponseValidatorProtocol.swift
 //  NetworkMe
 //
 //  Created by Ilias Pavlidakis on 08/06/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol NetworMeResponseValidatorProtocol {
+public protocol ResponseValidatorProtocol {
 
     func validate(_ response: URLResponse) -> Error?
 }

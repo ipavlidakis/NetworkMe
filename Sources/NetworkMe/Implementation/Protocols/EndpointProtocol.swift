@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol NetworkMeEndpointProtocol {
+public protocol EndpointProtocol {
 
     var taskType: NetworkMe.TaskType { get }
 
@@ -26,16 +26,16 @@ public protocol NetworkMeEndpointProtocol {
 
     var timeoutInterval: TimeInterval { get }
 
-    var decoder: NetworkMeDecoding { get }
+    var decoder: Decoding { get }
 
-    var requestHeaders: [NetworkMeHeaderProtocol] { get }
+    var requestHeaders: [HeaderProtocol] { get }
 
-    var responseValidator: NetworMeResponseValidatorProtocol { get }
+    var responseValidator: ResponseValidatorProtocol { get }
 
-    var responseHeadersParser: NetworkMeHeaderParserProtocol { get }
+    var responseHeadersParser: HeaderParserProtocol { get }
 }
 
-public extension NetworkMeEndpointProtocol {
+public extension EndpointProtocol {
 
     var taskType: NetworkMe.TaskType { return .data }
 
@@ -51,16 +51,16 @@ public extension NetworkMeEndpointProtocol {
 
     var timeoutInterval: TimeInterval { return 30 }
 
-    var decoder: NetworkMeDecoding { return JSONDecoder() }
+    var decoder: Decoding { return JSONDecoder() }
 
-    var requestHeaders: [NetworkMeHeaderProtocol] { return [] }
+    var requestHeaders: [HeaderProtocol] { return [] }
 
-    var responseValidator: NetworMeResponseValidatorProtocol {
+    var responseValidator: ResponseValidatorProtocol {
 
         return NetworkMe.HTTPResponseCodeValidator()
     }
 
-    var responseHeadersParser: NetworkMeHeaderParserProtocol {
+    var responseHeadersParser: HeaderParserProtocol {
 
         return NetworkMe.Response.HeaderParser()
     }

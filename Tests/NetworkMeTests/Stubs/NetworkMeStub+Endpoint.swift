@@ -23,7 +23,7 @@ extension NetworkMe.Stub {
         var stubTimeoutInterval: TimeInterval
         var stubDecoder: NetworkMe.Stub.Decoder
         var stubEncoder: NetworkMe.Stub.Encoder
-        var stubHeaders: [NetworkMeHeaderProtocol]
+        var stubHeaders: [HeaderProtocol]
 
         private(set) var timesTaskTypeWasCalled: Int = 0
         private(set) var timeURLWasCalled: Int = 0
@@ -47,7 +47,7 @@ extension NetworkMe.Stub {
              stubTimeoutInterval: TimeInterval = 0,
              stubDecoder: NetworkMe.Stub.Decoder = NetworkMe.Stub.Decoder(),
              stubEncoder: NetworkMe.Stub.Encoder = NetworkMe.Stub.Encoder(),
-             stubHeaders: [NetworkMeHeaderProtocol] = []) {
+             stubHeaders: [HeaderProtocol] = []) {
 
             self.stubTaskType = stubTaskType
             self.stubUrl = stubUrl
@@ -65,7 +65,7 @@ extension NetworkMe.Stub {
     }
 }
 
-extension NetworkMe.Stub.Endpoint: NetworkMeEndpointProtocol {
+extension NetworkMe.Stub.Endpoint: EndpointProtocol {
 
     var taskType: NetworkMe.TaskType {
 
@@ -123,21 +123,21 @@ extension NetworkMe.Stub.Endpoint: NetworkMeEndpointProtocol {
         return stubTimeoutInterval
     }
 
-    var decoder: NetworkMeDecoding {
+    var decoder: Decoding {
 
         timesDecoderWasCalled += 1
 
         return stubDecoder
     }
 
-    var encoder: NetworkMeEncoding {
+    var encoder: Encoding {
 
         timesEncoderWasCalled += 1
 
         return stubEncoder
     }
 
-    var requestHeaders: [NetworkMeHeaderProtocol] {
+    var requestHeaders: [HeaderProtocol] {
 
         timesHeadersWasCalled += 1
 

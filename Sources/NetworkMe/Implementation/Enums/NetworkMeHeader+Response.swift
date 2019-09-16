@@ -10,7 +10,7 @@ import Foundation
 
 public extension NetworkMe.Header {
 
-    enum Response: NetworkMeHeaderProtocol, RawRepresentable {
+    enum Response: HeaderProtocol, RawRepresentable {
 
         public typealias RawValue = NetworkMe.TransformableKeyValuePair<String, String>
 

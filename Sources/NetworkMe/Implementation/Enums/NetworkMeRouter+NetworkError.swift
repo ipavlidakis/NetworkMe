@@ -12,7 +12,7 @@ extension NetworkMe.Router {
 
     public enum NetworkError: Error {
 
-        case invalidEndpoint(_ endpoint: NetworkMeEndpointProtocol)
+        case invalidEndpoint(_ endpoint: EndpointProtocol)
         case invalidURLComponents(_ components: URLComponents)
         case noData
         case parsing(_ error: Error)

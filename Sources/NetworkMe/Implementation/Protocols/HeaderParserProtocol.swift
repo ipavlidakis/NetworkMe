@@ -1,5 +1,5 @@
 //
-//  NetworkMeHeaderParserProtocol.swift
+//  HeaderParserProtocol.swift
 //  NetworkMe
 //
 //  Created by Ilias Pavlidakis on 08/06/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol NetworkMeHeaderParserProtocol {
+public protocol HeaderParserProtocol {
 
     func parseHeaders(from response: URLResponse?) -> [NetworkMe.Header.Response]
 }

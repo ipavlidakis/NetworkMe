@@ -1,5 +1,5 @@
 //
-//  NetworkMeEncoding.swift
+//  HeaderProtocol.swift
 //  NetworkMe
 //
 //  Created by Ilias Pavlidakis on 02/06/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol NetworkMeEncoding {
+public protocol HeaderProtocol {
 
-    func encode<T>(_ value: T) throws -> Data where T : Encodable
+    var keyPair: NetworkMe.TransformableKeyValuePair<String, String> { get }
 }

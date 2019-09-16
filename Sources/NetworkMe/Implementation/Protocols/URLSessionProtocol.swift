@@ -1,5 +1,5 @@
 //
-//  NetworkMeURLSessionProtocol.swift
+//  URLSessionProtocol.swift
 //  NetworkMe
 //
 //  Created by Ilias Pavlidakis on 02/06/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol NetworkMeURLSessionProtocol {
+public protocol URLSessionProtocol {
 
     func dataTask(
         with request: URLRequest,

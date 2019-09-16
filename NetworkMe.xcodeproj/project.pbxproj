@@ -21,6 +21,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		40D9C40923304A1A009C85AF /* AuthorizerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D9C40823304A1A009C85AF /* AuthorizerProtocol.swift */; };
+		40D9C40C23304CB9009C85AF /* NetworkMe+BasicAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D9C40B23304CB9009C85AF /* NetworkMe+BasicAuthorizer.swift */; };
+		40D9C40F2330529F009C85AF /* NetworkMeStub+Authorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D9C40D23305290009C85AF /* NetworkMeStub+Authorizer.swift */; };
+		40D9C412233053AB009C85AF /* NetworkMeAuthorizer_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D9C411233053AB009C85AF /* NetworkMeAuthorizer_Tests.swift */; };
 		OBJ_100 /* NetworkMe+ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* NetworkMe+ContentType.swift */; };
 		OBJ_101 /* NetworkMe+Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* NetworkMe+Header.swift */; };
 		OBJ_102 /* NetworkMe+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* NetworkMe+Method.swift */; };
@@ -40,16 +44,16 @@
 		OBJ_116 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* URLSession+NetworkMeURLSessionProtocol.swift */; };
 		OBJ_117 /* NetworkMe+EmptyDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* NetworkMe+EmptyDecodable.swift */; };
 		OBJ_118 /* NetworkMe+TransformableKeyValuePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* NetworkMe+TransformableKeyValuePair.swift */; };
-		OBJ_119 /* NetworMeResponseValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* NetworMeResponseValidatorProtocol.swift */; };
-		OBJ_120 /* NetworkMeDateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* NetworkMeDateProviding.swift */; };
-		OBJ_121 /* NetworkMeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* NetworkMeDecoding.swift */; };
-		OBJ_122 /* NetworkMeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* NetworkMeEncoding.swift */; };
-		OBJ_123 /* NetworkMeEndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* NetworkMeEndpointProtocol.swift */; };
-		OBJ_124 /* NetworkMeFileRetrieving.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* NetworkMeFileRetrieving.swift */; };
-		OBJ_125 /* NetworkMeHeaderParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* NetworkMeHeaderParserProtocol.swift */; };
-		OBJ_126 /* NetworkMeHeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* NetworkMeHeaderProtocol.swift */; };
-		OBJ_127 /* NetworkMeRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* NetworkMeRouting.swift */; };
-		OBJ_128 /* NetworkMeURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* NetworkMeURLSessionProtocol.swift */; };
+		OBJ_119 /* ResponseValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* ResponseValidatorProtocol.swift */; };
+		OBJ_120 /* DateProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* DateProviding.swift */; };
+		OBJ_121 /* Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* Decoding.swift */; };
+		OBJ_122 /* Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* Encoding.swift */; };
+		OBJ_123 /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* EndpointProtocol.swift */; };
+		OBJ_124 /* FileRetrieving.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* FileRetrieving.swift */; };
+		OBJ_125 /* HeaderParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* HeaderParserProtocol.swift */; };
+		OBJ_126 /* HeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* HeaderProtocol.swift */; };
+		OBJ_127 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* Routing.swift */; };
+		OBJ_128 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* URLSessionProtocol.swift */; };
 		OBJ_129 /* NetworkMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* NetworkMe.swift */; };
 		OBJ_136 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_147 /* NetworkMeFileRetriever_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* NetworkMeFileRetriever_Tests.swift */; };
@@ -98,6 +102,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40D9C40823304A1A009C85AF /* AuthorizerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizerProtocol.swift; sourceTree = "<group>"; };
+		40D9C40B23304CB9009C85AF /* NetworkMe+BasicAuthorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+BasicAuthorizer.swift"; sourceTree = "<group>"; };
+		40D9C40D23305290009C85AF /* NetworkMeStub+Authorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeStub+Authorizer.swift"; sourceTree = "<group>"; };
+		40D9C411233053AB009C85AF /* NetworkMeAuthorizer_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeAuthorizer_Tests.swift; sourceTree = "<group>"; };
 		"NetworkMe::NetworkMe::Product" /* NetworkMe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NetworkMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"NetworkMe::NetworkMeTests::Product" /* NetworkMeTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = NetworkMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* NetworkMe+FileRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+FileRetriever.swift"; sourceTree = "<group>"; };
@@ -127,16 +135,16 @@
 		OBJ_41 /* URLSession+NetworkMeURLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkMeURLSessionProtocol.swift"; sourceTree = "<group>"; };
 		OBJ_43 /* NetworkMe+EmptyDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+EmptyDecodable.swift"; sourceTree = "<group>"; };
 		OBJ_44 /* NetworkMe+TransformableKeyValuePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+TransformableKeyValuePair.swift"; sourceTree = "<group>"; };
-		OBJ_46 /* NetworMeResponseValidatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworMeResponseValidatorProtocol.swift; sourceTree = "<group>"; };
-		OBJ_47 /* NetworkMeDateProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeDateProviding.swift; sourceTree = "<group>"; };
-		OBJ_48 /* NetworkMeDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeDecoding.swift; sourceTree = "<group>"; };
-		OBJ_49 /* NetworkMeEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeEncoding.swift; sourceTree = "<group>"; };
-		OBJ_50 /* NetworkMeEndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeEndpointProtocol.swift; sourceTree = "<group>"; };
-		OBJ_51 /* NetworkMeFileRetrieving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeFileRetrieving.swift; sourceTree = "<group>"; };
-		OBJ_52 /* NetworkMeHeaderParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeHeaderParserProtocol.swift; sourceTree = "<group>"; };
-		OBJ_53 /* NetworkMeHeaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeHeaderProtocol.swift; sourceTree = "<group>"; };
-		OBJ_54 /* NetworkMeRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeRouting.swift; sourceTree = "<group>"; };
-		OBJ_55 /* NetworkMeURLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeURLSessionProtocol.swift; sourceTree = "<group>"; };
+		OBJ_46 /* ResponseValidatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseValidatorProtocol.swift; sourceTree = "<group>"; };
+		OBJ_47 /* DateProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateProviding.swift; sourceTree = "<group>"; };
+		OBJ_48 /* Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoding.swift; sourceTree = "<group>"; };
+		OBJ_49 /* Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encoding.swift; sourceTree = "<group>"; };
+		OBJ_50 /* EndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
+		OBJ_51 /* FileRetrieving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileRetrieving.swift; sourceTree = "<group>"; };
+		OBJ_52 /* HeaderParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderParserProtocol.swift; sourceTree = "<group>"; };
+		OBJ_53 /* HeaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderProtocol.swift; sourceTree = "<group>"; };
+		OBJ_54 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
+		OBJ_55 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		OBJ_56 /* NetworkMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMe.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_62 /* NetworkMeFileRetriever_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeFileRetriever_Tests.swift; sourceTree = "<group>"; };
@@ -178,9 +186,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40D9C40A23304CAB009C85AF /* Authorizers */ = {
+			isa = PBXGroup;
+			children = (
+				40D9C40B23304CB9009C85AF /* NetworkMe+BasicAuthorizer.swift */,
+			);
+			path = Authorizers;
+			sourceTree = "<group>";
+		};
+		40D9C4102330539B009C85AF /* Authorizer */ = {
+			isa = PBXGroup;
+			children = (
+				40D9C411233053AB009C85AF /* NetworkMeAuthorizer_Tests.swift */,
+			);
+			path = Authorizer;
+			sourceTree = "<group>";
+		};
 		OBJ_10 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				40D9C40A23304CAB009C85AF /* Authorizers */,
 				OBJ_11 /* FileRetriever */,
 				OBJ_13 /* NetworkeMeResponse+HeaderParser.swift */,
 				OBJ_14 /* ResponseValidator */,
@@ -268,21 +293,22 @@
 		OBJ_45 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_46 /* NetworMeResponseValidatorProtocol.swift */,
-				OBJ_47 /* NetworkMeDateProviding.swift */,
-				OBJ_48 /* NetworkMeDecoding.swift */,
-				OBJ_49 /* NetworkMeEncoding.swift */,
-				OBJ_50 /* NetworkMeEndpointProtocol.swift */,
-				OBJ_51 /* NetworkMeFileRetrieving.swift */,
-				OBJ_52 /* NetworkMeHeaderParserProtocol.swift */,
-				OBJ_53 /* NetworkMeHeaderProtocol.swift */,
-				OBJ_54 /* NetworkMeRouting.swift */,
-				OBJ_55 /* NetworkMeURLSessionProtocol.swift */,
+				OBJ_46 /* ResponseValidatorProtocol.swift */,
+				OBJ_47 /* DateProviding.swift */,
+				OBJ_48 /* Decoding.swift */,
+				OBJ_49 /* Encoding.swift */,
+				OBJ_50 /* EndpointProtocol.swift */,
+				OBJ_51 /* FileRetrieving.swift */,
+				OBJ_52 /* HeaderParserProtocol.swift */,
+				OBJ_53 /* HeaderProtocol.swift */,
+				OBJ_54 /* Routing.swift */,
+				OBJ_55 /* URLSessionProtocol.swift */,
+				40D9C40823304A1A009C85AF /* AuthorizerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -291,7 +317,6 @@
 				OBJ_83 /* Products */,
 				OBJ_86 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_57 /* Tests */ = {
@@ -327,6 +352,7 @@
 		OBJ_60 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				40D9C4102330539B009C85AF /* Authorizer */,
 				OBJ_61 /* FileRetriever */,
 				OBJ_63 /* Router */,
 			);
@@ -387,6 +413,7 @@
 				OBJ_79 /* NetworkMeStub+FileRetriever.swift */,
 				OBJ_80 /* NetworkMeStub+URLSession.swift */,
 				OBJ_81 /* NetworkMeStub+URLSessionTask.swift */,
+				40D9C40D23305290009C85AF /* NetworkMeStub+Authorizer.swift */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -489,7 +516,7 @@
 				English,
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_83 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -516,6 +543,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_147 /* NetworkMeFileRetriever_Tests.swift in Sources */,
+				40D9C40F2330529F009C85AF /* NetworkMeStub+Authorizer.swift in Sources */,
 				OBJ_148 /* NetworkMeRouter_Tests.swift in Sources */,
 				OBJ_149 /* NetworMeMethod_Tests.swift in Sources */,
 				OBJ_150 /* NetworMeScheme_Tests.swift in Sources */,
@@ -531,6 +559,7 @@
 				OBJ_160 /* NetworkMeStub+FileRetriever.swift in Sources */,
 				OBJ_161 /* NetworkMeStub+URLSession.swift in Sources */,
 				OBJ_162 /* NetworkMeStub+URLSessionTask.swift in Sources */,
+				40D9C412233053AB009C85AF /* NetworkMeAuthorizer_Tests.swift in Sources */,
 				OBJ_163 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,6 +576,7 @@
 				OBJ_97 /* NetworkMe+URLQueryItemEncoder.swift in Sources */,
 				OBJ_98 /* NetworMe+Scheme.swift in Sources */,
 				OBJ_99 /* NetworkMe+Accept.swift in Sources */,
+				40D9C40C23304CB9009C85AF /* NetworkMe+BasicAuthorizer.swift in Sources */,
 				OBJ_100 /* NetworkMe+ContentType.swift in Sources */,
 				OBJ_101 /* NetworkMe+Header.swift in Sources */,
 				OBJ_102 /* NetworkMe+Method.swift in Sources */,
@@ -557,6 +587,7 @@
 				OBJ_107 /* NetworkMeHeaderGeneric+Connection.swift in Sources */,
 				OBJ_108 /* NetworkMeHeaderRequest+Authorization.swift in Sources */,
 				OBJ_109 /* NetworkMeHeaderRequest+CacheControl.swift in Sources */,
+				40D9C40923304A1A009C85AF /* AuthorizerProtocol.swift in Sources */,
 				OBJ_110 /* NetworkMeHeaderResponse+CacheControl.swift in Sources */,
 				OBJ_111 /* NetworkMeResponse+Error.swift in Sources */,
 				OBJ_112 /* NetworkMeRouter+NetworkError.swift in Sources */,
@@ -566,16 +597,16 @@
 				OBJ_116 /* URLSession+NetworkMeURLSessionProtocol.swift in Sources */,
 				OBJ_117 /* NetworkMe+EmptyDecodable.swift in Sources */,
 				OBJ_118 /* NetworkMe+TransformableKeyValuePair.swift in Sources */,
-				OBJ_119 /* NetworMeResponseValidatorProtocol.swift in Sources */,
-				OBJ_120 /* NetworkMeDateProviding.swift in Sources */,
-				OBJ_121 /* NetworkMeDecoding.swift in Sources */,
-				OBJ_122 /* NetworkMeEncoding.swift in Sources */,
-				OBJ_123 /* NetworkMeEndpointProtocol.swift in Sources */,
-				OBJ_124 /* NetworkMeFileRetrieving.swift in Sources */,
-				OBJ_125 /* NetworkMeHeaderParserProtocol.swift in Sources */,
-				OBJ_126 /* NetworkMeHeaderProtocol.swift in Sources */,
-				OBJ_127 /* NetworkMeRouting.swift in Sources */,
-				OBJ_128 /* NetworkMeURLSessionProtocol.swift in Sources */,
+				OBJ_119 /* ResponseValidatorProtocol.swift in Sources */,
+				OBJ_120 /* DateProviding.swift in Sources */,
+				OBJ_121 /* Decoding.swift in Sources */,
+				OBJ_122 /* Encoding.swift in Sources */,
+				OBJ_123 /* EndpointProtocol.swift in Sources */,
+				OBJ_124 /* FileRetrieving.swift in Sources */,
+				OBJ_125 /* HeaderParserProtocol.swift in Sources */,
+				OBJ_126 /* HeaderProtocol.swift in Sources */,
+				OBJ_127 /* Routing.swift in Sources */,
+				OBJ_128 /* URLSessionProtocol.swift in Sources */,
 				OBJ_129 /* NetworkMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

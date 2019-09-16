@@ -10,7 +10,7 @@ import Foundation
 
 extension NetworkMe {
 
-    public struct FileRetriever: NetworkMeFileRetrieving {
+    public struct FileRetriever: FileRetrieving {
 
         public init() {}
 

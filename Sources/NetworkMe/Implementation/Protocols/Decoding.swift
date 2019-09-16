@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol NetworkMeDecoding {
+public protocol Decoding {
 
     func decode<T>(
         _ type: T.Type,

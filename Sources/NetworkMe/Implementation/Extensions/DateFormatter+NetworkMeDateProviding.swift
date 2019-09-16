@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension DateFormatter: NetworkMeDateProviding {
+extension DateFormatter: DateProviding {
 
     public var date: Date { return Date() }
 

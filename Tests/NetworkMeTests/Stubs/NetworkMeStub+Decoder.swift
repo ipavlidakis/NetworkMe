@@ -11,7 +11,7 @@ import NetworkMe
 
 extension NetworkMe.Stub {
 
-    final class Decoder: NetworkMeDecoding {
+    final class Decoder: Decoding {
 
         private(set) var decodeWasCalled: (type: String, data: Data)?
         var stubDecodeResult: Any?

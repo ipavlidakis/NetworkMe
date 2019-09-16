@@ -1,5 +1,5 @@
 //
-//  NetworkMeDateProviding.swift
+//  DateProviding.swift
 //  NetworkMe iOS
 //
 //  Created by Ilias Pavlidakis on 03/06/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol NetworkMeDateProviding {
+public protocol DateProviding {
 
     var date: Date { get }
 

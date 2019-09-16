@@ -27,7 +27,7 @@ extension NetworkMe.Stub {
     }
 }
 
-extension NetworkMe.Stub.URLSession: NetworkMeURLSessionProtocol {
+extension NetworkMe.Stub.URLSession: URLSessionProtocol {
 
     func dataTask(
         with request: URLRequest,

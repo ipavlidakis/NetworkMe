@@ -1,5 +1,5 @@
 //
-//  NetworkMeFileRetrieving.swift
+//  FileRetrieving.swift
 //  NetworkMe iOS
 //
 //  Created by Ilias Pavlidakis on 04/06/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol NetworkMeFileRetrieving {
+public protocol FileRetrieving {
 
     func fetchData(from url: URL) -> Data?
 }

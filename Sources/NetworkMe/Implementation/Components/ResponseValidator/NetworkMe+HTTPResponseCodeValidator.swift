@@ -16,7 +16,7 @@ extension NetworkMe {
     }
 }
 
-extension NetworkMe.HTTPResponseCodeValidator: NetworMeResponseValidatorProtocol {
+extension NetworkMe.HTTPResponseCodeValidator: ResponseValidatorProtocol {
 
     func validate(_ response: URLResponse) -> Error? {
 

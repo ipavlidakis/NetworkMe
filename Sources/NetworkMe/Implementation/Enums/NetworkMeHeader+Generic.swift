@@ -10,10 +10,10 @@ import Foundation
 
 public extension NetworkMe.Header {
 
-    enum Generic: NetworkMeHeaderProtocol {
+    enum Generic: HeaderProtocol {
 
         case connection(_ type: NetworkMe.Header.Generic.Connection)
-        case date(_ dateProvider: NetworkMeDateProviding)
+        case date(_ dateProvider: DateProviding)
 
         public var keyPair: NetworkMe.TransformableKeyValuePair<String, String> {
             switch self {

@@ -14,7 +14,7 @@ final class NetworkMeEndpointProtocol_Tests: XCTestCase {
 
     func test_endpointHasExpectedDefaultValues() {
 
-        enum Endpoint: NetworkMeEndpointProtocol {
+        enum Endpoint: EndpointProtocol {
             case test
             var url: URL { return URL(string: "test.com")! }
         }

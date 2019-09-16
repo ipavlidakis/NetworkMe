@@ -10,7 +10,7 @@ import Foundation
 
 public extension NetworkMe.Header {
 
-    enum Request: NetworkMeHeaderProtocol {
+    enum Request: HeaderProtocol {
 
         case cacheControl(_ cacheControl: NetworkMe.Header.Request.CacheControl)
         case custom(key: String, value: String)

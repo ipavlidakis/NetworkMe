@@ -14,6 +14,37 @@ final class NetworkMeRouter_Tests: XCTestCase {
 
     private struct CodableItem: Equatable, Codable { let value: String }
 
+    // MARK: - Authorizer
+
+    func test_request_authorizerWasCalled() {
+
+        let stubURLSession = NetworkMe.Stub.URLSession()
+        let task = NetworkMe.Stub.URLSessionDataTask()
+        stubURLSession.stubDataTaskResult = task
+        let stubFileRetriever = NetworkMe.Stub.FileRetriever()
+        let stubAuthorizer = NetworkMe.Stub.Authorizer()
+        let router = NetworkMe.Router(
+            urlSession: stubURLSession,
+            fileRetriever: stubFileRetriever,
+            authorizer: stubAuthorizer)
+        let endpoint = NetworkMe.Stub.Endpoint(
+            stubQueryItems: [URLQueryItem(name: "key", value: "value")],
+            stubScheme: NetworkMe.Scheme.https,
+            stubHeaders: [NetworkMe.Header.Request.contentType(.atomXML)]
+        )
+
+        router.request(endpoint: endpoint)
+
+        XCTAssertEqual(stubAuthorizer.authorizeWasCalled?.endpoint.url, endpoint.url)
+        XCTAssertEqual(stubAuthorizer.authorizeWasCalled?.request.cachePolicy, .useProtocolCachePolicy)
+        XCTAssertEqual(endpoint.timesCachePolicyWasCalled, 1)
+        XCTAssertEqual(stubAuthorizer.authorizeWasCalled?.request.timeoutInterval, 0)
+        XCTAssertEqual(endpoint.timesTimeoutIntervalWasCalled, 1)
+        XCTAssertEqual(stubAuthorizer.authorizeWasCalled?.request.httpMethod?.lowercased(), endpoint.method.rawValue)
+        XCTAssertEqual(stubAuthorizer.authorizeWasCalled?.request.allHTTPHeaderFields, ["Content-Type": "application/atom+xml"])
+        XCTAssertEqual(stubAuthorizer.authorizeWasCalled?.request.url, URL(string: "https://test.com?key=value")!)
+    }
+
     // MARK: - Request without completion
     // MARK: Data task
 
@@ -25,7 +56,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         let endpoint = NetworkMe.Stub.Endpoint(
             stubQueryItems: [URLQueryItem(name: "key", value: "value")],
             stubScheme: NetworkMe.Scheme.https,
@@ -43,7 +75,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         let endpoint = NetworkMe.Stub.Endpoint(
             stubQueryItems: [URLQueryItem(name: "key", value: "value")],
             stubScheme: NetworkMe.Scheme.https,
@@ -71,7 +104,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         let endpoint = NetworkMe.Stub.Endpoint(
             stubTaskType: .upload,
             stubQueryItems: [URLQueryItem(name: "key", value: "value")],
@@ -90,7 +124,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         let stubData = Data(base64Encoded: "test")!
         let endpoint = NetworkMe.Stub.Endpoint(
             stubTaskType: .upload,
@@ -122,7 +157,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         let endpoint = NetworkMe.Stub.Endpoint(
             stubTaskType: .download,
             stubQueryItems: [URLQueryItem(name: "key", value: "value")],
@@ -141,7 +177,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         let endpoint = NetworkMe.Stub.Endpoint(
             stubTaskType: .download,
             stubQueryItems: [URLQueryItem(name: "key", value: "value")],
@@ -172,7 +209,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         let endpoint = NetworkMe.Stub.Endpoint(
             stubQueryItems: [URLQueryItem(name: "key", value: "value")],
             stubScheme: NetworkMe.Scheme.https,
@@ -190,7 +228,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         let endpoint = NetworkMe.Stub.Endpoint(
             stubQueryItems: [URLQueryItem(name: "key", value: "value")],
             stubScheme: NetworkMe.Scheme.https,
@@ -214,7 +253,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         let stubDataResult = Data(base64Encoded: "test")!
         stubURLSession.stubDataTaskCompletionHandlerInput = (stubDataResult, nil, nil)
         let endpoint = NetworkMe.Stub.Endpoint()
@@ -230,7 +270,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         stubURLSession.stubDataTaskCompletionHandlerInput = (nil, nil, nil)
         let endpoint = NetworkMe.Stub.Endpoint()
 
@@ -260,7 +301,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         let stubResult = CodableItem(value: "test")
         stubURLSession.stubDataTaskCompletionHandlerInput = (Data(), nil, nil)
         let endpoint = NetworkMe.Stub.Endpoint()
@@ -293,7 +335,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         let endpoint = NetworkMe.Stub.Endpoint(
             stubTaskType: .upload,
             stubQueryItems: [URLQueryItem(name: "key", value: "value")],
@@ -312,7 +355,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         let stubData = Data(base64Encoded: "test")!
         let endpoint = NetworkMe.Stub.Endpoint(
             stubTaskType: .upload,
@@ -340,7 +384,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         let stubDataResult = Data(base64Encoded: "test")!
         stubURLSession.stubUploadTaskCompletionHandlerInput = (stubDataResult, nil, nil)
         let endpoint = NetworkMe.Stub.Endpoint(stubTaskType: .upload)
@@ -356,7 +401,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         stubURLSession.stubDataTaskCompletionHandlerInput = (nil, nil, nil)
         let endpoint = NetworkMe.Stub.Endpoint(stubTaskType: .upload)
 
@@ -386,7 +432,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         let stubResult = CodableItem(value: "test")
         stubURLSession.stubDataTaskCompletionHandlerInput = (Data(), nil, nil)
         let endpoint = NetworkMe.Stub.Endpoint(stubTaskType: .upload)
@@ -419,7 +466,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         let endpoint = NetworkMe.Stub.Endpoint(
             stubTaskType: .download,
             stubQueryItems: [URLQueryItem(name: "key", value: "value")],
@@ -438,7 +486,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         let endpoint = NetworkMe.Stub.Endpoint(
             stubTaskType: .download,
             stubQueryItems: [URLQueryItem(name: "key", value: "value")],
@@ -463,7 +512,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         let stubResult = URL(string: "test.com")
         stubURLSession.stubDownloadTaskCompletionHandlerInput = (stubResult, nil, nil)
         let endpoint = NetworkMe.Stub.Endpoint(stubTaskType: .download)
@@ -479,7 +529,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         let stubResult = URL(string: "test.com")
         let stubDataResult = Data(base64Encoded: "test")!
         stubFileRetriever.stubFetchResult = stubDataResult
@@ -497,7 +548,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         stubURLSession.stubDataTaskCompletionHandlerInput = (nil, nil, nil)
         let endpoint = NetworkMe.Stub.Endpoint(stubTaskType: .download)
 
@@ -527,7 +579,8 @@ final class NetworkMeRouter_Tests: XCTestCase {
         let stubFileRetriever = NetworkMe.Stub.FileRetriever()
         let router = NetworkMe.Router(
             urlSession: stubURLSession,
-            fileRetriever: stubFileRetriever)
+            fileRetriever: stubFileRetriever,
+            authorizer: nil)
         let stubResult = CodableItem(value: "test")
         let stubDataResult = Data(base64Encoded: "test")!
         stubFileRetriever.stubFetchResult = stubDataResult

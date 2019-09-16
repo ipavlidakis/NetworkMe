@@ -12,29 +12,33 @@ extension NetworkMe {
 
     public final class Router {
 
-        private let urlSession: NetworkMeURLSessionProtocol
-        private let fileRetriever: NetworkMeFileRetrieving
+        private let urlSession: URLSessionProtocol
+        private let fileRetriever: FileRetrieving
+        private let authorizer: AuthorizerProtocol?
 
         public convenience init() {
 
             self.init(
                 urlSession: URLSession.shared,
-                fileRetriever: NetworkMe.FileRetriever())
+                fileRetriever: NetworkMe.FileRetriever(),
+                authorizer: nil)
         }
 
         public init(
-            urlSession: NetworkMeURLSessionProtocol,
-            fileRetriever: NetworkMeFileRetrieving) {
+            urlSession: URLSessionProtocol,
+            fileRetriever: FileRetrieving,
+            authorizer: AuthorizerProtocol?) {
 
             self.urlSession = urlSession
             self.fileRetriever = fileRetriever
+            self.authorizer = authorizer
         }
     }
 }
 
-extension NetworkMe.Router: NetworkMeRouting {
+extension NetworkMe.Router: Routing {
 
-    public func request(endpoint: NetworkMeEndpointProtocol) {
+    public func request(endpoint: EndpointProtocol) {
 
         request(
             endpoint: endpoint,
@@ -42,7 +46,7 @@ extension NetworkMe.Router: NetworkMeRouting {
     }
 
     public func request<ResultItem: Decodable>(
-        endpoint: NetworkMeEndpointProtocol,
+        endpoint: EndpointProtocol,
         completion: @escaping (Result<ResultItem, NetworkError>, [NetworkMe.Header.Response]?) -> Void) {
 
         guard
@@ -62,18 +66,25 @@ extension NetworkMe.Router: NetworkMeRouting {
                 return
         }
 
-        var request = URLRequest(
-            url: url,
-            cachePolicy: endpoint.cachePolicy,
-            timeoutInterval: endpoint.timeoutInterval)
-        request.httpMethod = endpoint.method.rawValue
-        request.httpBody = endpoint.body
-        let requestHeaders = endpoint.requestHeaders.map { $0.keyPair }
-        request.allHTTPHeaderFields = requestHeaders.reduce([:]) { (headers, header) -> [String: String] in
-            var _headers = headers
-            _headers[header.key] = header.value
-            return _headers
-        }
+        let request: URLRequest = {
+
+            var urlRequest = URLRequest(
+                url: url,
+                cachePolicy: endpoint.cachePolicy,
+                timeoutInterval: endpoint.timeoutInterval)
+            urlRequest.httpMethod = endpoint.method.rawValue
+            urlRequest.httpBody = endpoint.body
+
+            let requestHeaders = endpoint.requestHeaders.map { $0.keyPair }
+            urlRequest.allHTTPHeaderFields = requestHeaders.reduce([:]) { (headers, header) -> [String: String] in
+                var _headers = headers
+                _headers[header.key] = header.value
+                return _headers
+            }
+
+            return authorizer?.authorize(endpoint: endpoint, request: urlRequest)
+                ?? urlRequest
+        }()
 
         let task: URLSessionTask = {
             switch endpoint.taskType {
@@ -94,7 +105,7 @@ private extension NetworkMe.Router {
 
     func dataTask<ResultItem: Decodable>(
         with request: URLRequest,
-        endpoint: NetworkMeEndpointProtocol,
+        endpoint: EndpointProtocol,
         completion: @escaping (Result<ResultItem, NetworkError>, [NetworkMe.Header.Response]?) -> Void) -> URLSessionDataTask {
 
         return urlSession.dataTask(with: request) { (data, response, error) in
@@ -127,7 +138,7 @@ private extension NetworkMe.Router {
 
     func uploadTask<ResultItem: Decodable>(
         with request: URLRequest,
-        endpoint: NetworkMeEndpointProtocol,
+        endpoint: EndpointProtocol,
         completion: @escaping (Result<ResultItem, NetworkError>, [NetworkMe.Header.Response]?) -> Void) -> URLSessionUploadTask {
 
         return urlSession.uploadTask(with: request, from: request.httpBody) { (data, response, error) in
@@ -160,7 +171,7 @@ private extension NetworkMe.Router {
 
     func downloadTask<ResultItem: Decodable>(
         with request: URLRequest,
-        endpoint: NetworkMeEndpointProtocol,
+        endpoint: EndpointProtocol,
         completion: @escaping (Result<ResultItem, NetworkError>, [NetworkMe.Header.Response]?) -> Void) -> URLSessionDownloadTask {
 
         return urlSession.downloadTask(with: request) { [weak self] (url, response, error) in

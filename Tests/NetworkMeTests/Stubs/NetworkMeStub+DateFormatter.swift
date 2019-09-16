@@ -20,7 +20,7 @@ extension NetworkMe.Stub {
     }
 }
 
-extension NetworkMe.Stub.DateProvider: NetworkMeDateProviding {
+extension NetworkMe.Stub.DateProvider: DateProviding {
 
     var date: Date { return stubDateResult }
 

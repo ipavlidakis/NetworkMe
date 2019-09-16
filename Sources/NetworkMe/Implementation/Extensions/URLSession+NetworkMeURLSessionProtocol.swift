@@ -1,5 +1,5 @@
 //
-//  URLSession+NetworkMeURLSessionProtocol.swift
+//  URLSession+URLSessionProtocol.swift
 //  NetworkMe
 //
 //  Created by Ilias Pavlidakis on 06/06/2019.
@@ -8,4 +8,4 @@
 
 import Foundation
 
-extension URLSession: NetworkMeURLSessionProtocol {}
+extension URLSession: URLSessionProtocol {}
