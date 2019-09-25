@@ -20,7 +20,7 @@ final class NetworkMeAuthorizer_Tests: XCTestCase {
             return ""
         }
 
-        _ = authorizer.authorize(endpoint: NetworkMe.Stub.Endpoint(), request: URLRequest(url: URL(string: "test.com")!))
+        _ = authorizer.apply(endpoint: NetworkMe.Stub.Endpoint(), request: URLRequest(url: URL(string: "test.com")!))
 
         XCTAssert(accessTokenProviderWasCalled)
     }
@@ -29,7 +29,7 @@ final class NetworkMeAuthorizer_Tests: XCTestCase {
 
         let authorizer = NetworkMe.BearerAuthorizer { "token" }
 
-        let request = authorizer.authorize(endpoint: NetworkMe.Stub.Endpoint(), request: URLRequest(url: URL(string: "test.com")!))
+        let request = authorizer.apply(endpoint: NetworkMe.Stub.Endpoint(), request: URLRequest(url: URL(string: "test.com")!))
 
         XCTAssertEqual(request.allHTTPHeaderFields?["Authorization"], "Bearer token")
     }

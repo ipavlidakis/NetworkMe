@@ -7,9 +7,9 @@
 
 import Foundation
 
-public protocol AuthorizerProtocol {
+public protocol MiddlewareProtocol {
 
-    func authorize(
+    func apply(
         endpoint: EndpointProtocol,
         request: URLRequest) -> URLRequest
 }

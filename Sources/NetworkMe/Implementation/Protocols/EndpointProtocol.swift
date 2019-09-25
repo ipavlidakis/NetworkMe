@@ -33,35 +33,33 @@ public protocol EndpointProtocol {
     var responseValidator: ResponseValidatorProtocol { get }
 
     var responseHeadersParser: HeaderParserProtocol { get }
+
+    var priority: NetworkMe.Priority { get }
 }
 
 public extension EndpointProtocol {
 
-    var taskType: NetworkMe.TaskType { return .data }
+    var taskType: NetworkMe.TaskType { .data }
 
-    var body: Data? { return nil }
+    var body: Data? { nil }
 
-    var queryItems: [URLQueryItem]? { return nil }
+    var queryItems: [URLQueryItem]? {nil }
 
-    var scheme: NetworkMe.Scheme { return .https }
+    var scheme: NetworkMe.Scheme { .https }
 
-    var method: NetworkMe.Method { return .get }
+    var method: NetworkMe.Method { .get }
 
-    var cachePolicy: URLRequest.CachePolicy { return .useProtocolCachePolicy }
+    var cachePolicy: URLRequest.CachePolicy { .useProtocolCachePolicy }
 
-    var timeoutInterval: TimeInterval { return 30 }
+    var timeoutInterval: TimeInterval { 30 }
 
-    var decoder: Decoding { return JSONDecoder() }
+    var decoder: Decoding { JSONDecoder() }
 
-    var requestHeaders: [HeaderProtocol] { return [] }
+    var requestHeaders: [HeaderProtocol] { [] }
 
-    var responseValidator: ResponseValidatorProtocol {
+    var responseValidator: ResponseValidatorProtocol { NetworkMe.HTTPResponseCodeValidator() }
 
-        return NetworkMe.HTTPResponseCodeValidator()
-    }
+    var responseHeadersParser: HeaderParserProtocol { NetworkMe.Response.HeaderParser() }
 
-    var responseHeadersParser: HeaderParserProtocol {
-
-        return NetworkMe.Response.HeaderParser()
-    }
+    var priority: NetworkMe.Priority { .normal }
 }

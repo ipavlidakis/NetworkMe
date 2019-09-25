@@ -20,9 +20,9 @@ extension NetworkMe {
     }
 }
 
-extension NetworkMe.BearerAuthorizer: AuthorizerProtocol {
+extension NetworkMe.BearerAuthorizer: MiddlewareProtocol {
 
-    public func authorize(
+    public func apply(
         endpoint: EndpointProtocol,
         request: URLRequest) -> URLRequest {
 

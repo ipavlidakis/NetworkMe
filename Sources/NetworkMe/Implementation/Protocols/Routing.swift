@@ -10,6 +10,10 @@ import Foundation
 
 public protocol Routing {
 
+    func add(middleware: MiddlewareProtocol)
+
+    func cancelRequests(with priorities: [NetworkMe.Priority])
+
     func request(
         endpoint: EndpointProtocol)
 

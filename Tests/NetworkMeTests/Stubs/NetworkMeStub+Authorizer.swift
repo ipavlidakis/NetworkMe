@@ -10,19 +10,19 @@ import NetworkMe
 
 extension NetworkMe.Stub {
 
-    final class Authorizer {
+    final class Middleware {
 
-        private(set) var authorizeWasCalled: (endpoint: EndpointProtocol, request: URLRequest)?
+        private(set) var applyWasCalled: (endpoint: EndpointProtocol, request: URLRequest)?
     }
 }
 
-extension NetworkMe.Stub.Authorizer: AuthorizerProtocol {
+extension NetworkMe.Stub.Middleware: MiddlewareProtocol {
 
-    func authorize(
+    func apply(
         endpoint: EndpointProtocol,
         request: URLRequest) -> URLRequest {
 
-        authorizeWasCalled = (endpoint, request)
+        applyWasCalled = (endpoint, request)
 
         return request
     }

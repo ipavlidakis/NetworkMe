@@ -14,29 +14,56 @@ extension NetworkMe {
 
         private let urlSession: URLSessionProtocol
         private let fileRetriever: FileRetrieving
-        private let authorizer: AuthorizerProtocol?
+        private let queues: [Priority: OperationQueue]
+
+        private var middleware: [MiddlewareProtocol]
 
         public convenience init() {
+
+            let queues = Priority.allCases.reduce([:]) { (dictionary, priority) -> [Priority: OperationQueue] in
+
+                var mutableDictionary = dictionary
+                let operationQueue = OperationQueue()
+
+                operationQueue.qualityOfService = priority.qualityOfService
+                operationQueue.maxConcurrentOperationCount = priority.maxConcurrentOperations
+                mutableDictionary[priority] = operationQueue
+
+                return mutableDictionary
+            }
 
             self.init(
                 urlSession: URLSession.shared,
                 fileRetriever: NetworkMe.FileRetriever(),
-                authorizer: nil)
+                middleware: [],
+                queues: queues)
         }
 
         public init(
             urlSession: URLSessionProtocol,
             fileRetriever: FileRetrieving,
-            authorizer: AuthorizerProtocol?) {
+            middleware: [MiddlewareProtocol],
+            queues: [Priority: OperationQueue]) {
 
             self.urlSession = urlSession
             self.fileRetriever = fileRetriever
-            self.authorizer = authorizer
+            self.middleware = middleware
+            self.queues = queues
         }
     }
 }
 
 extension NetworkMe.Router: Routing {
+
+    public func add(middleware: MiddlewareProtocol) {
+
+        self.middleware.append(middleware)
+    }
+
+    public func cancelRequests(with priorities: [NetworkMe.Priority]) {
+
+        priorities.forEach { queues[$0]?.cancelAllOperations() }
+    }
 
     public func request(endpoint: EndpointProtocol) {
 
@@ -82,8 +109,7 @@ extension NetworkMe.Router: Routing {
                 return _headers
             }
 
-            return authorizer?.authorize(endpoint: endpoint, request: urlRequest)
-                ?? urlRequest
+            return middleware.reduce(urlRequest) { $1.apply(endpoint: endpoint, request: $0) }
         }()
 
         let task: URLSessionTask = {
@@ -97,7 +123,7 @@ extension NetworkMe.Router: Routing {
             }
         }()
 
-        task.resume()
+        enqueue(endpoint: endpoint, task: task)
     }
 }
 
@@ -200,6 +226,20 @@ private extension NetworkMe.Router {
                 completion(Result.failure(NetworkError.parsing(exception)), headers)
                 debugPrint(String(data: data, encoding: .utf8) ?? "")
             }
+        }
+    }
+
+    func enqueue(
+        endpoint: EndpointProtocol,
+        task: URLSessionTask) {
+
+        guard let operationQueue = queues[endpoint.priority] else {
+            assertionFailure("Queue with priority \(endpoint.priority.rawValue) doesn't exist")
+            return
+        }
+
+        operationQueue.addOperation {
+            task.resume()
         }
     }
 }
