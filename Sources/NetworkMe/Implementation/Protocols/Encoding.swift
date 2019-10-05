@@ -10,5 +10,5 @@ import Foundation
 
 public protocol Encoding {
 
-    func encode<T>(_ value: T) throws -> Data where T : Encodable
+    func customEncode<T>(_ value: T) throws -> Data? where T : Encodable
 }

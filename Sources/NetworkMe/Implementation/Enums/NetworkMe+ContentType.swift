@@ -33,5 +33,8 @@ public extension NetworkMe.Header.Request {
         case octetStream = "application/octet-stream"
         case ogg = "application/ogg"
         case pdf = "application/pdf"
+        case jpeg = "image/jpeg"
+        case png = "image/png"
+        case anything = "*/*"
     }
 }

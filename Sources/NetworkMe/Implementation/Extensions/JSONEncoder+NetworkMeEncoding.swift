@@ -8,4 +8,13 @@
 
 import Foundation
 
-extension JSONEncoder: Encoding {}
+extension JSONEncoder: Encoding {
+
+    public func customEncode<T>(_ value: T) throws -> Data? where T : Encodable {
+        try self.encode(value)
+    }
+
+    public func customEncode<T>(_ value: T) throws -> Data? {
+        return nil
+    }
+}

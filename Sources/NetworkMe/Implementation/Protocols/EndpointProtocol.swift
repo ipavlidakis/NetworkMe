@@ -26,6 +26,8 @@ public protocol EndpointProtocol {
 
     var timeoutInterval: TimeInterval { get }
 
+    var encoder: Encoding { get }
+
     var decoder: Decoding { get }
 
     var requestHeaders: [HeaderProtocol] { get }
@@ -52,6 +54,8 @@ public extension EndpointProtocol {
     var cachePolicy: URLRequest.CachePolicy { .useProtocolCachePolicy }
 
     var timeoutInterval: TimeInterval { 30 }
+
+    var encoder: Encoding { JSONEncoder() }
 
     var decoder: Decoding { JSONDecoder() }
 

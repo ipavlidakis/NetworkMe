@@ -24,6 +24,7 @@
 		4028E273233C06E300B956B2 /* NetworkMe+Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4028E272233C06E300B956B2 /* NetworkMe+Priority.swift */; };
 		4028E276233C0E5100B956B2 /* NetworkMeStub+OperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4028E274233C0DF200B956B2 /* NetworkMeStub+OperationQueue.swift */; };
 		4028E278233C0F5600B956B2 /* NetworMePriority_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4028E277233C0F5600B956B2 /* NetworMePriority_Tests.swift */; };
+		4093337C234692E9009D9059 /* FileDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4093337B234692E9009D9059 /* FileDecoder.swift */; };
 		40D9C40923304A1A009C85AF /* MiddlewareProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D9C40823304A1A009C85AF /* MiddlewareProtocol.swift */; };
 		40D9C40C23304CB9009C85AF /* NetworkMe+BasicAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D9C40B23304CB9009C85AF /* NetworkMe+BasicAuthorizer.swift */; };
 		40D9C40F2330529F009C85AF /* NetworkMeStub+Authorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D9C40D23305290009C85AF /* NetworkMeStub+Authorizer.swift */; };
@@ -108,12 +109,13 @@
 		4028E272233C06E300B956B2 /* NetworkMe+Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+Priority.swift"; sourceTree = "<group>"; };
 		4028E274233C0DF200B956B2 /* NetworkMeStub+OperationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeStub+OperationQueue.swift"; sourceTree = "<group>"; };
 		4028E277233C0F5600B956B2 /* NetworMePriority_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworMePriority_Tests.swift; sourceTree = "<group>"; };
+		4093337B234692E9009D9059 /* FileDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDecoder.swift; sourceTree = "<group>"; };
 		40D9C40823304A1A009C85AF /* MiddlewareProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewareProtocol.swift; sourceTree = "<group>"; };
 		40D9C40B23304CB9009C85AF /* NetworkMe+BasicAuthorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+BasicAuthorizer.swift"; sourceTree = "<group>"; };
 		40D9C40D23305290009C85AF /* NetworkMeStub+Authorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeStub+Authorizer.swift"; sourceTree = "<group>"; };
 		40D9C411233053AB009C85AF /* NetworkMeAuthorizer_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeAuthorizer_Tests.swift; sourceTree = "<group>"; };
 		"NetworkMe::NetworkMe::Product" /* NetworkMe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NetworkMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"NetworkMe::NetworkMeTests::Product" /* NetworkMeTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = NetworkMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"NetworkMe::NetworkMeTests::Product" /* NetworkMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = NetworkMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* NetworkMe+FileRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+FileRetriever.swift"; sourceTree = "<group>"; };
 		OBJ_13 /* NetworkeMeResponse+HeaderParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkeMeResponse+HeaderParser.swift"; sourceTree = "<group>"; };
 		OBJ_15 /* NetworkMe+HTTPResponseCodeValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+HTTPResponseCodeValidator.swift"; sourceTree = "<group>"; };
@@ -200,6 +202,14 @@
 			path = HeaderParser;
 			sourceTree = "<group>";
 		};
+		4093337A234692DC009D9059 /* FileDecoder */ = {
+			isa = PBXGroup;
+			children = (
+				4093337B234692E9009D9059 /* FileDecoder.swift */,
+			);
+			path = FileDecoder;
+			sourceTree = "<group>";
+		};
 		40D9C40A23304CAB009C85AF /* Authorizers */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +229,7 @@
 		OBJ_10 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				4093337A234692DC009D9059 /* FileDecoder */,
 				40D9C40A23304CAB009C85AF /* Authorizers */,
 				OBJ_11 /* FileRetriever */,
 				4006CEE62330586C00565632 /* HeaderParser */,
@@ -523,15 +534,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 9999;
-				LastUpgradeCheck = 9999;
+				LastUpgradeCheck = 1110;
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "NetworkMe" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = OBJ_5;
 			productRefGroup = OBJ_83 /* Products */;
@@ -624,6 +635,7 @@
 				OBJ_123 /* EndpointProtocol.swift in Sources */,
 				OBJ_124 /* FileRetrieving.swift in Sources */,
 				OBJ_125 /* HeaderParserProtocol.swift in Sources */,
+				4093337C234692E9009D9059 /* FileDecoder.swift in Sources */,
 				OBJ_126 /* HeaderProtocol.swift in Sources */,
 				OBJ_127 /* Routing.swift in Sources */,
 				OBJ_128 /* URLSessionProtocol.swift in Sources */,
@@ -680,8 +692,8 @@
 		OBJ_144 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -705,8 +717,8 @@
 		OBJ_145 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -731,17 +743,43 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"SWIFT_PACKAGE=1",
 					"DEBUG=1",
 				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "-DXcode";
@@ -758,15 +796,40 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"SWIFT_PACKAGE=1",
 				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_SWIFT_FLAGS = "-DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
