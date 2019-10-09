@@ -37,6 +37,10 @@ public protocol EndpointProtocol {
     var responseHeadersParser: HeaderParserProtocol { get }
 
     var priority: NetworkMe.Priority { get }
+
+    var cacheKey: String { get }
+
+    var isCachable: Bool { get }
 }
 
 public extension EndpointProtocol {
@@ -66,4 +70,8 @@ public extension EndpointProtocol {
     var responseHeadersParser: HeaderParserProtocol { NetworkMe.Response.HeaderParser() }
 
     var priority: NetworkMe.Priority { .normal }
+
+    var cacheKey: String { url.absoluteString }
+
+    var isCachable: Bool { true }
 }

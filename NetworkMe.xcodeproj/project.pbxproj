@@ -24,6 +24,7 @@
 		4028E273233C06E300B956B2 /* NetworkMe+Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4028E272233C06E300B956B2 /* NetworkMe+Priority.swift */; };
 		4028E276233C0E5100B956B2 /* NetworkMeStub+OperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4028E274233C0DF200B956B2 /* NetworkMeStub+OperationQueue.swift */; };
 		4028E278233C0F5600B956B2 /* NetworMePriority_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4028E277233C0F5600B956B2 /* NetworMePriority_Tests.swift */; };
+		40580034234BF79100CB8E02 /* NetworkMeHeaderRequest+Accept.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40580033234BF79100CB8E02 /* NetworkMeHeaderRequest+Accept.swift */; };
 		4093337C234692E9009D9059 /* FileDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4093337B234692E9009D9059 /* FileDecoder.swift */; };
 		40D9C40923304A1A009C85AF /* MiddlewareProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D9C40823304A1A009C85AF /* MiddlewareProtocol.swift */; };
 		40D9C40C23304CB9009C85AF /* NetworkMe+BasicAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D9C40B23304CB9009C85AF /* NetworkMe+BasicAuthorizer.swift */; };
@@ -109,6 +110,7 @@
 		4028E272233C06E300B956B2 /* NetworkMe+Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+Priority.swift"; sourceTree = "<group>"; };
 		4028E274233C0DF200B956B2 /* NetworkMeStub+OperationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeStub+OperationQueue.swift"; sourceTree = "<group>"; };
 		4028E277233C0F5600B956B2 /* NetworMePriority_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworMePriority_Tests.swift; sourceTree = "<group>"; };
+		40580033234BF79100CB8E02 /* NetworkMeHeaderRequest+Accept.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeHeaderRequest+Accept.swift"; sourceTree = "<group>"; };
 		4093337B234692E9009D9059 /* FileDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDecoder.swift; sourceTree = "<group>"; };
 		40D9C40823304A1A009C85AF /* MiddlewareProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewareProtocol.swift; sourceTree = "<group>"; };
 		40D9C40B23304CB9009C85AF /* NetworkMe+BasicAuthorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+BasicAuthorizer.swift"; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				OBJ_22 /* NetworMe+Scheme.swift */,
 				OBJ_23 /* NetworkMe+Accept.swift */,
 				OBJ_24 /* NetworkMe+ContentType.swift */,
+				40580033234BF79100CB8E02 /* NetworkMeHeaderRequest+Accept.swift */,
 				OBJ_25 /* NetworkMe+Header.swift */,
 				OBJ_26 /* NetworkMe+Method.swift */,
 				OBJ_27 /* NetworkMe+TaskType.swift */,
@@ -620,6 +623,7 @@
 				OBJ_109 /* NetworkMeHeaderRequest+CacheControl.swift in Sources */,
 				40D9C40923304A1A009C85AF /* MiddlewareProtocol.swift in Sources */,
 				OBJ_110 /* NetworkMeHeaderResponse+CacheControl.swift in Sources */,
+				40580034234BF79100CB8E02 /* NetworkMeHeaderRequest+Accept.swift in Sources */,
 				OBJ_111 /* NetworkMeResponse+Error.swift in Sources */,
 				OBJ_112 /* NetworkMeRouter+NetworkError.swift in Sources */,
 				OBJ_113 /* DateFormatter+NetworkMeDateProviding.swift in Sources */,

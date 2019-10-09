@@ -14,6 +14,8 @@ public protocol Routing {
 
     func cancelRequests(with priorities: [NetworkMe.Priority])
 
+    func cancelRequest(for endpoint: EndpointProtocol)
+
     func request(
         endpoint: EndpointProtocol)
 

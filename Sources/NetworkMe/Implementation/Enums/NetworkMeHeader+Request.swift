@@ -16,6 +16,7 @@ public extension NetworkMe.Header {
         case custom(key: String, value: String)
         case authorization(NetworkMe.Header.Request.Authorization)
         case contentType(_ contentType: NetworkMe.Header.Request.ContentType)
+        case accept(_ accept: NetworkMe.Header.Request.Accept)
 
         public var keyPair: NetworkMe.TransformableKeyValuePair<String, String> {
             switch self {
@@ -33,6 +34,10 @@ public extension NetworkMe.Header {
                 return NetworkMe.TransformableKeyValuePair(
                     "Content-Type",
                     contentType.rawValue)
+            case .accept(let accept):
+                return NetworkMe.TransformableKeyValuePair(
+                    "Accept",
+                    accept.rawValue)
             }
         }
     }

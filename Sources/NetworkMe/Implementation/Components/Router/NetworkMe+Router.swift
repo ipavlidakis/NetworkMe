@@ -17,6 +17,7 @@ extension NetworkMe {
         private let queues: [Priority: OperationQueue]
 
         private var middleware: [MiddlewareProtocol]
+        private var runningTasks: [URL: URLSessionTask]
 
         public convenience init() {
 
@@ -36,19 +37,22 @@ extension NetworkMe {
                 urlSession: URLSession.shared,
                 fileRetriever: NetworkMe.FileRetriever(),
                 middleware: [],
-                queues: queues)
+                queues: queues,
+                runningTasks: [:])
         }
 
         public init(
             urlSession: URLSessionProtocol,
             fileRetriever: FileRetrieving,
             middleware: [MiddlewareProtocol],
-            queues: [Priority: OperationQueue]) {
+            queues: [Priority: OperationQueue],
+            runningTasks: [URL: URLSessionTask]) {
 
             self.urlSession = urlSession
             self.fileRetriever = fileRetriever
             self.middleware = middleware
             self.queues = queues
+            self.runningTasks = runningTasks
         }
     }
 }
@@ -63,6 +67,15 @@ extension NetworkMe.Router: Routing {
     public func cancelRequests(with priorities: [NetworkMe.Priority]) {
 
         priorities.forEach { queues[$0]?.cancelAllOperations() }
+    }
+
+    public func cancelRequest(for endpoint: EndpointProtocol) {
+
+        guard let task = runningTasks[endpoint.url] else { return }
+
+        task.cancel()
+
+        completeTask(for: endpoint)
     }
 
     public func request(endpoint: EndpointProtocol) {
@@ -134,7 +147,9 @@ private extension NetworkMe.Router {
         endpoint: EndpointProtocol,
         completion: @escaping (Result<ResultItem, NetworkError>, [NetworkMe.Header.Response]?) -> Void) -> URLSessionDataTask {
 
-        return urlSession.dataTask(with: request) { (data, response, error) in
+        return urlSession.dataTask(with: request) { [weak self] (data, response, error) in
+
+            self?.completeTask(for: endpoint)
 
             let headers = endpoint.responseHeadersParser.parseHeaders(from: response)
 
@@ -167,7 +182,9 @@ private extension NetworkMe.Router {
         endpoint: EndpointProtocol,
         completion: @escaping (Result<ResultItem, NetworkError>, [NetworkMe.Header.Response]?) -> Void) -> URLSessionUploadTask {
 
-        return urlSession.uploadTask(with: request, from: request.httpBody) { (data, response, error) in
+        return urlSession.uploadTask(with: request, from: request.httpBody) { [weak self] (data, response, error) in
+
+            self?.completeTask(for: endpoint)
 
             let headers = endpoint.responseHeadersParser.parseHeaders(from: response)
 
@@ -201,6 +218,8 @@ private extension NetworkMe.Router {
         completion: @escaping (Result<ResultItem, NetworkError>, [NetworkMe.Header.Response]?) -> Void) -> URLSessionDownloadTask {
 
         return urlSession.downloadTask(with: request) { [weak self] (url, response, error) in
+
+            self?.completeTask(for: endpoint)
 
             let headers = endpoint.responseHeadersParser.parseHeaders(from: response)
 
@@ -238,8 +257,18 @@ private extension NetworkMe.Router {
             return
         }
 
-        operationQueue.addOperation {
+        operationQueue.addOperation { [weak self] in
+
+            self?.runningTasks[endpoint.url]?.cancel()
+            self?.runningTasks[endpoint.url] = task
+
             task.resume()
         }
+    }
+
+    func completeTask(
+        for endpoint: EndpointProtocol) {
+
+        runningTasks[endpoint.url] = nil
     }
 }
