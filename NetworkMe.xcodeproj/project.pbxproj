@@ -553,9 +553,9 @@
 			projectRoot = "";
 			targets = (
 				"NetworkMe::NetworkMe" /* NetworkMe */,
+				"NetworkMe::NetworkMeTests" /* NetworkMeTests */,
 				"NetworkMe::SwiftPMPackageDescription" /* NetworkMePackageDescription */,
 				"NetworkMe::NetworkMePackageTests::ProductTarget" /* NetworkMePackageTests */,
-				"NetworkMe::NetworkMeTests" /* NetworkMeTests */,
 			);
 		};
 /* End PBXProject section */
