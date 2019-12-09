@@ -60,7 +60,8 @@ private extension NetworkMeRouter_Tests {
             urlSession: stubURLSession,
             fileRetriever: stubFileRetriever,
             middleware: middleware,
-            queues: spyQueues)
+            queues: spyQueues,
+            runningTasks: [:])
     }
 }
 

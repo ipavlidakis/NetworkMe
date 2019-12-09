@@ -13,12 +13,12 @@ extension NetworkMe.Stub {
 
     final class Encoder: Encoding {
 
-        private(set) var encodeWasCalledWithValue: Any?
+        private(set) var customEncodeEncodeWasCalledWithValue: Any?
         var stubEncodeResult: Data = Data()
 
-        func encode<T>(_ value: T) throws -> Data where T : Encodable {
+        func customEncode<T>(_ value: T) throws -> Data? where T : Encodable {
 
-            encodeWasCalledWithValue = value
+            customEncodeEncodeWasCalledWithValue = value
 
             return stubEncodeResult
         }

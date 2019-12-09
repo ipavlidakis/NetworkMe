@@ -122,7 +122,10 @@ final class NetworkHeader_RequestTests: XCTestCase {
             "application/javascript",
             "application/octet-stream",
             "application/ogg",
-            "application/pdf"
+            "application/pdf",
+            "image/jpeg",
+            "image/png",
+            "*/*"
         ].map { NetworkMe.TransformableKeyValuePair<String, String>("Content-Type", $0) }
 
         guard
