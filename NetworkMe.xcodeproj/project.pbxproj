@@ -116,7 +116,7 @@
 		40D9C40B23304CB9009C85AF /* NetworkMe+BasicAuthorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+BasicAuthorizer.swift"; sourceTree = "<group>"; };
 		40D9C40D23305290009C85AF /* NetworkMeStub+Authorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMeStub+Authorizer.swift"; sourceTree = "<group>"; };
 		40D9C411233053AB009C85AF /* NetworkMeAuthorizer_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMeAuthorizer_Tests.swift; sourceTree = "<group>"; };
-		"NetworkMe::NetworkMe::Product" /* NetworkMe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NetworkMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"NetworkMe::NetworkMe::Product" /* NetworkMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"NetworkMe::NetworkMeTests::Product" /* NetworkMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = NetworkMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* NetworkMe+FileRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMe+FileRetriever.swift"; sourceTree = "<group>"; };
 		OBJ_13 /* NetworkeMeResponse+HeaderParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkeMeResponse+HeaderParser.swift"; sourceTree = "<group>"; };
@@ -864,6 +864,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = NetworkMe;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
@@ -892,6 +893,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = NetworkMe;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
